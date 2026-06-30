@@ -13,12 +13,33 @@ export default function OverMijPage() {
         <div className="two-col">
           <div className="col-text">
             <h1 className="text-3xl font-bold text-primair mb-6 reveal">Over mij</h1>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal text-3xl" style={{ fontFamily: 'var(--font-buydog)' }}>
+              Lieve mama,
+            </p>
             <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-              [Vertel hier jouw verhaal. Wie ben je, wat drijft je, hoe ben je hier gekomen?
-              Schrijf vanuit je hart.]
+              van harte welkom!
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Ik ben Marleen en samen met Paul, hebben we <strong>twee prachtige dochters.</strong> Zij hebben me geïnspireerd om te doen wat ik nu doe. Het duurde even voor ik zwanger werd. Maar toen dat eenmaal lukte voelde ik me geweldig. Tot <strong>de bevalling anders verliep dan gehoopt.</strong> Ze huilde veel, ik huilde mee en de zoektocht begon. Bij de jongste was het precies andersom. Haar geboorte was fantastisch (ja echt!), maar ik heb de zwangerschap hard gewerkt aan <strong>mijn angst voor nog een huilbaby.</strong>
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Vanaf de start vroeg ik mij al af welke impact dit alles had op hen. Nu weet ik dat <strong>zwangerschap en geboorte voor blijvende imprints zorgen</strong> en dat juist hier al gedragspatronen ontstaan. Ook kwam ik erachter hoe vaak wij als moeders <strong>niet in balans zijn en een ontregeld zenuwstelsel hebben.</strong> Althans, ik wel..
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Ik vond het zo&apos;n heftige verandering om zelf moeder te worden. Als je me toen zou kennen kon me het beste omschrijven als <strong>de typische millenialmom die het perfect wilde doen.</strong>
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Voor mij was het moederschap <strong>dé uitnodiging om mijzelf te ontwikkelen.</strong> Er zijn geen betere spiegels dan je kinderen ;-). Ik stond totaal niet meer in verbinding met mijn lijf en mijn gevoel. Mijn zenuwstelsel was al jaren ontregeld. Onder andere <strong>NEI therapie en zenuwstelselregulatie</strong> hebben voor mij mijn leven veranderd.
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Ik help je graag in het prachtige, maar rauwe proces van moederschap. Want <strong>gedrag is altijd logisch</strong> en de antwoorden liggen soms diep verborgen in je lichaam. Mijn missie: <strong>een mama vol vertrouwen en een kindje dat emotioneel de wereld aan kan</strong>, daar doe ik het voor!
+            </p>
+            <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+              Welkom op jouw Momtrail!
             </p>
             <p className="text-tekst/80 leading-relaxed reveal">
-              [Meer over jouw werkwijze, achtergrond of wat jou uniek maakt.]
+              Veel liefs,<br />
+              <span className="text-3xl" style={{ fontFamily: 'var(--font-buydog)' }}>Marleen</span>
             </p>
           </div>
           <div className="col-image">
