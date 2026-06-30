@@ -8,9 +8,10 @@ const KENNIS_SHOP_URL = '';
 
 const navLinks = [
   { href: '/',         label: 'Home'     },
-  { href: '/over-mij', label: 'Over mij' },
-  { href: '/aanbod',   label: 'Aanbod'   },
-  { href: '/contact',  label: 'Contact'  },
+  { href: '/over-mij', label: 'Over mij'      },
+  { href: '/aanbod',   label: 'Aanbod'        },
+  { href: '/agenda',   label: 'Agenda & events' },
+  { href: '/contact',  label: 'Contact'        },
 ];
 
 export default function Header() {

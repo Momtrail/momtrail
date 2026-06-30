@@ -20,7 +20,7 @@ export default function ContactPage() {
       <div
         className="calendly-inline-widget mb-16 rounded-2xl overflow-hidden"
         data-url="https://calendly.com/momtrail"
-        style={{ minWidth: '320px', height: '700px' }}
+        style={{ minWidth: '320px', height: '500px' }}
       />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
 

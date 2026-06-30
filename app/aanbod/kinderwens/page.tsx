@@ -5,30 +5,12 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = { title: 'Kinderwenstraject' };
 
 const veranderingen = [
-  {
-    titel: 'Je hormonen krijgen de kans om te herstellen',
-    tekst: 'Door de juiste voeding en ondersteuning ontstaat er meer balans in je cyclus en ovulatie.',
-  },
-  {
-    titel: 'Je lichaam krijgt de bouwstoffen die het nodig heeft',
-    tekst: 'Voor eicelkwaliteit, een gezonde baarmoeder en een goede basis voor bevruchting. Ook je partner wordt meegenomen in de juiste voeding en leefstijl.',
-  },
-  {
-    titel: 'Je darmen gaan beter opnemen en verwerken',
-    tekst: 'Waardoor voedingsstoffen echt aankomen én je hormonen beter gereguleerd worden.',
-  },
-  {
-    titel: 'Je systeem komt uit de \'aan-stand\'',
-    tekst: 'Als je veel spanning of stress draagt, blijft je lichaam in een soort overlevingsmodus. In die staat is voortplanting geen prioriteit.',
-  },
-  {
-    titel: 'Je zenuwstelsel leert weer ontspannen en vertrouwen',
-    tekst: 'Waardoor je lichaam signalen krijgt: het is veilig. En dat heeft direct invloed op je hormonale balans en je cyclus.',
-  },
-  {
-    titel: 'Er komt meer rust, ruimte en doorstroming',
-    tekst: 'In je lichaam, in je emoties en in je hoofd.',
-  },
+  { titel: 'Je hormonen krijgen de kans om te herstellen', tekst: 'Door de juiste voeding en ondersteuning ontstaat er meer balans in je cyclus en ovulatie.' },
+  { titel: 'Je lichaam krijgt de bouwstoffen die het nodig heeft', tekst: 'Voor eicelkwaliteit, een gezonde baarmoeder en een goede basis voor bevruchting. Ook je partner wordt meegenomen in de juiste voeding en leefstijl.' },
+  { titel: 'Je darmen gaan beter opnemen en verwerken', tekst: 'Waardoor voedingsstoffen echt aankomen én je hormonen beter gereguleerd worden.' },
+  { titel: 'Je systeem komt uit de aan-stand', tekst: 'Als je veel spanning of stress draagt, blijft je lichaam in een soort overlevingsmodus. In die staat is voortplanting geen prioriteit.' },
+  { titel: 'Je zenuwstelsel leert weer ontspannen en vertrouwen', tekst: 'Waardoor je lichaam signalen krijgt: het is veilig. En dat heeft direct invloed op je hormonale balans en je cyclus.' },
+  { titel: 'Er komt meer rust, ruimte en doorstroming', tekst: 'In je lichaam, in je emoties en in je hoofd.' },
 ];
 
 const voorWie = [
@@ -47,96 +29,112 @@ const watJeKrijgt = [
   'Whatsapp-, telefonisch en mailcontact tijdens het traject',
   'Rust Reset (online programma om spanning te verminderen)',
   '6 maanden Health and Happiness weekmenu\'s',
-  '20–25% korting op supplementen',
+  '20-25% korting op supplementen',
 ];
 
 export default function KinderwensPage() {
   return (
     <>
-      <section className="max-w-3xl mx-auto px-6 py-20">
-        <Link href="/aanbod" className="text-accent hover:underline text-sm mb-8 inline-block">← Terug naar aanbod</Link>
+      {/* Hero blok */}
+      <div className="bg-primair py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <Link href="/aanbod" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar aanbod</Link>
+          <h1 className="text-5xl font-bold text-achtergrond mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>Kinderwenstraject</h1>
+          <p className="text-achtergrond/80 text-xl italic">Health and Happiness × Momtrail</p>
+        </div>
+      </div>
 
-        <h1 className="text-3xl font-bold text-primair mb-2 reveal">Kinderwenstraject</h1>
-        <p className="text-tekst/60 italic text-lg mb-10 reveal">Health and Happiness × Momtrail</p>
+      <div className="max-w-3xl mx-auto px-6 py-16">
 
-        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Jullie verlangen al een tijd naar een kindje, maar als je menstruatie weer begint sta je met tranen in je ogen. <strong>Weer niet gelukt deze maand.</strong> Of het zwanger worden lukt wel, maar je blijft niet zwanger. Misschien zit je midden in een fertiliteitstraject of je voelt: ik wil mijn lichaam en mezelf zo goed mogelijk voorbereiden. Wat jouw situatie ook is, <strong>je hoeft dit niet alleen te doen.</strong>
-        </p>
-        <p className="text-tekst/80 leading-relaxed mb-10 reveal">
-          Een kinderwens raakt je vaak diep. Het is vaak een proces wat je niet deelt met mensen om je heen, maar wat je samen met je partner doormaakt. Er komen veel emoties bij kijken: hoop, teleurstelling, spanning… en soms ook onzekerheid, verdriet of onmacht. En juist daarom kijken wij, <strong>Susan en Marleen,</strong> graag met je mee en gaan we verder dan de standaard adviezen.
-        </p>
+        {/* Intro */}
+        <div className="bg-achtergrond rounded-2xl p-8 mb-12 reveal">
+          <p className="text-tekst/80 leading-relaxed mb-4">
+            Jullie verlangen al een tijd naar een kindje, maar als je menstruatie weer begint sta je met tranen in je ogen. <strong>Weer niet gelukt deze maand.</strong> Of het zwanger worden lukt wel, maar je blijft niet zwanger. Misschien zit je midden in een fertiliteitstraject of je voelt: ik wil mijn lichaam en mezelf zo goed mogelijk voorbereiden. Wat jouw situatie ook is, <strong>je hoeft dit niet alleen te doen.</strong>
+          </p>
+          <p className="text-tekst/80 leading-relaxed">
+            Een kinderwens raakt je vaak diep. Het is vaak een proces wat je niet deelt met mensen om je heen, maar wat je samen met je partner doormaakt. Er komen veel emoties bij kijken: hoop, teleurstelling, spanning... en soms ook onzekerheid, verdriet of onmacht. En juist daarom kijken wij, <strong>Susan en Marleen,</strong> graag met je mee en gaan we verder dan de standaard adviezen.
+          </p>
+        </div>
 
+        {/* Holistische aanpak */}
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Een holistische benadering</h2>
-        <p className="text-tekst/80 leading-relaxed mb-3 reveal">In deze samenwerking bundelen we onze expertise:</p>
-        <div className="space-y-4 mb-4">
-          <div className="bg-wit rounded-2xl p-5 border border-primair/10 reveal">
-            <p className="font-bold text-primair mb-1">Orthomoleculaire begeleiding</p>
-            <p className="text-tekst/80">Gericht op hormonen, leefstijl, voeding en darmgezondheid.</p>
+        <p className="text-tekst/80 leading-relaxed mb-4 reveal">In deze samenwerking bundelen we onze expertise:</p>
+        <div className="grid gap-4 md:grid-cols-2 mb-6">
+          <div className="bg-primair rounded-2xl p-6 reveal">
+            <p className="font-bold text-achtergrond mb-2">Orthomoleculaire begeleiding</p>
+            <p className="text-achtergrond/80 text-sm">Gericht op hormonen, leefstijl, voeding en darmgezondheid.</p>
           </div>
-          <div className="bg-wit rounded-2xl p-5 border border-primair/10 reveal">
-            <p className="font-bold text-primair mb-1">Lichaamsgerichte en systemische begeleiding</p>
-            <p className="text-tekst/80">Gericht op zenuwstelsel, (onverwerkte) emoties en onderliggende patronen.</p>
+          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
+            <p className="font-bold text-primair mb-2">Lichaamsgerichte begeleiding</p>
+            <p className="text-tekst/80 text-sm">Gericht op zenuwstelsel, (onverwerkte) emoties en onderliggende patronen.</p>
           </div>
         </div>
-        <p className="text-tekst/80 leading-relaxed mb-10 reveal">
+        <p className="text-tekst/80 leading-relaxed mb-16 reveal">
           Je lichaam is geen los systeem. Stress, oude ervaringen, leefstijl en voeding hebben invloed op je cyclus, je hormonen en je algehele balans. Als jouw zenuwstelsel zich niet veilig en ontspannen voelt, <strong>kunnen je geslachtsorganen minder goed hun werk doen.</strong>
         </p>
 
+        {/* Wat verandert */}
         <h2 className="text-2xl font-bold text-primair mb-6 reveal">Wat er verandert na dit traject</h2>
-        <div className="space-y-4 mb-12">
+        <div className="space-y-4 mb-16">
           {veranderingen.map(v => (
-            <div key={v.titel} className="flex gap-3 reveal">
-              <span className="text-accent text-xl mt-0.5">✦</span>
+            <div key={v.titel} className="bg-wit border border-primair/10 rounded-xl p-5 flex gap-4 reveal">
+              <span className="text-accent text-xl mt-0.5 shrink-0">✦</span>
               <div>
                 <p className="font-semibold text-tekst mb-1">{v.titel}</p>
-                <p className="text-tekst/70 leading-relaxed">{v.tekst}</p>
+                <p className="text-tekst/70 leading-relaxed text-sm">{v.tekst}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Voor wie is dit?</h2>
-        <p className="text-tekst/80 mb-3 reveal">Dit traject is voor jou als je:</p>
-        <ul id="voorWie-lijst" className="mb-12">
-          {voorWie.map(v => (
-            <li key={v} className="flex items-start gap-2 text-tekst/80 mb-2">
-              <span className="text-accent mt-1">✦</span>
-              {v}
-            </li>
-          ))}
-        </ul>
+        {/* Voor wie */}
+        <div className="bg-achtergrond rounded-2xl p-8 mb-12 reveal">
+          <h2 className="text-2xl font-bold text-primair mb-4">Voor wie is dit?</h2>
+          <p className="text-tekst/80 mb-4">Dit traject is voor jou als je:</p>
+          <ul className="space-y-2">
+            {voorWie.map(v => (
+              <li key={v} className="flex items-start gap-3 text-tekst/80">
+                <span className="text-accent mt-1 shrink-0">✦</span>
+                {v}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="bg-achtergrond rounded-2xl p-6 mb-12 reveal">
+        {/* Quote */}
+        <div className="border-l-4 border-accent pl-8 mb-16 reveal">
           <p className="text-tekst/80 leading-relaxed italic">
             Een zwangerschap kun je niet afdwingen, maar je kunt wel <strong>de omstandigheden creëren waarin jouw lichaam tot rust komt, in balans raakt en open kan staan voor nieuw leven.</strong> En precies daar begeleiden we je graag in.
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Investering</h2>
-        <p className="text-primair text-xl font-bold mb-3 reveal">De investering bedraagt €1.347.</p>
-        <p className="text-tekst/70 text-sm leading-relaxed mb-4 reveal">
-          Supplementen en eventuele onderzoeken zijn maatwerk en niet meegerekend in dit bedrag. Voor een deel van het traject is gedeeltelijke vergoeding via de zorgverzekering vaak mogelijk. Betalen in termijnen is mogelijk.
-        </p>
-        <p className="text-tekst/80 font-semibold mb-3 reveal">Wat je krijgt:</p>
-        <ul id="krijgt-lijst" className="mb-12">
-          {watJeKrijgt.map(k => (
-            <li key={k} className="flex items-start gap-2 text-tekst/80 mb-2">
-              <span className="text-accent mt-1">✦</span>
-              {k}
-            </li>
-          ))}
-        </ul>
+        {/* Investering */}
+        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
+          <h2 className="text-2xl font-bold text-primair mb-4">Investering</h2>
+          <p className="text-3xl font-bold text-primair mb-2">€1.347</p>
+          <p className="text-tekst/60 text-sm mb-6">Supplementen en eventuele onderzoeken zijn maatwerk en niet meegerekend. Voor een deel van het traject is gedeeltelijke vergoeding via de zorgverzekering vaak mogelijk. Betalen in termijnen is mogelijk.</p>
+          <p className="font-semibold text-tekst mb-3">Wat je krijgt:</p>
+          <ul className="space-y-2">
+            {watJeKrijgt.map(k => (
+              <li key={k} className="flex items-start gap-3 text-tekst/80">
+                <span className="text-accent mt-1 shrink-0">✦</span>
+                {k}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="bg-achtergrond rounded-2xl p-8 text-center reveal">
-          <h2 className="text-2xl font-bold text-primair mb-3">Wil je meer weten of kennismaken?</h2>
-          <p className="text-tekst/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> We kijken dan samen of het kinderwenstraject aansluit bij jou.</p>
-          <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+        {/* CTA */}
+        <div className="bg-primair rounded-2xl p-8 text-center reveal">
+          <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
+          <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> We kijken dan samen of het kinderwenstraject aansluit bij jou.</p>
+          <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
             Plan een kennismaking →
           </Link>
         </div>
-      </section>
+      </div>
 
-      <ScrollReveal singles={['.reveal']} grids={['#voorWie-lijst', '#krijgt-lijst']} />
+      <ScrollReveal singles={['.reveal']} />
     </>
   );
 }

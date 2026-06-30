@@ -19,9 +19,9 @@ const aanbod = [
     fotoPositie: '70% 15%',
   },
   {
-    titel: 'Zwanger & Kind',
+    titel: 'Zwanger & Baby',
     slug: 'zwanger-en-kind',
-    beschrijving: '[Beschrijving]',
+    beschrijving: 'Of je nu zwanger bent, net bevallen of een pittige start hebt gehad: dit aanbod begeleidt je lichamelijk en emotioneel. Van bewust zwanger zijn tot de eerste weken met je baby.',
     foto: '/fotos/IMG_2748 2.jpg',
     fotoPositie: '50% 10%',
   },

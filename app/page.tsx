@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 const aanbodPreview = [
   { titel: 'Moeder & Kind',                     slug: 'moeder-en-kind',          foto: '/fotos/IMG_6045 2.jpg', positie: '50% 20%' },
   { titel: 'Ambulante begeleiding (100% vergoed)', slug: 'ambulante-begeleiding', foto: '/fotos/IMG_5862 2.jpg', positie: '70% 15%' },
-  { titel: 'Zwanger & Kind',                    slug: 'zwanger-en-kind',         foto: '/fotos/IMG_2748 2.jpg', positie: '50% 10%' },
+  { titel: 'Zwanger & Baby',                    slug: 'zwanger-en-kind',         foto: '/fotos/IMG_2748 2.jpg', positie: '50% 10%' },
   { titel: 'Kinderwens',                         slug: 'kinderwens',             foto: '/fotos/IMG_5836 2.jpg', positie: '50% 10%' },
 ];
 
@@ -20,10 +20,10 @@ export default function HomePage() {
       {/* Hero */}
       <div className="hero-section" style={{ backgroundImage: "url('/fotos/portret.jpg')" }}>
         <div className="hero-overlay">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 max-w-2xl leading-tight text-achtergrond" style={{ fontFamily: 'var(--font-hoofd)' }}>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 max-w-2xl leading-tight text-achtergrond" style={{ fontFamily: 'var(--font-hoofd)' }}>
             Welkom bij Momtrail
           </h1>
-          <p className="hero-subtitle max-w-xl text-xl leading-relaxed mb-2 text-achtergrond/90" style={{ fontFamily: 'var(--font-buydog)' }}>
+          <p className="hero-subtitle max-w-xl text-2xl leading-relaxed mb-2 text-achtergrond/90" style={{ fontFamily: 'var(--font-buydog)' }}>
             Ben je klaar met overleven en het allemaal alleen doen?
           </p>
           <a href="/aanbod" className="hero-btn">
@@ -62,7 +62,7 @@ export default function HomePage() {
           <div className="col-text reveal">
             <h2 className="text-2xl font-bold text-achtergrond mb-4">Over mij</h2>
             <p className="text-achtergrond/80 leading-relaxed mb-4">
-              [Korte introductie over jezelf — wie ben je, wat drijft je?]
+              Ik ben Marleen, moeder van twee dochters en zij zijn de reden waarom ik doe wat ik doe. Het moederschap bracht mij bij mijzelf: een ontregeld zenuwstelsel, een zoektocht naar antwoorden en uiteindelijk een missie. Ik begeleid moeders én kinderen die vastlopen, met methodes die verder gaan dan praten alleen.
             </p>
             <Link href="/over-mij" className="inline-block bg-wit text-primair font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity mt-2">
               Lees meer over mij →

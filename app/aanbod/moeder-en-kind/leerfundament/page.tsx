@@ -27,7 +27,7 @@ export default function LeerfundamentPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <Link href="/aanbod/moeder-en-kind" className="text-accent hover:underline text-sm mb-8 inline-block">← Terug naar Moeder & Kind</Link>
 
-        <h1 className="text-3xl font-bold text-primair mb-2 reveal">Het Leerfundament traject</h1>
+        <h1 className="text-5xl font-bold text-primair mb-2 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Het Leerfundament traject</h1>
         <p className="text-tekst/60 italic text-lg mb-10 reveal">een stevige basis voor leerbegeleiding</p>
 
         <p className="text-tekst/80 leading-relaxed mb-10 reveal">
