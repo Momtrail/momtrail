@@ -1,26 +1,35 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Suspense } from 'react';
 import ContactForm from '@/components/ContactForm';
+import LevenswielIntro from '@/components/LevenswielIntro';
 
 export const metadata: Metadata = { title: 'Contact' };
 
 export default function ContactPage() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-20">
-      <h1 className="text-3xl font-bold text-primair mb-6">Contact</h1>
+      <h1 className="text-3xl font-bold text-primair mb-6">Plan of boek een afspraak</h1>
+
+      {/* Persoonlijke intro als bezoeker vanuit Levenswiel komt */}
+      <Suspense>
+        <LevenswielIntro />
+      </Suspense>
 
       <p className="text-tekst/80 leading-relaxed mb-4">
-        Wil je een (kosteloze) kennismaking plannen en je hulpvraag bespreken? Of wil je een consult boeken? Hieronder vind je mijn digitale agenda.
+        Wil je een kosteloze kennismaking plannen en je hulpvraag bespreken? Of wil je een consult of een somatic yoga les boeken?
+        Hieronder vind je mijn digitale agenda.
       </p>
       <p className="text-tekst/80 leading-relaxed mb-10">
-        Je kunt ook je gegevens invullen op het contactformulier. Dan neem ik binnen twee werkdagen op één van mijn werkdagen daarna contact met je op. Ik kijk ernaar uit om je te ontmoeten!
+        Je kunt ook je gegevens invullen op het contactformulier. Dan neem ik binnen twee werkdagen contact met je op.
+        Ik kijk ernaar uit je te ontmoeten!
       </p>
 
       {/* Calendly inline widget */}
       <div
         className="calendly-inline-widget mb-16 rounded-2xl overflow-hidden"
         data-url="https://calendly.com/momtrail"
-        style={{ minWidth: '320px', height: '500px' }}
+        style={{ minWidth: '320px', height: '700px' }}
       />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
 

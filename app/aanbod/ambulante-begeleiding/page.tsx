@@ -71,7 +71,11 @@ export default function AmbulantePage() {
             Met een PGB kun je zelf kiezen door wie je begeleid wilt worden. Samen kijken we of mijn begeleiding aansluit bij jouw indicatie en hulpvraag. Ik kan ook meedenken in het proces rondom de start van de begeleiding.
           </p>
           <p className="text-tekst/80 leading-relaxed">
-            Wil je meer lezen over PGB begeleiding? Ik ben aangesloten bij <strong>Mentaal Sterk.</strong> Op hun website vind je meer informatie over PGB en ambulante begeleiding.
+            Wil je meer lezen over PGB begeleiding? Ik ben aangesloten bij Mentaal Sterk. Op{' '}
+            <a href="https://mentaalsterk.nu" target="_blank" rel="noopener noreferrer" className="font-semibold text-primair underline underline-offset-2 hover:opacity-75 transition-opacity">
+              onze website
+            </a>{' '}
+            vind je meer informatie over PGB en ambulante begeleiding.
           </p>
         </div>
 

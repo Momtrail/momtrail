@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Levenswiel from '@/components/Levenswiel';
 
 const aanbodPreview = [
   { titel: 'Moeder & Kind',                     slug: 'moeder-en-kind',          foto: '/fotos/IMG_6045 2.jpg', positie: '50% 20%' },
@@ -52,6 +53,31 @@ export default function HomePage() {
           Want jouw momtrail... die hoef je niet alleen te bewandelen.
         </p>
       </section>
+
+      {/* Levenswiel intro */}
+      <section className="bg-wit py-16">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-4 py-1.5 rounded-full mb-6 reveal tracking-widest uppercase">
+            Gratis tool
+          </span>
+          <h2 className="text-3xl font-bold text-primair mb-5 reveal" style={{ fontFamily: 'var(--font-hoofd)' }}>
+            Hoe balanceer jij als mama?
+          </h2>
+          <p className="text-tekst/80 leading-relaxed mb-4 reveal">
+            Het Levenswiel laat in één oogopslag zien hoe je ervoor staat op 8 levensgebieden. Eerlijk,
+            visueel en in twee minuten ingevuld. Helemaal gratis — geen account, geen verplichtingen.
+          </p>
+          <p className="text-tekst/80 leading-relaxed reveal">
+            Vul de schuifjes in en zie meteen jouw patroon. Wil je daarna een{' '}
+            <strong>persoonlijk mini-verslag</strong> met één tip van mij voor jouw aandachtsgebied?
+            Laat dan je e-mailadres achter — ik stuur je iets nuttigs, geen spam.
+          </p>
+          <p className="text-accent text-3xl mt-8 reveal select-none">↓</p>
+        </div>
+      </section>
+
+      {/* Levenswiel */}
+      <Levenswiel />
 
       {/* Over mij preview */}
       <section className="bg-primair py-20">
