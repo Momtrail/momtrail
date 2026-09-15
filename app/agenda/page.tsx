@@ -17,25 +17,10 @@ export default function AgendaPage() {
         {/* Evenementen */}
         <div className="space-y-6 mb-20">
           <div className="bg-wit rounded-2xl p-8 border border-primair/10 shadow-sm reveal">
-            <p className="text-accent font-semibold text-sm mb-1">Zaterdag 22 augustus, 9.30 - 10.15u</p>
-            <h2 className="text-xl font-bold text-primair mb-2">Somatic Yoga les</h2>
-            <p className="text-tekst/70 leading-relaxed mb-4">Een zachte les waarbij je leert luisteren naar je lijf en spanning los te laten vanuit binnenuit.</p>
-            <Link href="/contact" className="font-bold text-accent hover:underline">
-              Aanmelden →
-            </Link>
-          </div>
-          <div className="bg-wit rounded-2xl p-8 border border-primair/10 shadow-sm reveal">
-            <p className="text-accent font-semibold text-sm mb-1">Zaterdag 5 september, 9.30 - 10.15u</p>
-            <h2 className="text-xl font-bold text-primair mb-2">Somatic Yoga les</h2>
-            <p className="text-tekst/70 leading-relaxed mb-4">Een zachte les waarbij je leert luisteren naar je lijf en spanning los te laten vanuit binnenuit.</p>
-            <Link href="/contact" className="font-bold text-accent hover:underline">
-              Aanmelden →
-            </Link>
-          </div>
-          <div className="bg-wit rounded-2xl p-8 border border-primair/10 shadow-sm reveal">
-            <p className="text-accent font-semibold text-sm mb-1">Zaterdag 19 september, 9.30 - 10.15u</p>
-            <h2 className="text-xl font-bold text-primair mb-2">Somatic Yoga les</h2>
-            <p className="text-tekst/70 leading-relaxed mb-4">Een zachte les waarbij je leert luisteren naar je lijf en spanning los te laten vanuit binnenuit.</p>
+            <p className="text-accent font-semibold text-sm mb-1">Zaterdag 19 september, 10.00 - 12.30u</p>
+            <h2 className="text-xl font-bold text-primair mb-2">Cursus Biotensor</h2>
+            <p className="text-tekst/70 leading-relaxed mb-1">Praktisch leren werken met een biotensor om jezelf en je gezin te kunnen ondersteunen.</p>
+            <p className="text-tekst/50 text-sm mb-4">Centrum de Korenbloem, Boven Leeuwen</p>
             <Link href="/contact" className="font-bold text-accent hover:underline">
               Aanmelden →
             </Link>

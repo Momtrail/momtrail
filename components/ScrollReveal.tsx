@@ -36,7 +36,7 @@ export default function ScrollReveal({ singles = [], grids = [] }: Props) {
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, .reveal-right').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, [singles, grids]);
 

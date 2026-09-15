@@ -38,7 +38,7 @@ export default function KinderwensPage() {
       {/* Hero blok */}
       <div className="bg-primair py-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <Link href="/aanbod" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar aanbod</Link>
+          <Link href="/aanbod/zwanger-en-kinderwens" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar Zwanger &amp; Kinderwens</Link>
           <h1 className="text-5xl font-bold text-achtergrond mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>Kinderwenstraject</h1>
           <p className="text-achtergrond/80 text-xl italic">Health and Happiness × Momtrail</p>
         </div>

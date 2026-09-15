@@ -22,7 +22,7 @@ export default function ZwangerEnKindPage() {
     <>
       <div className="bg-primair py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <Link href="/aanbod" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar aanbod</Link>
+          <Link href="/aanbod/zwanger-en-kinderwens" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar Zwanger &amp; Kinderwens</Link>
           <h1 className="text-4xl font-bold text-achtergrond mb-3">Zwanger & Baby</h1>
           <p className="text-achtergrond/80 text-xl italic">Bewust en verbonden de zwangerschap in</p>
         </div>

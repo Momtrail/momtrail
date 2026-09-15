@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import Levenswiel from '@/components/Levenswiel';
 
 const aanbodPreview = [
-  { titel: 'Moeder & Kind',                     slug: 'moeder-en-kind',          foto: '/fotos/IMG_6045 2.jpg', positie: '50% 20%' },
-  { titel: 'Ambulante begeleiding (100% vergoed)', slug: 'ambulante-begeleiding', foto: '/fotos/IMG_5862 2.jpg', positie: '70% 15%' },
-  { titel: 'Zwanger & Baby',                    slug: 'zwanger-en-kind',         foto: '/fotos/IMG_2748 2.jpg', positie: '50% 10%' },
-  { titel: 'Kinderwens',                         slug: 'kinderwens',             foto: '/fotos/IMG_5836 2.jpg', positie: '50% 10%' },
+  { titel: 'Moeder',                foto: '/fotos/IMG_6045 2.jpg', positie: '50% 20%', href: '/aanbod/moeder' },
+  { titel: 'Kind',                  foto: '/fotos/IMG_5904 2.jpg', positie: '50% 20%', href: '/aanbod/kind' },
+  { titel: 'PGB / Ambulant',        foto: '/fotos/IMG_5862 2.jpg', positie: '70% 15%', href: '/aanbod/ambulante-begeleiding' },
+  { titel: 'Zwanger & Kinderwens',  foto: '/fotos/IMG_2748 2.jpg', positie: '50% 10%', href: '/aanbod/zwanger-en-kinderwens' },
 ];
 
 const reviews = [
@@ -54,31 +53,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Levenswiel intro */}
-      <section className="bg-wit py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-4 py-1.5 rounded-full mb-6 reveal tracking-widest uppercase">
-            Gratis tool
-          </span>
-          <h2 className="text-3xl font-bold text-primair mb-5 reveal" style={{ fontFamily: 'var(--font-hoofd)' }}>
-            Hoe balanceer jij als mama?
-          </h2>
-          <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-            Het Levenswiel laat in één oogopslag zien hoe je ervoor staat op 8 levensgebieden. Eerlijk,
-            visueel en in twee minuten ingevuld. Helemaal gratis — geen account, geen verplichtingen.
-          </p>
-          <p className="text-tekst/80 leading-relaxed reveal">
-            Vul de schuifjes in en zie meteen jouw patroon. Wil je daarna een{' '}
-            <strong>persoonlijk mini-verslag</strong> met één tip van mij voor jouw aandachtsgebied?
-            Laat dan je e-mailadres achter — ik stuur je iets nuttigs, geen spam.
-          </p>
-          <p className="text-accent text-3xl mt-8 reveal select-none">↓</p>
-        </div>
-      </section>
-
-      {/* Levenswiel */}
-      <Levenswiel />
-
       {/* Over mij preview */}
       <section className="bg-primair py-20">
         <div className="two-col max-w-5xl mx-auto px-6">
@@ -103,7 +77,7 @@ export default function HomePage() {
         <p className="text-tekst/60 italic text-center mb-10 reveal">Waar kan ik je mee helpen?</p>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {aanbodPreview.map(item => (
-            <Link key={item.slug} href={`/aanbod/${item.slug}`}
+            <Link key={item.href} href={item.href}
               className="bg-wit rounded-2xl shadow-sm border border-primair/10 overflow-hidden hover:shadow-md transition-shadow reveal flex flex-col">
               <img src={item.foto} alt={item.titel} className="w-full h-32 object-cover" style={{ objectPosition: item.positie }} />
               <p className="font-bold text-primair text-sm p-4 text-center">{item.titel}</p>
@@ -125,8 +99,13 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-3">
             {reviews.map(r => (
               <div key={r.naam} className="bg-wit rounded-2xl p-6 border border-primair/10 reveal flex flex-col">
-                <p className="text-tekst/80 leading-relaxed italic flex-1 mb-4">&ldquo;{r.tekst}&rdquo;</p>
-                <p className="font-bold text-primair">{r.naam}</p>
+                <p className="text-tekst/80 leading-relaxed italic flex-1 mb-6">&ldquo;{r.tekst}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primair text-wit flex items-center justify-center font-bold text-sm shrink-0">
+                    {r.naam.charAt(0)}
+                  </div>
+                  <p className="font-bold text-primair">{r.naam}</p>
+                </div>
               </div>
             ))}
           </div>

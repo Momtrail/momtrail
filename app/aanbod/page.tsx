@@ -5,31 +5,31 @@ export const metadata: Metadata = { title: 'Aanbod' };
 
 const aanbod = [
   {
-    titel: 'Moeder & Kind',
-    slug: 'moeder-en-kind',
-    beschrijving: 'Voor moeders die merken dat ze aan het overleven zijn én voor kinderen die vastlopen. We kijken verder dan de klacht, naar wat er écht speelt in het lijf en in het zenuwstelsel.',
+    titel: 'Moeder',
+    slug: 'moeder',
+    beschrijving: 'Voor de moeder die merkt dat ze aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en echt aanwezig te zijn.',
     foto: '/fotos/IMG_6045 2.jpg',
     fotoPositie: '50% 20%',
   },
   {
-    titel: 'Ambulante begeleiding (100% vergoed)',
+    titel: 'Kind',
+    slug: 'kind',
+    beschrijving: 'Voor kinderen die vastlopen, overprikkeld zijn of gewoon steviger in hun schoenen mogen staan. We kijken verder dan het gedrag, naar wat er écht speelt.',
+    foto: '/fotos/IMG_5904 2.jpg',
+    fotoPositie: '50% 20%',
+  },
+  {
+    titel: 'PGB / Ambulant',
     slug: 'ambulante-begeleiding',
     beschrijving: 'Loop je vast in het dagelijks leven? Met ambulante begeleiding ondersteun ik je thuis of in je eigen omgeving. Volledig gefinancierd via PGB (Wmo), voor inwoners van de regio Maas en Waal en de Betuwe.',
     foto: '/fotos/IMG_5862 2.jpg',
     fotoPositie: '70% 15%',
   },
   {
-    titel: 'Zwanger & Baby',
-    slug: 'zwanger-en-kind',
-    beschrijving: 'Of je nu zwanger bent, net bevallen of een pittige start hebt gehad: dit aanbod begeleidt je lichamelijk en emotioneel. Van bewust zwanger zijn tot de eerste weken met je baby.',
+    titel: 'Zwanger & Kinderwens',
+    slug: 'zwanger-en-kinderwens',
+    beschrijving: 'Of je nu zwanger bent, net bevallen bent of al een tijdje probeert zwanger te worden: dit aanbod begeleidt je lichamelijk en emotioneel in één van de meest ingrijpende periodes van je leven.',
     foto: '/fotos/IMG_2748 2.jpg',
-    fotoPositie: '50% 10%',
-  },
-  {
-    titel: 'Kinderwens',
-    slug: 'kinderwens',
-    beschrijving: 'Jullie verlangen naar een kindje, maar het lukt maar niet. In samenwerking met Health & Happiness begeleiden we je op alle lagen: van hormonen en voeding tot zenuwstelsel en onverwerkte emoties.',
-    foto: '/fotos/IMG_5836 2.jpg',
     fotoPositie: '50% 10%',
   },
 ];
