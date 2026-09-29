@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het Levenswiel voor Moeders die Vastlopen | Momtrail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#EFE6D8;
+    --sand-deep:#E2D3BB;
+    --terracotta:#C97B5E;
+    --terracotta-dark:#A85D42;
+    --sage:#8A9B7D;
+    --sage-deep:#6E7F62;
+    --blush:#E8B4B8;
+    --ink:#3A322C;
+    --ink-soft:#6B6156;
+    --paper:#FBF7F1;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'DM Sans', sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px 100px;}
+  header{
+    text-align:center;
+    padding:64px 24px 40px;
+    background:linear-gradient(180deg, var(--sand-deep) 0%, var(--sand) 100%);
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--terracotta-dark);
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:44px;
+    line-height:1.15;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  h1 em{font-style:italic;color:var(--terracotta-dark);}
+  .intro{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:0 auto;
+  }
+  section{padding:48px 0;}
+  h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:30px;
+    margin:0 0 14px;
+    color:var(--ink);
+  }
+  .lead{color:var(--ink-soft);font-size:16px;margin-bottom:32px;}
+  .card{
+    background:var(--paper);
+    border-radius:18px;
+    padding:36px 32px;
+    box-shadow:0 8px 30px rgba(58,50,44,0.06);
+  }
+  .wheel-layout{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+    align-items:center;
+  }
+  #wheelCanvas{
+    max-width:100%;
+    height:auto;
+  }
+  .sliders{width:100%;}
+  .slider-row{
+    margin-bottom:22px;
+  }
+  .slider-row label{
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:6px;
+    color:var(--ink);
+  }
+  .slider-row .score{
+    color:var(--terracotta-dark);
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px;
+    font-weight:600;
+  }
+  input[type=range]{
+    -webkit-appearance:none;
+    width:100%;
+    height:6px;
+    border-radius:3px;
+    background:var(--sand-deep);
+    outline:none;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:22px;height:22px;
+    border-radius:50%;
+    background:var(--terracotta);
+    border:3px solid var(--paper);
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:22px;height:22px;
+    border-radius:50%;
+    background:var(--terracotta);
+    border:3px solid var(--paper);
+    cursor:pointer;
+  }
+  .result-box{
+    margin-top:8px;
+    text-align:center;
+    padding:22px;
+    border-radius:14px;
+    background:var(--sand-deep);
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    font-style:italic;
+    color:var(--ink);
+  }
+  .result-box strong{
+    font-family:'DM Sans', sans-serif;
+    font-style:normal;
+    font-weight:700;
+    color:var(--terracotta-dark);
+  }
+  .reflect{
+    background:var(--paper);
+    border-radius:18px;
+    padding:36px 32px;
+  }
+  .reflect .q{
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  .reflect textarea{
+    width:100%;
+    min-height:64px;
+    border:1px solid var(--sand-deep);
+    border-radius:10px;
+    background:var(--sand);
+    padding:12px 14px;
+    font-family:'DM Sans', sans-serif;
+    font-size:15px;
+    color:var(--ink);
+    resize:vertical;
+    margin-bottom:26px;
+  }
+  .reflect textarea:focus{outline:2px solid var(--terracotta);}
+  .cta-section{
+    background:var(--terracotta);
+    color:#fff;
+    border-radius:22px;
+    padding:48px 36px;
+    text-align:center;
+  }
+  .cta-section h2{color:#fff;}
+  .cta-section p{
+    font-size:16px;
+    max-width:520px;
+    margin:0 auto 28px;
+    color:rgba(255,255,255,0.92);
+  }
+  .cta-btn{
+    display:inline-block;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    padding:16px 36px;
+    border-radius:40px;
+    font-weight:700;
+    font-size:16px;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .cta-btn:hover{background:var(--sage-deep);transform:translateY(-2px);}
+  .cta-note{
+    margin-top:18px;
+    font-size:13px;
+    color:rgba(255,255,255,0.75);
+  }
+  footer{
+    text-align:center;
+    padding:40px 24px 20px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .divider{
+    width:60px;height:2px;background:var(--terracotta);
+    margin:0 auto 24px;
+    border-radius:2px;
+  }
+  @media (min-width:700px){
+    .wheel-layout{flex-direction:row;align-items:flex-start;}
+    #wheelCanvas{flex:0 0 340px;}
+    .sliders{flex:1;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Momtrail · gratis weggever</div>
+  <h1>Het Levenswiel voor moeders<br>die <em>vastlopen</em> in het moederschap</h1>
+  <p class="intro">Acht gebieden. Eén eerlijk cijfer per gebied. En misschien, heel eventjes, het moment dat je denkt: <em>"shit… dat is best laag."</em> Dat moment is precies waar we willen zijn.</p>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>Waarom een levenswiel?</h2>
+    <p class="lead">Als moeder ben je gewend om over jezelf heen te stappen. Je hoofd zegt "het gaat wel", terwijl je lijf allang iets anders aangeeft. Dit wiel maakt in één oogopslag zichtbaar waar je écht staat — niet wat je ervan vindt dat je zou moeten voelen, maar hoe het nu voelt. Wees eerlijk. Er is geen goed of fout cijfer.</p>
+  </section>
+
+  <section>
+    <div class="card">
+      <div class="wheel-layout">
+        <canvas id="wheelCanvas" width="340" height="340"></canvas>
+        <div class="sliders" id="sliders"></div>
+      </div>
+      <div class="result-box" id="resultBox">Schuif de balkjes en kijk wat je wiel je vertelt.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="reflect">
+      <h2>Even landen</h2>
+      <p class="lead">Geen goed of fout antwoord. Schrijf gewoon op wat er opkomt.</p>
+      <p class="q">1. Welk gebied verraste je het meest — in positieve of negatieve zin?</p>
+      <textarea placeholder="..."></textarea>
+      <p class="q">2. Als je lijf zou mogen praten in plaats van je hoofd, wat zou het zeggen over dit wiel?</p>
+      <textarea placeholder="..."></textarea>
+      <p class="q">3. Wat zou er al veranderen als dit laagste gebied één punt hoger stond?</p>
+      <textarea placeholder="..."></textarea>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-section">
+      <h2>Wat je hoofd niet ziet, ziet je lijf wél</h2>
+      <p>Je kunt dit wiel invullen met je verstand — en toch iets missen. Je onderbewuste houdt namelijk spanning, overtuigingen en oude patronen vast die je bewust niet meer opmerkt. Met de biotensor test brengen we tijdens een gratis kennismaking in kaart wat er onder de oppervlakte speelt, zodat je niet alleen weet dát je vastloopt, maar ook waaróm.</p>
+      <a href="#" class="cta-btn">Plan je gratis kennismaking</a>
+      <div class="cta-note">30 minuten · vrijblijvend · online of bij Momtrail</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="divider"></div>
+  Momtrail — lichaamsgerichte coaching &amp; NEI-therapie voor moeders<br>
+  Maas en Waal &amp; Betuwe
+</footer>
+
+<script>
+const gebieden = [
+  {label:"Energie & rust", key:"energie"},
+  {label:"Verbinding met jezelf", key:"zelf"},
+  {label:"Verbinding met je kind(eren)", key:"kind"},
+  {label:"Partner & relatie", key:"partner"},
+  {label:"Werk / identiteit", key:"werk"},
+  {label:"Sociale steun", key:"sociaal"},
+  {label:"Lichaam & gezondheid", key:"lichaam"},
+  {label:"Gevoel van grip & overzicht", key:"grip"}
+];
+
+const values = {};
+gebieden.forEach(g => values[g.key] = 5);
+
+const slidersEl = document.getElementById('sliders');
+gebieden.forEach(g => {
+  const row = document.createElement('div');
+  row.className = 'slider-row';
+  row.innerHTML = `
+    <label>${g.label} <span class="score" id="score-${g.key}">5</span></label>
+    <input type="range" min="1" max="10" value="5" id="slider-${g.key}">
+  `;
+  slidersEl.appendChild(row);
+});
+
+gebieden.forEach(g => {
+  const slider = document.getElementById(`slider-${g.key}`);
+  const scoreLabel = document.getElementById(`score-${g.key}`);
+  slider.addEventListener('input', () => {
+    values[g.key] = parseInt(slider.value, 10);
+    scoreLabel.textContent = slider.value;
+    drawWheel();
+    updateResult();
+  });
+});
+
+const canvas = document.getElementById('wheelCanvas');
+const ctx = canvas.getContext('2d');
+const center = 170;
+const maxRadius = 130;
+
+function drawWheel(){
+  ctx.clearRect(0,0,340,340);
+  const n = gebieden.length;
+  const angleStep = (Math.PI * 2) / n;
+
+  // rings
+  ctx.strokeStyle = '#E2D3BB';
+  ctx.lineWidth = 1;
+  for(let r=1; r<=5; r++){
+    ctx.beginPath();
+    for(let i=0;i<=n;i++){
+      const a = -Math.PI/2 + i*angleStep;
+      const rad = (maxRadius/5)*r;
+      const x = center + Math.cos(a)*rad;
+      const y = center + Math.sin(a)*rad;
+      if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+  }
+
+  // spokes
+  gebieden.forEach((g,i) => {
+    const a = -Math.PI/2 + i*angleStep;
+    const x = center + Math.cos(a)*maxRadius;
+    const y = center + Math.sin(a)*maxRadius;
+    ctx.beginPath();
+    ctx.moveTo(center, center);
+    ctx.lineTo(x,y);
+    ctx.strokeStyle = '#E2D3BB';
+    ctx.stroke();
+  });
+
+  // data shape
+  ctx.beginPath();
+  gebieden.forEach((g,i) => {
+    const a = -Math.PI/2 + i*angleStep;
+    const rad = (maxRadius/10) * values[g.key];
+    const x = center + Math.cos(a)*rad;
+    const y = center + Math.sin(a)*rad;
+    if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(201,123,94,0.35)';
+  ctx.fill();
+  ctx.strokeStyle = '#A85D42';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  // dots
+  gebieden.forEach((g,i) => {
+    const a = -Math.PI/2 + i*angleStep;
+    const rad = (maxRadius/10) * values[g.key];
+    const x = center + Math.cos(a)*rad;
+    const y = center + Math.sin(a)*rad;
+    ctx.beginPath();
+    ctx.arc(x,y,4,0,Math.PI*2);
+    ctx.fillStyle = '#A85D42';
+    ctx.fill();
+  });
+}
+
+function updateResult(){
+  const scores = Object.values(values);
+  const avg = (scores.reduce((a,b)=>a+b,0) / scores.length).toFixed(1);
+  const lowest = gebieden.reduce((min,g)=> values[g.key] < values[min.key] ? g : min, gebieden[0]);
+  const box = document.getElementById('resultBox');
+  let msg;
+  if(avg < 5){
+    msg = `Gemiddeld: <strong>${avg}</strong> — dat mag best schrikken. Je laagste gebied is <strong>${lowest.label}</strong>.`;
+  } else if(avg < 7){
+    msg = `Gemiddeld: <strong>${avg}</strong>. Je houdt het staande, maar <strong>${lowest.label}</strong> vraagt aandacht.`;
+  } else {
+    msg = `Gemiddeld: <strong>${avg}</strong>. Je staat er relatief stevig voor — hou <strong>${lowest.label}</strong> toch in de gaten.`;
+  }
+  box.innerHTML = msg;
+}
+
+drawWheel();
+updateResult();
+</script>
+
+</body>
+</html>

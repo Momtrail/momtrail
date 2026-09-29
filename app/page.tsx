@@ -3,10 +3,10 @@ import ScrollReveal from '@/components/ScrollReveal';
 import PijnpuntenSlider from '@/components/PijnpuntenSlider';
 
 const trailStops = [
-  { nr: '01', label: 'De start', tekst: 'Je wordt moeder. Het mooiste en soms zwaarste avontuur begint.' },
-  { nr: '02', label: 'Het hobbelige pad', tekst: 'Uitgeput, vol twijfels. Maar je blijft doorgaan.' },
-  { nr: '03', label: 'Vastlopen', tekst: 'Jij of je kind. Het signaal dat er iets anders moet.' },
-  { nr: '04', label: 'Rocking your momtrail!', tekst: 'Plezier in het moederschap en al jouw rollen daaromheen.' },
+  { nr: '01', label: 'De start', tekst: 'Je wordt moeder. Het mooiste en soms meest confronterende avontuur begint.' },
+  { nr: '02', label: 'Het hobbelige pad', tekst: 'Je voelt je uitgeput en vol twijfels, maar je blijft doorgaan.' },
+  { nr: '03', label: 'Vastlopen', tekst: 'Je bent je kompas kwijt, van jezelf of van je kind. Dit is het punt waarop jij écht om hulp mag vragen.' },
+  { nr: '04', label: 'Rocking your momtrail!', tekst: 'Je voelt weer plezier in het moederschap en jouw leven.' },
 ];
 
 const aanbodPreview = [
@@ -245,7 +245,13 @@ export default function HomePage() {
           <div className="col-text reveal">
             <h2 className="text-2xl font-bold text-achtergrond mb-4">Over mij</h2>
             <p className="text-achtergrond/80 leading-relaxed mb-4">
-              Ik ben Marleen, moeder van twee dochters en zij zijn de reden waarom ik doe wat ik doe. Het moederschap bracht mij bij mijzelf: een ontregeld zenuwstelsel, een zoektocht naar antwoorden en uiteindelijk een missie. Ik begeleid moeders én kinderen die vastlopen, met methodes die verder gaan dan praten alleen.
+              Ik ben Marleen, moeder van twee dochters en zij zijn precies de reden waarom ik doe wat ik doe. Het moederschap bracht mij bij mijzelf: een ontregeld zenuwstelsel, een zoektocht naar antwoorden en uiteindelijk een missie. Ik begeleid moeders én kinderen die vastlopen, met methodes die verder gaan dan praten alleen.
+            </p>
+            <p className="text-achtergrond/80 leading-relaxed mb-4">
+              Met meer dan 16 jaar ervaring in coaching en begeleiding begeleid ik moeders die vastlopen, met of zonder hun kind erbij. Van chronische vermoeidheid en stress tot moeite met grenzen stellen, identiteitsverlies en vastgelopen patronen in het moederschap. Maar ook moeders die merken dat het gedrag van hun kind een spiegel is voor wat er thuis of in henzelf speelt.
+            </p>
+            <p className="text-achtergrond/80 leading-relaxed mb-5">
+              Ik werk lichaamsgericht: niet alleen praten over wat er speelt, maar ook voelen wat er in je lijf leeft. Afhankelijk van wat jij of je kind nodig heeft, zet ik verschillende methoden in, zoals zenuwstelselregulatie, somatisch werk, systemisch werk, EFT, geboortepsychologie en NEI.
             </p>
             <Link href="/over-mij" className="inline-block bg-wit text-primair font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity mt-2">
               Lees meer over mij →

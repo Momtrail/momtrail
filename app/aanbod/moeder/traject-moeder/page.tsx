@@ -55,8 +55,9 @@ export default function TrajectMoederPage() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-primair py-16 px-6">
-        <div className="max-w-3xl mx-auto">
+      <div className="bg-primair py-16 px-6 relative overflow-hidden">
+        <Kompas className="absolute -right-16 -top-16 w-96 h-96 text-achtergrond/10 pointer-events-none" />
+        <div className="max-w-3xl mx-auto relative">
           <Link href="/aanbod/moeder" className="text-achtergrond/70 hover:text-achtergrond text-sm mb-6 inline-block">← Terug naar Moeder</Link>
           <h1 className="text-5xl font-bold text-achtergrond mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>Momtrail traject</h1>
           <p className="text-achtergrond/80 text-xl italic">voor de moeder die voelt: ik wil weer de energie voelen die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten</p>
