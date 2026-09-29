@@ -16,10 +16,10 @@ export default function StickyWeggever() {
       >
         <div className="flex-1 min-w-0">
           <p className="text-achtergrond font-bold text-base leading-snug" style={{ fontFamily: 'var(--font-buydog)' }}>
-            Wie neemt het over?
+            Wie neemt het stuur over?
           </p>
           <p className="text-achtergrond/70 text-sm leading-snug mt-0.5">
-            Ontdek welk deel van jou vooropstaat en welke delen zijn weggesnoeid.
+            Ontdek welk stemmetje in jouw hoofd de leiding heeft.
           </p>
         </div>
         <Link

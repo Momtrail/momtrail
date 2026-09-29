@@ -26,6 +26,7 @@ const weggevers = [
     cta: 'Ja, ik wil luisteren →',
     href: '/contact',
     intern: false,
+    binnenkort: true,
   },
   {
     tag: 'Voor moeders',
@@ -35,6 +36,7 @@ const weggevers = [
     cta: 'Ja, ik wil dit →',
     href: '/contact',
     intern: false,
+    binnenkort: true,
   },
 ];
 
@@ -71,7 +73,11 @@ export default function GratisPage() {
                 </h2>
                 <p className="text-tekst/75 leading-relaxed text-sm">{w.omschrijving}</p>
               </div>
-              {w.intern ? (
+              {w.binnenkort ? (
+                <span className="shrink-0 bg-accent/30 text-primair font-bold px-6 py-3 rounded-full text-sm whitespace-nowrap text-center italic">
+                  Binnenkort online
+                </span>
+              ) : w.intern ? (
                 <a
                   href={w.href}
                   className="shrink-0 bg-primair text-achtergrond font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm whitespace-nowrap text-center"
