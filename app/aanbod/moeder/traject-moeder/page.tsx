@@ -164,7 +164,7 @@ export default function TrajectMoederPage() {
                 <div key={s.nr} className="bg-wit rounded-2xl p-5 flex gap-4 reveal">
                   <span className="text-4xl font-bold text-primair/15 shrink-0 leading-none -mt-1" style={{ fontFamily: 'var(--font-buydog)' }}>{s.nr}</span>
                   <div>
-                    <p className="font-bold text-primair">{s.titel} <span className="font-normal text-tekst/50 text-sm">{s.sub}</span></p>
+                    <p className="font-bold text-primair">{s.titel} <span className="text-primair/30 mx-1">·</span> <span className="font-normal text-tekst/50 text-sm">{s.sub}</span></p>
                     <p className="text-tekst/70 text-sm leading-relaxed mt-1 mb-2">{s.tekst}</p>
                     <p className="text-primair/50 text-xs italic">{s.tag}</p>
                   </div>
@@ -198,48 +198,52 @@ export default function TrajectMoederPage() {
 
       {/* Investering */}
       <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-wit border border-primair/20 rounded-2xl p-8 reveal">
-            <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
-            <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
-            <ul className="space-y-3 mb-8">
-              {inclusief.map(i => (
-                <li key={i} className="flex items-start gap-3 text-tekst/80">
-                  <Kompas />
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <div className="border-t border-primair/10 pt-6">
-              <p className="text-4xl font-bold text-primair mb-4">€417</p>
-              <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
-              <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            {/* Foto */}
+            <div className="flex justify-center md:w-80 shrink-0 reveal">
+              <div className="relative w-64 md:w-72">
+                <div
+                  className="absolute inset-0 bg-accent/40 -z-10"
+                  style={{
+                    borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
+                    transform: 'translate(10px, 10px) scale(1.04)',
+                  }}
+                />
+                <img
+                  src="/fotos/IMG_6078 2.jpg"
+                  alt="Marleen"
+                  className="w-full object-cover aspect-[3/4]"
+                  style={{
+                    borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
+                    objectPosition: 'center 40%',
+                  }}
+                />
+              </div>
+            </div>
+            {/* Investering */}
+            <div className="flex-1 reveal">
+              <div className="bg-wit border border-primair/20 rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
+                <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
+                <ul className="space-y-3 mb-8">
+                  {inclusief.map(i => (
+                    <li key={i} className="flex items-start gap-3 text-tekst/80">
+                      <Kompas />
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-primair/10 pt-6">
+                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
+                  <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
+                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Foto */}
-      <div className="py-16 flex justify-center px-6">
-        <div className="relative w-72 md:w-96">
-          <div
-            className="absolute inset-0 bg-accent/40 -z-10"
-            style={{
-              borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
-              transform: 'translate(10px, 10px) scale(1.04)',
-            }}
-          />
-          <img
-            src="/fotos/IMG_6078 2.jpg"
-            alt="Marleen"
-            className="w-full object-cover aspect-[3/4]"
-            style={{
-              borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
-              objectPosition: 'center 40%',
-            }}
-          />
-        </div>
-      </div>
 
       {/* Reviews - full width */}
       <section className="bg-achtergrond py-20 px-6">
