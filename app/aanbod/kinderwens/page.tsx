@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Kinderwenstraject' };
 
@@ -72,13 +73,28 @@ export default function KinderwensPage() {
         <p className="text-tekst/80 leading-relaxed mb-16 reveal">
           Je lichaam is geen los systeem. Stress, oude ervaringen, leefstijl en voeding hebben invloed op je cyclus, je hormonen en je algehele balans. Als jouw zenuwstelsel zich niet veilig en ontspannen voelt, <strong>kunnen je geslachtsorganen minder goed hun werk doen.</strong>
         </p>
+      </div>
 
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5836 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 30%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;hope is the quiet voice that says: keep going, you&apos;re closer than you think.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Wat verandert */}
         <h2 className="text-2xl font-bold text-primair mb-6 reveal">Wat er verandert na dit traject</h2>
         <div className="space-y-4 mb-16">
           {veranderingen.map(v => (
             <div key={v.titel} className="bg-wit border border-primair/10 rounded-xl p-5 flex gap-4 reveal">
-              <span className="text-accent text-xl mt-0.5 shrink-0">✦</span>
+              <Kompas className="text-accent mt-0.5 shrink-0" />
               <div>
                 <p className="font-semibold text-tekst mb-1">{v.titel}</p>
                 <p className="text-tekst/70 leading-relaxed text-sm">{v.tekst}</p>
@@ -94,7 +110,7 @@ export default function KinderwensPage() {
           <ul className="space-y-2">
             {voorWie.map(v => (
               <li key={v} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {v}
               </li>
             ))}
@@ -117,7 +133,7 @@ export default function KinderwensPage() {
           <ul className="space-y-2">
             {watJeKrijgt.map(k => (
               <li key={k} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {k}
               </li>
             ))}

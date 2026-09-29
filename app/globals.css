@@ -75,9 +75,19 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .reveal-right { opacity: 1; transform: none; transition: none; }
+  .reveal-left { opacity: 1; transform: none; transition: none; }
   .hero-btn { animation: none; }
 }
 

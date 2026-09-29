@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Momtrail traject' };
 
@@ -74,7 +75,7 @@ export default function TrajectMoederPage() {
           <ul className="space-y-2">
             {klachten.map(k => (
               <li key={k} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {k}
               </li>
             ))}
@@ -97,7 +98,22 @@ export default function TrajectMoederPage() {
             Het hoeft niet nóg perfecter. Jij mag weer lichtheid en plezier gaan voelen in het moederschap.
           </p>
         </div>
+      </div>
 
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5925 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 40%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;sometimes you just need to pause, reset and rise again.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Wat we doen */}
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Het Momtrail traject</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
@@ -107,7 +123,7 @@ export default function TrajectMoederPage() {
           <ul className="space-y-3">
             {dieptepunten.map(d => (
               <li key={d} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {d}
               </li>
             ))}
@@ -119,7 +135,7 @@ export default function TrajectMoederPage() {
         <div className="space-y-3 mb-6">
           {opbrengsten.map(o => (
             <div key={o} className="bg-wit border border-primair/10 rounded-xl p-4 flex items-start gap-3 reveal">
-              <span className="text-accent mt-1 shrink-0">✦</span>
+              <Kompas />
               <p className="text-tekst/80 leading-relaxed">{o}</p>
             </div>
           ))}
@@ -135,7 +151,7 @@ export default function TrajectMoederPage() {
           <ul className="space-y-2 mb-6">
             {inclusief.map(i => (
               <li key={i} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {i}
               </li>
             ))}

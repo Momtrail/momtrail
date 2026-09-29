@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/over-mij', label: 'Over mij'      },
   { href: '/aanbod',   label: 'Aanbod'        },
   { href: '/agenda',   label: 'Agenda & events' },
+  { href: '/blog',     label: 'Blog'           },
   { href: '/contact',  label: 'Contact'        },
 ];
 
@@ -34,9 +35,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link href="/gratis"
+            className="bg-wit text-primair font-bold px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
+            Gratis →
+          </Link>
           {KENNIS_SHOP_URL && (
             <a href={KENNIS_SHOP_URL} target="_blank" rel="noopener noreferrer"
-              className="bg-wit text-primair px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
+              className="bg-wit/20 text-wit px-4 py-2 rounded-full hover:opacity-90 transition-opacity">
               Mijn cursussen
             </a>
           )}
@@ -62,9 +67,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link href="/gratis"
+            className="bg-wit text-primair font-bold px-4 py-3 rounded-full hover:opacity-90 transition-opacity text-center tracking-wide"
+            onClick={() => setOpen(false)}>
+            GRATIS →
+          </Link>
           {KENNIS_SHOP_URL && (
             <a href={KENNIS_SHOP_URL} target="_blank" rel="noopener noreferrer"
-              className="bg-primair text-wit px-4 py-3 rounded-full hover:opacity-90 transition-opacity text-center"
+              className="bg-wit/20 text-wit px-4 py-3 rounded-full hover:opacity-90 transition-opacity text-center"
               onClick={() => setOpen(false)}>
               Mijn cursussen
             </a>

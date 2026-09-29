@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'New Mom, New Baby' };
 
@@ -8,13 +9,6 @@ const voorWie = [
   "Baby's die veel huilen, onrustig zijn of moeilijk tot rust komen",
   'Moeders die zich overweldigd voelen, gespannen zijn of twijfelen aan zichzelf',
   'Ouders die voelen: dit is niet hoe we het voor ons zagen',
-];
-
-const werkwijze = [
-  'Zenuwstelselregulatie',
-  'Geboorteverwerking en de invloed van zwangerschap en geboorte',
-  'Lichaamsgerichte interventies en/of NEI therapie',
-  'Ruimte voor jouw verhaal',
 ];
 
 export default function NewMomNewBabyPage() {
@@ -30,7 +24,6 @@ export default function NewMomNewBabyPage() {
 
       <div className="max-w-3xl mx-auto px-6 py-16">
 
-        {/* Intro */}
         <div className="bg-achtergrond rounded-2xl p-8 mb-12 reveal">
           <p className="text-tekst/80 leading-relaxed mb-4">
             Jullie zijn (opnieuw) ouders geworden van een lief, klein babytje. Maar de roze wolk blijft helaas uit. Bijvoorbeeld omdat je babytje veel huilt of omdat jij zelf niet lekker in je vel zit...
@@ -43,74 +36,66 @@ export default function NewMomNewBabyPage() {
           </p>
         </div>
 
-        {/* Voor wie */}
         <div className="bg-primair rounded-2xl p-8 mb-16 reveal">
-          <h2 className="text-2xl font-bold text-achtergrond mb-4">Dit traject van 2 maanden is er voor:</h2>
+          <h2 className="text-2xl font-bold text-achtergrond mb-4">Dit is er voor:</h2>
           <ul className="space-y-3">
             {voorWie.map(item => (
               <li key={item} className="flex items-start gap-3 text-achtergrond/90">
-                <span className="text-achtergrond/60 mt-1 shrink-0">✦</span>
+                <Kompas className="text-achtergrond/60 mt-1 shrink-0" />
                 {item}
               </li>
             ))}
           </ul>
         </div>
+      </div>
 
-        {/* Werkwijze */}
-        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Hoe we werken</h2>
-        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          We kijken naar jullie als systeem en werken binnen dit traject met:
-        </p>
-        <div className="border-l-4 border-accent pl-8 mb-6 reveal">
-          <ul className="space-y-3">
-            {werkwijze.map(item => (
-              <li key={item} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="text-tekst/80 leading-relaxed mb-16 reveal">
-          Zodat er weer meer rust en vertrouwen komt in jullie gezin. En wie weet komt er steeds wat meer ruimte om samen ook te gaan genieten...
-        </p>
-
-        {/* Sessies */}
-        <h2 className="text-2xl font-bold text-primair mb-6 reveal">Zo ziet het traject eruit</h2>
-        <div className="space-y-4 mb-16">
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">Kennismaking</h3>
-            <p className="text-tekst/80 leading-relaxed mb-2">
-              Tijdens een kosteloze kennismaking bespreken we hoe jullie start was en wat jullie hulpvraag is.
-            </p>
-            <p className="text-tekst/80 leading-relaxed">
-              Daarna stuur ik je een vragenlijst over de zwangerschap en geboorte.
-            </p>
-          </div>
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">De sessies</h3>
-            <p className="text-tekst/80 leading-relaxed">
-              In drie sessies besteden we aandacht aan jullie ervaringen uit de zwangerschap, geboorte en daarna. We kijken waar onrust en spanning vandaan komen en ik blijf twee maanden als vast gezicht betrokken in jullie zoektocht. Samen zoeken we uit wat jij of jullie kindje nodig heeft om ongemak te verlichten en emoties te verwerken.
-            </p>
-          </div>
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">Whatsappbegeleiding</h3>
-            <p className="text-tekst/80 leading-relaxed">
-              Je hebt de mogelijkheid tot onbeperkt Whatsappcontact. Zo heb je altijd een hulplijn dichtbij als jouw hoofd overloopt.
-            </p>
-          </div>
-        </div>
-
-        {/* Investering */}
-        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
-          <h2 className="text-2xl font-bold text-primair mb-4">De investering</h2>
-          <p className="text-tekst/80 leading-relaxed mb-4">
-            Dit traject is inclusief kennismaking/intake, overzicht van geboortepatronen, posters met informatie, drie sessies van 60-75 min (online, in de praktijk of bij je thuis in een straal van max. 20 km vanaf Boven Leeuwen) en Whatsappbegeleiding gedurende twee maanden.
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5843 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 35%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;you are exactly the mother your baby needs.&rdquo;
           </p>
-          <p className="text-3xl font-bold text-primair mb-2">€419</p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Wat we samen aanpakken</h2>
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          We kijken naar jou als moeder en naar jullie als systeem. We gaan aan de slag met de invloed van zwangerschap en geboorte op jou en je baby, en bouwen samen aan meer rust, vertrouwen en verbinding.
+        </p>
+        <p className="text-tekst/80 leading-relaxed mb-16 reveal">
+          Via zenuwstelselregulatie, lichaamsgerichte technieken en ruimte voor jouw verhaal zoeken we uit wat jij of jullie kindje nodig heeft om spanning te verlichten en de draad weer op te pakken. Zodat er ruimte komt om samen ook te gaan genieten.
+        </p>
+
+        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-8 reveal">
+          <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
+          <ul className="space-y-3 mb-8">
+            {[
+              'Kosteloze kennismaking/intake',
+              '3 individuele sessies van 75 minuten, in mijn praktijkruimte of online',
+              'Whatsapp-begeleiding tussendoor voor een check-in na een sessie en bij vragen',
+              '2 telefonische contactmomenten tussen de sessies door voor afstemming, vragen en ondersteuning',
+              'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
+              'Vanaf september: 6 maanden toegang tot de online leeromgeving',
+              'Toegang tot de Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
+              'Een persoonlijk cadeau bij de start',
+            ].map(i => (
+              <li key={i} className="flex items-start gap-3 text-tekst/80">
+                <Kompas />
+                {i}
+              </li>
+            ))}
+          </ul>
+          <div className="border-t border-primair/10 pt-6">
+            <p className="text-4xl font-bold text-primair mb-2">€417</p>
+            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
+          </div>
         </div>
 
-        {/* CTA */}
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
           <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong></p>

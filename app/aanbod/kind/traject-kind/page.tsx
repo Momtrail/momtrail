@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
+import StickyPodcast from '@/components/StickyPodcast';
 
 export const metadata: Metadata = { title: 'Littletrail traject' };
 
@@ -51,7 +53,22 @@ export default function TrajectKindPage() {
             Hoe zou het voor jullie zijn als er weer rust is voor je kind én jou? Stel je voor: je ziet een vrolijker, vrijer kind en er is minder spanning in huis. Je kind kan beter met emoties omgaan of die (fysieke) klacht is eindelijk over. En jij hebt als ouder weer het gevoel dat alles onder controle is. Dat is mogelijk als we samen aan de slag gaan met de <strong className="text-achtergrond">échte boodschap achter het gedrag of de klacht.</strong>
           </p>
         </div>
+      </div>
 
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5904 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 20%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;children are not problems to be fixed. they are people to be heard.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Voor wie is dit traject?</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
           Dit traject is voor jullie als je merkt dat je kind vastloopt, maar je weet niet precies waarom. Praten of strenger zijn werkt niet. Je voelt dat het geen lastig gedrag is, maar dat er een boodschap achter gedrag zit. Of je hebt het gevoel dat het lijf of de klacht van je kind je iets vertelt.
@@ -62,35 +79,48 @@ export default function TrajectKindPage() {
           <ul className="space-y-2">
             {klachten.map(k => (
               <li key={k} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {k}
               </li>
             ))}
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold text-primair mb-6 reveal">Zo ziet het traject eruit</h2>
-        <div className="space-y-4 mb-16">
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">Kennismaking & intake</h3>
-            <p className="text-tekst/80 leading-relaxed">
-              Telefonisch of via Google Meet. We brengen samen jullie hulpvraag in kaart en bekijken of het traject passend is. <strong>Dit gesprek is kosteloos.</strong> Wil je starten? Dan ontvang je de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte die je (tenminste) drie dagen voor de eerste sessie terugstuurt.
-            </p>
-          </div>
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">Tijdens de sessies</h3>
-            <p className="text-tekst/80 leading-relaxed">
-              In twee sessies gaan we dieper in op welke invloed de zwangerschap en geboorte heeft op je kind. Afhankelijk van de klacht gebruiken we verschillende methodes, zoals <strong>NEI, EFT of zenuwstelselregulatie-technieken.</strong> In sommige gevallen doen we een sessie gericht op één van de ouders of het gezin als daar belangrijke aanknopingspunten liggen.
-            </p>
-          </div>
-          <div className="bg-wit border border-primair/10 rounded-2xl p-6 reveal">
-            <h3 className="font-bold text-primair mb-2">Begeleiding tussendoor</h3>
-            <p className="text-tekst/80 leading-relaxed">
-              Er is Whatsapp-begeleiding tussen de sessies in. Het kan zijn dat jullie gerichte oefeningen krijgen om samen te doen. Na ongeveer één à twee weken na de tweede sessie hebben we contact om te evalueren en het traject af te ronden.
-            </p>
+      </div>
+
+      {/* Zo ziet het traject eruit - rode sectie */}
+      <section className="bg-primair pb-20">
+        <div className="w-full overflow-hidden leading-none">
+          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
+            <path fill="#fae8e1" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />
+          </svg>
+        </div>
+        <div className="max-w-3xl mx-auto px-6 pt-10">
+          <h2 className="text-2xl font-bold text-achtergrond mb-8 reveal">Zo ziet het traject eruit</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
+              <h3 className="font-bold text-achtergrond mb-2">Kennismaking & intake</h3>
+              <p className="text-achtergrond/80 leading-relaxed">
+                Telefonisch of via Google Meet. We brengen samen jullie hulpvraag in kaart en bekijken of het traject passend is. <strong className="text-achtergrond">Dit gesprek is kosteloos.</strong> Wil je starten? Dan ontvang je de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte die je (tenminste) drie dagen voor de eerste sessie terugstuurt.
+              </p>
+            </div>
+            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
+              <h3 className="font-bold text-achtergrond mb-2">Tijdens de sessies</h3>
+              <p className="text-achtergrond/80 leading-relaxed">
+                In twee sessies gaan we dieper in op welke invloed de zwangerschap en geboorte heeft op je kind. Afhankelijk van de klacht gebruiken we verschillende methodes, zoals <strong className="text-achtergrond">NEI, EFT of zenuwstelselregulatie-technieken.</strong> In sommige gevallen doen we een sessie gericht op één van de ouders of het gezin als daar belangrijke aanknopingspunten liggen.
+              </p>
+            </div>
+            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
+              <h3 className="font-bold text-achtergrond mb-2">Begeleiding tussendoor</h3>
+              <p className="text-achtergrond/80 leading-relaxed">
+                Er is Whatsapp-begeleiding tussen de sessies in. Het kan zijn dat jullie gerichte oefeningen krijgen om samen te doen. Na ongeveer één à twee weken na de tweede sessie hebben we contact om te evalueren en het traject af te ronden.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
           <h2 className="text-2xl font-bold text-primair mb-4">De investering</h2>
           <p className="text-tekst/80 leading-relaxed mb-4">
@@ -109,6 +139,7 @@ export default function TrajectKindPage() {
       </div>
 
       <ScrollReveal singles={['.reveal']} />
+      <StickyPodcast />
     </>
   );
 }

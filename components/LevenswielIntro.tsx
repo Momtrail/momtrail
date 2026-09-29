@@ -33,7 +33,7 @@ export default function LevenswielIntro() {
         Je aandachtsgebied is <strong>{laagsteLabel}</strong>.
       </p>
       <p className="text-tekst/70 text-sm leading-relaxed">
-        Tijdens de kennismaking check ik samen met jou wat je onderbewuste als score geeft voor dit gebied —
+        Tijdens de kennismaking check ik samen met jou wat je onderbewuste als score geeft voor dit gebied:
         en waar de echte sleutel zit. Kies hieronder een moment dat jou uitkomt.
       </p>
     </div>

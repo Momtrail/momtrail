@@ -165,9 +165,7 @@ export default function Levenswiel() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16">
       <h2 className="text-2xl font-bold text-primair mb-2 text-center reveal">Het Levenswiel</h2>
-      <p className="text-tekst/60 italic text-center mb-10 reveal">
-        Acht gebieden. Eén eerlijk cijfer per gebied.
-      </p>
+
 
       <div className="bg-wit rounded-2xl shadow-sm border border-primair/10 p-6 md:p-9 reveal">
         <div className="flex flex-col md:flex-row gap-9 items-center md:items-start">

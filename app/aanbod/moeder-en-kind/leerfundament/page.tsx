@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Het Leerfundament traject' };
 
@@ -49,12 +50,28 @@ export default function LeerfundamentPage() {
         <ul id="watWeDoen-lijst" className="mb-4">
           {watWeDoen.map(w => (
             <li key={w} className="flex items-start gap-2 text-tekst/80 mb-2">
-              <span className="text-accent mt-1">✦</span>
+              <Kompas className="text-accent mt-1" />
               {w}
             </li>
           ))}
         </ul>
         <p className="text-tekst/80 font-semibold mb-10 reveal">We bouwen aan rust, veiligheid en vertrouwen.</p>
+      </section>
+
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5868 2.JPG')", backgroundSize: 'cover', backgroundPosition: 'center 35%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;when a child feels safe inside, the whole world opens up.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <section className="max-w-3xl mx-auto px-6 py-20">
 
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Voor wie is dit traject?</h2>
         <p className="text-tekst/80 leading-relaxed mb-3 reveal">
@@ -63,7 +80,7 @@ export default function LeerfundamentPage() {
         <ul id="voorWie-lijst" className="mb-10">
           {waarVoorWie.map(w => (
             <li key={w} className="flex items-start gap-2 text-tekst/80 mb-2">
-              <span className="text-accent mt-1">✦</span>
+              <Kompas className="text-accent mt-1" />
               {w}
             </li>
           ))}

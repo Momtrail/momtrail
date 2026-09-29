@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Ambulante begeleiding (PGB)' };
 
@@ -46,14 +47,29 @@ export default function AmbulantePage() {
         <p className="text-tekst/80 leading-relaxed mb-16 reveal">
           Vanuit mijn achtergrond in social work en de GGZ combineer ik praktische begeleiding met inzicht in hoe stress, emoties en het zenuwstelsel werken. Zo draagt de begeleiding bij aan meer zelfinzicht en veerkracht.
         </p>
+      </div>
 
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_6059 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 40%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;you don&apos;t have to have it all figured out. you just need to take the next step.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Hulp bij */}
         <div className="border-l-4 border-accent pl-8 mb-16 reveal">
           <h2 className="text-2xl font-bold text-primair mb-4">Waarbij kan begeleiding helpen?</h2>
           <ul className="space-y-3">
             {hulpBij.map(h => (
               <li key={h} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {h}
               </li>
             ))}

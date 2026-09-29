@@ -3,19 +3,19 @@ import { Resend } from 'resend';
 
 const gebiedTips: Record<string, string> = {
   energie:
-    'Jouw energie is je fundament. Plan elke dag één bewust herstelmoment in — ook al duurt het maar 10 minuten zonder telefoon en zonder to-do lijst. Energie bijvullen is geen luxe, het is onderhoud.',
+    'Jouw energie is je fundament. Plan elke dag één bewust herstelmoment in, ook al duurt het maar 10 minuten zonder telefoon en zonder to-do lijst. Energie bijvullen is geen luxe, het is onderhoud.',
   zelf:
-    'Begin iedere ochtend met één vraag: "Hoe voel ik me nu écht?" Luister niet naar je hoofd, maar naar je lijf. Je hoeft er niets mee te doen — alleen maar merken. Dat is al het begin van verbinding met jezelf.',
+    'Begin iedere ochtend met één vraag: "Hoe voel ik me nu écht?" Luister niet naar je hoofd, maar naar je lijf. Je hoeft er niets mee te doen, alleen maar merken. Dat is al het begin van verbinding met jezelf.',
   kind:
-    'Verbinding met je kind gaat niet over hoeveelheid tijd, maar over aanwezigheid. Eén moment per dag van écht contact — oogcontact, samen lachen, even stilzitten — doet meer dan een volle dag naast elkaar zijn.',
+    'Verbinding met je kind gaat niet over hoeveelheid tijd, maar over aanwezigheid. Eén moment per dag van écht contact: oogcontact, samen lachen, even stilzitten. Dat doet meer dan een volle dag naast elkaar zijn.',
   partner:
     'Relaties zijn spiegels. Wat je in je partner irriteert, vertelt je vaak iets over wat je van jezelf nodig hebt. Begin niet met het gesprek dat je wilt hebben, maar met de vraag: wat heb ik nodig?',
   werk:
-    'Wie ben jij als je niet "mama" bent? Je identiteit is groter dan je rol. Geef haar ook ruimte — al is het maar één klein ding per week dat puur voor jou is, buiten het moederschap.',
+    'Wie ben jij als je niet "mama" bent? Je identiteit is groter dan je rol. Geef haar ook ruimte, al is het maar één klein ding per week dat puur voor jou is, buiten het moederschap.',
   sociaal:
     'Hulp vragen is geen zwakte, het is wijsheid. Welke één persoon in jouw omgeving zou je deze week iets kunnen vragen, hoe klein ook? Echte verbinding begint bij durven ontvangen.',
   lichaam:
-    'Je lijf houdt alles bij wat je hoofd allang vergeten is. De signalen die je voelt zijn er niet voor niets — ze zijn er al langer dan je denkt. Eén keer per dag even inchecken bij je lijf is genoeg om te beginnen.',
+    'Je lijf houdt alles bij wat je hoofd allang vergeten is. De signalen die je voelt zijn er niet voor niets, ze zijn er al langer dan je denkt. Eén keer per dag even inchecken bij je lijf is genoeg om te beginnen.',
   grip:
     'Grip begint niet met méér doen, maar met minder willen controleren. Wat kun je vandaag loslaten zonder dat het écht iets kost? Overzicht komt als je stopt met alles tegelijk vast te houden.',
 };
@@ -118,7 +118,7 @@ function buildEmailHtml(
   </div>
   <div style="padding:36px 40px;">
     <p style="margin:0 0 20px;color:#76473a;font-size:15px;line-height:1.7;">Hé lieve mama,</p>
-    <p style="margin:0 0 20px;color:#76473a;font-size:15px;line-height:1.7;">Je hebt het Levenswiel ingevuld — dat is al een daad van eerlijkheid tegenover jezelf. Hier zijn jouw scores:</p>
+    <p style="margin:0 0 20px;color:#76473a;font-size:15px;line-height:1.7;">Je hebt het Levenswiel ingevuld. Dat is al een daad van eerlijkheid tegenover jezelf. Hier zijn jouw scores:</p>
     <div style="background:#fae8e1;border-radius:12px;padding:20px 24px;margin-bottom:28px;">
       <table style="width:100%;border-collapse:collapse;">${scoreRijen}</table>
       <p style="margin:16px 0 0;font-size:14px;color:#76473a;">Gemiddelde score: <strong>${avg} / 10</strong></p>
@@ -126,7 +126,7 @@ function buildEmailHtml(
     <div style="border-left:4px solid #c16052;padding:16px 20px;margin-bottom:28px;background:#fff8f6;border-radius:0 12px 12px 0;">
       <p style="margin:0 0 8px;font-size:12px;color:#c16052;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Mijn tip voor ${lowestLabel}</p>
       <p style="margin:0;color:#76473a;font-size:15px;line-height:1.75;font-style:italic;">"${tip}"</p>
-      <p style="margin:12px 0 0;font-size:13px;color:#76473a;">— Marleen, Momtrail</p>
+      <p style="margin:12px 0 0;font-size:13px;color:#76473a;">Marleen, Momtrail</p>
     </div>
     <p style="margin:0 0 28px;color:#76473a;font-size:15px;line-height:1.7;">Wil je samen kijken wat er <em>écht</em> onder de oppervlakte speelt? Een kennismaking is altijd gratis en vrijblijvend.</p>
     <div style="text-align:center;margin-bottom:28px;">

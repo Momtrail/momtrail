@@ -3,13 +3,14 @@ import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StickyKennismaking from '@/components/StickyKennismaking';
 
 export const metadata: Metadata = {
   title: {
-    default: '[Jouw naam] · [Jouw tagline]',
-    template: '%s · [Jouw naam]',
+    default: 'Momtrail · Begeleiding voor moeders en kinderen',
+    template: '%s · Momtrail',
   },
-  description: '[Korte beschrijving van wat je doet en voor wie]',
+  description: 'Momtrail begeleidt moeders en kinderen met lichaamsgerichte therapie. Voor meer rust, verbinding en plezier in het moederschap.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <StickyKennismaking />
 
         {/* ── Google Analytics ─────────────────────────────────────
             1. Maak een account op analytics.google.com

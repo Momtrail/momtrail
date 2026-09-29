@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Somatic Yoga' };
 
@@ -56,13 +57,28 @@ export default function SomaticYogaPage() {
           <ul className="space-y-3">
             {herken.map(h => (
               <li key={h} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {h}
               </li>
             ))}
           </ul>
         </div>
+      </div>
 
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5911 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 35%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;your body is not a problem to be solved. it is a home to return to.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold text-primair mb-6 reveal">De drie lagen van Somatic Yoga</h2>
         <div className="space-y-4 mb-16">
           {lagen.map((l, i) => (
@@ -75,10 +91,8 @@ export default function SomaticYogaPage() {
 
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Klaar om terug te landen in jezelf?</h2>
-          <p className="text-achtergrond/80 mb-2">Tot 1 juli boek je een les voor de <strong className="text-achtergrond">pilotprijs van €10 per les.</strong></p>
-          <p className="text-achtergrond/60 text-sm mb-6">Daarna gelden reguliere tarieven.</p>
-          <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-            Boek een les →
+          <Link href="/agenda" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity mt-2">
+            Bekijk de agenda →
           </Link>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Hartbewust Kids cursus' };
 
@@ -41,26 +42,109 @@ export default function HartbewustKidsPage() {
         </p>
 
         <div className="border-l-4 border-accent pl-8 mb-8 reveal">
-          <p className="font-semibold text-tekst mb-4">We werken met een mix van:</p>
+          <p className="font-semibold text-tekst mb-4">Na de cursus merk je dat je kind:</p>
           <ul className="space-y-2">
-            {methodes.map(m => (
-              <li key={m} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
-                {m}
-              </li>
-            ))}
+            <li className="flex items-start gap-3 text-tekst/80"><Kompas />Weerbaarder is geworden</li>
+            <li className="flex items-start gap-3 text-tekst/80"><Kompas />Beter voor zichzelf kan opkomen</li>
+            <li className="flex items-start gap-3 text-tekst/80"><Kompas />Beter om kan gaan met drukte of spanning, niet omdat het rustiger wordt, maar omdat zij zelf de tools hebben</li>
           </ul>
         </div>
-        <p className="text-tekst/80 leading-relaxed mb-12 reveal">
+        <p className="text-tekst/80 leading-relaxed mb-8 reveal">
           Doordat de groep klein blijft, is er volop ruimte voor persoonlijke aandacht: elk kind krijgt precies de begeleiding die het nodig heeft.
         </p>
 
         <div className="bg-primair rounded-2xl p-8 mb-12 reveal">
-          <p className="text-achtergrond/90 leading-relaxed italic">
-            Na de cursus merk je dat je kind weerbaarder is geworden, beter voor zichzelf kan opkomen en beter om kan gaan met drukte of spanning. Niet omdat het thuis of op school rustiger wordt, maar omdat zij zelf de tools hebben gekregen om daarmee om te gaan.
+          <p className="font-semibold text-achtergrond mb-6">We werken met een mix van:</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+
+            {/* Kinderyoga */}
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-wit flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-primair">
+                  <circle cx="20" cy="8" r="3.5"/>
+                  <path d="M20 12v7"/>
+                  <path d="M20 19 Q14 22 10 26"/>
+                  <path d="M20 19 Q26 22 30 26"/>
+                  <path d="M10 26 Q8 31 13 31 Q17 31 20 27"/>
+                  <path d="M30 26 Q32 31 27 31 Q23 31 20 27"/>
+                </svg>
+              </div>
+              <span className="text-achtergrond/90 text-sm font-medium leading-snug">Kinderyoga</span>
+            </div>
+
+            {/* Ademhaling */}
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-wit flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="w-8 h-8 text-primair">
+                  <path d="M4 15 Q10 9 16 15 Q22 21 28 15 Q34 9 40 15"/>
+                  <path d="M4 23 Q10 17 16 23 Q22 29 28 23 Q34 17 40 23"/>
+                  <path d="M10 31 Q16 27 20 31 Q24 35 30 31"/>
+                </svg>
+              </div>
+              <span className="text-achtergrond/90 text-sm font-medium leading-snug">Ademhaling</span>
+            </div>
+
+            {/* Creatief */}
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-wit flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-primair">
+                  <path d="M20 5 L22.5 13H31L24.5 18L27 26L20 21L13 26L15.5 18L9 13H17.5Z"/>
+                  <path d="M20 21v9"/>
+                  <path d="M16 34h8"/>
+                </svg>
+              </div>
+              <span className="text-achtergrond/90 text-sm font-medium leading-snug">Creatieve opdrachten & spel</span>
+            </div>
+
+            {/* Somatisch */}
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-wit flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-primair">
+                  <path d="M20 35 Q20 22 20 18"/>
+                  <path d="M20 26 Q13 20 12 12 Q20 11 20 22"/>
+                  <path d="M20 22 Q27 16 28 8 Q20 7 20 18"/>
+                  <path d="M16 35 Q18 33 20 35 Q22 33 24 35"/>
+                </svg>
+              </div>
+              <span className="text-achtergrond/90 text-sm font-medium leading-snug">Somatische oefeningen</span>
+            </div>
+
+            {/* Mindfulness */}
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-wit flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-primair">
+                  <circle cx="20" cy="20" r="4"/>
+                  <path d="M20 6 Q23 13 20 16"/>
+                  <path d="M20 24 Q17 27 20 34"/>
+                  <path d="M6 20 Q13 17 16 20"/>
+                  <path d="M24 20 Q27 23 34 20"/>
+                  <path d="M10 10 Q15 15 16 18"/>
+                  <path d="M24 22 Q25 25 30 30"/>
+                  <path d="M30 10 Q25 15 24 18"/>
+                  <path d="M16 22 Q15 25 10 30"/>
+                </svg>
+              </div>
+              <span className="text-achtergrond/90 text-sm font-medium leading-snug">Mindfulness</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_6045 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 20%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;every child has something beautiful to give the world. sometimes they just need the right space to bloom.&rdquo;
           </p>
         </div>
+      </div>
 
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Is deze cursus iets voor jouw kind?</h2>
         <p className="text-tekst/80 leading-relaxed mb-4 reveal">
           HartBewust Kids is bedoeld voor kinderen van 6 tot en met 12 jaar.
@@ -72,64 +156,63 @@ export default function HartbewustKidsPage() {
           In beide gevallen geldt: hoe eerder een kind leert vertrouwen op zichzelf, hoe steviger die basis voor de rest van zijn of haar leven.
         </p>
 
-        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Jij als ouder doet ook mee: het OuderKracht programma</h2>
-        <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-          Verandering bij je kind gebeurt niet alleen in de les zelf, maar vooral ook thuis. Daarom sta je er bij HartBewust Kids niet alleen voor.
-        </p>
-        <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-          Na elke les ontvang je als ouder informatie en oefeningen, zodat je precies weet waar je kind mee bezig is en hoe je daarop kunt aansluiten. Daarnaast krijg je automatisch toegang tot het <strong>OuderKrachtprogramma</strong>: een online programma vol kennis, praktische oefeningen en tools om het effect van de lessen ook thuis te verstevigen. Met als extra optie een live dag, waarop je samen met andere ouders ervaringen, inzichten en technieken uitwisselt.
-        </p>
-        <p className="text-tekst/80 leading-relaxed mb-12 reveal">
-          Onderzoek bevestigt wat wij al langer zien in de praktijk: de betrokkenheid van ouders maakt het verschil tussen een leuke cursus en een blijvende verandering. Jij bent daarin geen toeschouwer, maar een belangrijke schakel.
-        </p>
+      </div>
 
-        <h2 className="text-2xl font-bold text-primair mb-6 reveal">Praktische informatie</h2>
-        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-12 reveal">
-          <dl className="space-y-4">
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Startdatum</dt>
-              <dd className="text-tekst/80">Dinsdag 22 september 2026 (10 wekelijkse lessen, geen les in de herfstvakantie)</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Tijd</dt>
-              <dd className="text-tekst/80">16:00 – 16:45 uur</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Locatie</dt>
-              <dd className="text-tekst/80">Centrum de Korenbloem, Korenbloemstraat 75, Boven Leeuwen</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Groepsgrootte</dt>
-              <dd className="text-tekst/80">Maximaal 5 kinderen</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Leeftijd</dt>
-              <dd className="text-tekst/80">6 tot en met 12 jaar</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Inbegrepen</dt>
-              <dd className="text-tekst/80">10 lessen HartBewust Kids + het volledige OuderKracht programma</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-4">
-              <dt className="font-semibold text-primair sm:w-40 shrink-0">Investering</dt>
-              <dd className="text-tekst/80 font-bold text-2xl text-primair">€ 444,–<span className="text-base font-normal text-tekst/70 ml-2">(betalen in termijnen is mogelijk)</span></dd>
-            </div>
-          </dl>
+      {/* OuderKracht - rode sectie */}
+      <section className="bg-primair pb-20">
+        <div className="w-full overflow-hidden leading-none">
+          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
+            <path fill="#fae8e1" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />
+          </svg>
         </div>
+        <div className="max-w-3xl mx-auto px-6 pt-10">
+          <h2 className="text-2xl font-bold text-achtergrond mb-6 reveal">Jij als ouder doet ook mee: het OuderKracht programma</h2>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1 space-y-4">
+              <p className="text-achtergrond/80 leading-relaxed reveal">
+                Verandering bij je kind gebeurt niet alleen in de les zelf, maar vooral ook thuis. Daarom sta je er bij HartBewust Kids niet alleen voor.
+              </p>
+              <p className="text-achtergrond/80 leading-relaxed reveal">
+                Na elke les ontvang je als ouder informatie en oefeningen, zodat je precies weet waar je kind mee bezig is en hoe je daarop kunt aansluiten. Daarnaast krijg je automatisch toegang tot het <strong className="text-achtergrond">OuderKrachtprogramma</strong>: een online programma vol kennis, praktische oefeningen en tools om het effect van de lessen ook thuis te verstevigen. Met als extra optie een live dag, waarop je samen met andere ouders ervaringen, inzichten en technieken uitwisselt.
+              </p>
+              <p className="text-achtergrond/80 leading-relaxed reveal">
+                Onderzoek bevestigt wat wij al langer zien in de praktijk: de betrokkenheid van ouders maakt het verschil tussen een leuke cursus en een blijvende verandering. Jij bent daarin geen toeschouwer, maar een belangrijke schakel.
+              </p>
+            </div>
+            <div className="md:w-52 shrink-0 reveal">
+              <div className="relative">
+                <div
+                  className="absolute inset-0 bg-wit/20 -z-10"
+                  style={{
+                    borderRadius: '58% 42% 62% 38% / 45% 55% 45% 55%',
+                    transform: 'translate(6px, 6px) scale(1.04)',
+                  }}
+                />
+                <img
+                  src="/fotos/jordan-whitt-KQCXf_zvdaU-unsplash.jpg"
+                  alt="Ouder en kind"
+                  className="w-full object-cover aspect-[3/4]"
+                  style={{
+                    borderRadius: '58% 42% 62% 38% / 45% 55% 45% 55%',
+                    objectPosition: 'center 20%',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
-          <h2 className="text-2xl font-bold text-achtergrond mb-3">Geef je kind weer de ruimte om te stralen</h2>
-          <p className="text-achtergrond/80 mb-4 leading-relaxed">
-            Twijfel je? Op 22 september kan je kind een <strong className="text-achtergrond">proefles</strong> doen (kosten: € 20,–, wordt verrekend als je besluit mee te doen).
-          </p>
+          <h2 className="text-2xl font-bold text-achtergrond mb-3">Zet je op de wachtlijst</h2>
           <p className="text-achtergrond/80 mb-6 leading-relaxed">
-            Plekken zijn beperkt tot 5 kinderen per groep, zodat ieder kind écht gezien wordt. Wacht niet tot het "vanzelf overgaat" — meld je kind vandaag nog aan.
+            Bij voldoende aanmeldingen start er een nieuwe groep. Laat je gegevens achter en ik neem contact op zodra er een nieuwe groep van start gaat.
           </p>
           <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-            Meld je kind aan →
+            Zet me op de wachtlijst →
           </Link>
         </div>
-
       </div>
 
       <ScrollReveal singles={['.reveal']} />

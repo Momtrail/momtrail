@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Hartbewust Kids cursus' };
 
@@ -49,7 +50,7 @@ export default function HartbewustKidsPage() {
           <ul className="space-y-2">
             {methodes.map(m => (
               <li key={m} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {m}
               </li>
             ))}
@@ -59,6 +60,22 @@ export default function HartbewustKidsPage() {
           Doordat de groep klein blijft, is er volop ruimte voor persoonlijke aandacht: elk kind krijgt precies de begeleiding die het nodig heeft.
         </p>
 
+      </div>
+
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_6045 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 20%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;every child has something beautiful to give the world. sometimes they just need the right space to bloom.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Resultaat */}
         <div className="bg-primair rounded-2xl p-8 mb-12 reveal">
           <p className="text-achtergrond/90 leading-relaxed italic">
@@ -132,7 +149,7 @@ export default function HartbewustKidsPage() {
             Twijfel je? Op 22 september kan je kind een <strong className="text-achtergrond">proefles</strong> doen (kosten: € 20,–, wordt verrekend als je besluit mee te doen).
           </p>
           <p className="text-achtergrond/80 mb-6 leading-relaxed">
-            Plekken zijn beperkt tot 5 kinderen per groep, zodat ieder kind écht gezien wordt. Wacht niet tot het "vanzelf overgaat" — meld je kind vandaag nog aan.
+            Plekken zijn beperkt tot 5 kinderen per groep, zodat ieder kind écht gezien wordt. Wacht niet tot het "vanzelf overgaat". Meld je kind vandaag nog aan.
           </p>
           <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
             Meld je kind aan →

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Littletrail traject' };
 
@@ -56,6 +57,22 @@ export default function TrajectKindPage() {
           </p>
         </div>
 
+      </div>
+
+      {/* Quote foto */}
+      <div
+        className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
+        style={{ backgroundImage: "url('/fotos/IMG_5904 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 20%' }}
+      >
+        <div className="absolute inset-0 bg-primair/65" />
+        <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
+          <p className="text-achtergrond text-2xl md:text-3xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
+            &ldquo;children are not problems to be fixed. they are people to be heard.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Voor wie */}
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Voor wie is dit traject?</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
@@ -67,7 +84,7 @@ export default function TrajectKindPage() {
           <ul className="space-y-2">
             {klachten.map(k => (
               <li key={k} className="flex items-start gap-3 text-tekst/80">
-                <span className="text-accent mt-1 shrink-0">✦</span>
+                <Kompas />
                 {k}
               </li>
             ))}
