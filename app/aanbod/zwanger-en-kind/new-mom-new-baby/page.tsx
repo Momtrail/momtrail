@@ -52,7 +52,7 @@ export default function NewMomNewBabyPage() {
       {/* Quote foto */}
       <div
         className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
-        style={{ backgroundImage: "url('/fotos/IMG_5843 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 35%' }}
+        style={{ backgroundImage: "url('/fotos/IMG_9909.JPG')", backgroundSize: 'cover', backgroundPosition: 'center 25%' }}
       >
         <div className="absolute inset-0 bg-primair/65" />
         <div className="relative text-center px-6 max-w-2xl mx-auto reveal">

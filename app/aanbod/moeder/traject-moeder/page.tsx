@@ -92,7 +92,7 @@ export default function TrajectMoederPage() {
       {/* Quote foto */}
       <div
         className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
-        style={{ backgroundImage: "url('/fotos/IMG_5930 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 40%' }}
+        style={{ backgroundImage: "url('/fotos/Foto Atelier Contrast-66.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 80%' }}
       >
         <div className="absolute inset-0 bg-primair/65" />
         <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
@@ -196,22 +196,67 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
+      {/* Foto slider - drieluik */}
+      <div className="overflow-hidden py-12">
+        <div className="flex gap-4 marquee-track" style={{ width: 'max-content' }}>
+          {[
+            'IMG_6936.jpg',
+            'IMG_6938.jpg',
+            'IMG_6939.jpg',
+            'IMG_6936.jpg',
+            'IMG_6938.jpg',
+            'IMG_6939.jpg',
+          ].map((foto, i) => (
+            <img
+              key={i}
+              src={`/fotos/${foto}`}
+              alt=""
+              className="h-80 w-auto object-cover rounded-xl shrink-0"
+            />
+          ))}
+        </div>
+      </div>
+
       {/* Investering */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-10 items-center">
-            {/* Foto */}
-            <div className="flex justify-center md:w-80 shrink-0 reveal">
-              <div className="relative w-64 md:w-72">
+          <div className="relative reveal">
+            {/* Witte card */}
+            <div className="bg-wit border border-primair/20 rounded-2xl p-8 md:pl-12">
+              <div className="md:flex md:gap-10 items-start">
+                {/* Links: lijst */}
+                <div className="flex-1 mb-8 md:mb-0 md:pl-48">
+                  <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
+                  <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
+                  <ul className="space-y-3 mb-8">
+                    {inclusief.map(i => (
+                      <li key={i} className="flex items-start gap-3 text-tekst/80">
+                        <Kompas />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Rechts: prijs */}
+                <div className="md:w-64 shrink-0 border-t md:border-t-0 md:border-l border-primair/10 pt-6 md:pt-0 md:pl-8">
+                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
+                  <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
+                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
+                </div>
+              </div>
+            </div>
+            {/* Foto - overlapt linksonder */}
+            <div className="hidden md:block absolute -bottom-12 left-0 w-52 z-10">
+              <div className="relative">
                 <div
                   className="absolute inset-0 bg-accent/40 -z-10"
                   style={{
                     borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
-                    transform: 'translate(10px, 10px) scale(1.04)',
+                    transform: 'translate(8px, 8px) scale(1.04)',
                   }}
                 />
                 <img
-                  src="/fotos/IMG_6078 2.jpg"
+                  src="/fotos/IMG_4912.jpg"
                   alt="Marleen"
                   className="w-full object-cover aspect-[3/4]"
                   style={{
@@ -219,26 +264,6 @@ export default function TrajectMoederPage() {
                     objectPosition: 'center 40%',
                   }}
                 />
-              </div>
-            </div>
-            {/* Investering */}
-            <div className="flex-1 reveal">
-              <div className="bg-wit border border-primair/20 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
-                <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
-                <ul className="space-y-3 mb-8">
-                  {inclusief.map(i => (
-                    <li key={i} className="flex items-start gap-3 text-tekst/80">
-                      <Kompas />
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-                <div className="border-t border-primair/10 pt-6">
-                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
-                  <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
-                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
-                </div>
               </div>
             </div>
           </div>

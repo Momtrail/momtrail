@@ -10,10 +10,10 @@ const trailStops = [
 ];
 
 const aanbodPreview = [
-  { titel: 'Moeder',                foto: '/fotos/IMG_6045 2.jpg', positie: '50% 20%', href: '/aanbod/moeder' },
-  { titel: 'Kind',                  foto: '/fotos/IMG_5904 2.jpg', positie: '50% 20%', href: '/aanbod/kind' },
-  { titel: 'PGB / Ambulant',        foto: '/fotos/IMG_5862 2.jpg', positie: '70% 15%', href: '/aanbod/ambulante-begeleiding' },
-  { titel: 'Zwanger & Kinderwens',  foto: '/fotos/IMG_2748 2.jpg', positie: '50% 10%', href: '/aanbod/zwanger-en-kinderwens' },
+  { titel: 'Moeder',                foto: '/fotos/IMG_6045 2.jpg', positie: '50% 45%', href: '/aanbod/moeder' },
+  { titel: 'Kind',                  foto: '/fotos/DSC_4242-2.jpg', positie: '50% 50%', href: '/aanbod/kind' },
+  { titel: 'PGB / Ambulant',        foto: '/fotos/IMG_1433.JPG', positie: '70% 40%', href: '/aanbod/ambulante-begeleiding' },
+  { titel: 'Zwanger & Kinderwens',  foto: '/fotos/DSC_4049-2.jpg', positie: '50% 50%', href: '/aanbod/zwanger-en-kinderwens' },
 ];
 
 const reviews = [

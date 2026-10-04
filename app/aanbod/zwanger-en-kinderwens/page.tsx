@@ -9,15 +9,15 @@ const opties = [
     titel: 'Zwanger & Baby',
     href: '/aanbod/zwanger-en-kind',
     beschrijving: 'Of je nu voor het eerst zwanger bent of een pittige start hebt gehad: dit aanbod begeleidt je lichamelijk en emotioneel. Van bewust zwanger zijn tot de eerste weken met je baby.',
-    foto: '/fotos/IMG_2748 2.jpg',
-    fotoPositie: '50% 10%',
+    foto: '/fotos/DSC_4049-2.jpg',
+    fotoPositie: '50% 55%',
   },
   {
     titel: 'Kinderwenstraject',
     href: '/aanbod/kinderwens',
     beschrijving: 'Jullie verlangen naar een kindje, maar het lukt maar niet. In samenwerking met Health & Happiness begeleiden we je op alle lagen: van hormonen en voeding tot zenuwstelsel en onverwerkte emoties.',
-    foto: '/fotos/IMG_5836 2.jpg',
-    fotoPositie: '50% 10%',
+    foto: '/fotos/IMG_7036.jpg',
+    fotoPositie: '50% 50%',
   },
 ];
 

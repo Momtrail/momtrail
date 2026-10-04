@@ -68,7 +68,7 @@ export default function SomaticYogaPage() {
       {/* Quote foto */}
       <div
         className="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center"
-        style={{ backgroundImage: "url('/fotos/IMG_5911 2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 35%' }}
+        style={{ backgroundImage: "url('/fotos/49e4cb37-ac96-4ecf-831a-5ee5e740b17f.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 55%' }}
       >
         <div className="absolute inset-0 bg-primair/65" />
         <div className="relative text-center px-6 max-w-2xl mx-auto reveal">
@@ -87,6 +87,15 @@ export default function SomaticYogaPage() {
               <p className={`leading-relaxed ${i === 1 ? 'text-achtergrond/80' : 'text-tekst/80'}`}>{l.tekst}</p>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mb-12 reveal">
+          <img
+            src="/fotos/IMG_5843 2.jpg"
+            alt="Somatic Yoga"
+            className="w-72 h-80 object-cover"
+            style={{ borderRadius: '58% 42% 62% 38% / 45% 55% 45% 55%' }}
+          />
         </div>
 
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
