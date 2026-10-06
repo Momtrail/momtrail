@@ -67,6 +67,13 @@ export default function ContactForm() {
       >
         {pending ? 'Versturen...' : 'Verstuur bericht →'}
       </button>
+
+      <p className="text-xs text-tekst/50 pt-1">
+        Door dit formulier te verzenden ga je akkoord met de{' '}
+        <a href="/privacyverklaring" className="underline hover:text-tekst/80 transition-colors">
+          privacyverklaring
+        </a>.
+      </p>
     </form>
   );
 }
