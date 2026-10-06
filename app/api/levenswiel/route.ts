@@ -13,7 +13,7 @@ const gebiedTips: Record<string, string> = {
   werk:
     'Wie ben jij als je niet "mama" bent? Je identiteit is groter dan je rol. Geef haar ook ruimte, al is het maar één klein ding per week dat puur voor jou is, buiten het moederschap.',
   sociaal:
-    'Hulp vragen is geen zwakte, het is wijsheid. Welke één persoon in jouw omgeving zou je deze week iets kunnen vragen, hoe klein ook? Echte verbinding begint bij durven ontvangen.',
+    'Hulp vragen is geen zwakte, het is wijsheid. Welk persoon in jouw omgeving zou je deze week iets kunnen vragen, hoe klein ook? Echte verbinding begint bij durven ontvangen.',
   lichaam:
     'Je lijf houdt alles bij wat je hoofd allang vergeten is. De signalen die je voelt zijn er niet voor niets, ze zijn er al langer dan je denkt. Eén keer per dag even inchecken bij je lijf is genoeg om te beginnen.',
   grip:
