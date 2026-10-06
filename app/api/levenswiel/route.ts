@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
-      from: 'Marleen · Momtrail <onboarding@resend.dev>',
+      from: 'Marleen · Momtrail <noreply@momtrail.nl>',
       to: email,
       subject: 'Jouw Levenswiel: persoonlijk mini-verslag',
       html: buildEmailHtml(values, avg, lowestLabel, tip),
@@ -169,7 +169,7 @@ export async function POST(req: NextRequest) {
       .map(g => `<tr><td style="padding:4px 16px 4px 0;color:#76473a;font-size:14px;">${g.label}</td><td style="padding:4px 0;font-weight:700;color:${scoreKleur(values[g.key] ?? 5)};font-size:14px;">${values[g.key] ?? 5}/10</td></tr>`)
       .join('');
     await resend.emails.send({
-      from: 'Momtrail <onboarding@resend.dev>',
+      from: 'Momtrail <noreply@momtrail.nl>',
       to: 'info@momtrail.nl',
       subject: `Nieuwe Levenswiel-lead: ${email}`,
       html: `<div style="font-family:Arial,sans-serif;max-width:480px;">

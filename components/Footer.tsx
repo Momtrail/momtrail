@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-primair text-wit/80 text-sm py-8 mt-24">
+    <footer id="site-footer" className="bg-primair text-wit/80 text-sm py-8 mt-24">
       <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4">
         <p>© {new Date().getFullYear()} Momtrail · Alle rechten voorbehouden</p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
