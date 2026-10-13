@@ -164,7 +164,7 @@ export default function Levenswiel() {
 
   return (
     <section className="max-w-3xl mx-auto px-6 py-16">
-      <h2 className="text-2xl font-bold text-primair mb-2 text-center reveal">Het Levenswiel</h2>
+      <h2 className="text-2xl font-bold text-primair mb-2 text-center reveal">De Momtrail Scan</h2>
 
 
       <div className="bg-wit rounded-2xl shadow-sm border border-primair/10 p-6 md:p-9 reveal">

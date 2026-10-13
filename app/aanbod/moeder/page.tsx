@@ -7,6 +7,11 @@ export const metadata: Metadata = { title: 'Moeder' };
 
 const aanbod = [
   {
+    titel: 'MomShift',
+    tekst: 'Eén sessie, één thema, één stap vooruit. Een eenmalige kennismakingssessie van 60 tot 75 minuten waarin we direct in het thema duiken dat nu het meest voor jou speelt. Besluit je daarna om het volledige traject in te stappen? Dan wordt de sessie verrekend.',
+    slug: 'momshift',
+  },
+  {
     titel: 'Momtrail traject',
     tekst: 'Voor de moeder die voelt: ik wil weer de energie hebben die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten. Een verdiepend traject van twee maanden gericht op jouw fundament.',
     slug: 'traject-moeder',

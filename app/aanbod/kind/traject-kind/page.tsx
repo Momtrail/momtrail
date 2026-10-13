@@ -101,7 +101,7 @@ export default function TrajectKindPage() {
             <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
               <h3 className="font-bold text-achtergrond mb-2">Kennismaking & intake</h3>
               <p className="text-achtergrond/80 leading-relaxed">
-                Telefonisch of via Google Meet. We brengen samen jullie hulpvraag in kaart en bekijken of het traject passend is. <strong className="text-achtergrond">Dit gesprek is kosteloos.</strong> Wil je starten? Dan ontvang je de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte die je (tenminste) drie dagen voor de eerste sessie terugstuurt.
+                Telefonisch of via Google Meet. We brengen samen jullie hulpvraag in kaart en bekijken of het traject passend is. <strong className="text-achtergrond">Dit gesprek is kosteloos.</strong> Is je kind tussen de 6 en 12 jaar? Dan komen jullie allebei naar de fysieke kennismaking. Op basis van de intake bepalen we samen hoe het traject eruitziet. Wil je starten? Dan ontvang je de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte die je (tenminste) drie dagen voor de eerste sessie terugstuurt.
               </p>
             </div>
             <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">

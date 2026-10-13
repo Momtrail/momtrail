@@ -6,14 +6,14 @@ export const metadata: Metadata = { title: 'Kind' };
 
 const aanbod = [
   {
-    titel: '1 op 1 traject kind (1 maand)',
-    tekst: 'Maak je je zorgen om je kind? Ervaart hij of zij lichamelijke of emotionele klachten? Binnen een maand zorgen we er samen voor dat er weer vertrouwen en rust komt. Happy kid, happy mom!',
-    slug: 'traject-kind',
+    titel: 'The Little Shift',
+    tekst: 'Eén sessie, één thema, één stap vooruit voor je kind. Een eenmalige kennismakingssessie van 60 tot 75 minuten. We duiken direct in wat nu het meest speelt. Besluit je daarna om het volledige traject in te stappen? Dan wordt de sessie verrekend.',
+    slug: 'little-shift',
   },
   {
-    titel: 'Het Leerfundament',
-    tekst: 'Drie sessies waarin we kijken wat je kind nodig heeft om weer tot leren te komen op school. We brengen zenuwstelsel, blokkades en de impact van de geboorteperiode in kaart, zodat er rust, veiligheid en ruimte voor ontwikkeling ontstaat.',
-    slug: 'leerfundament',
+    titel: 'Little Trail traject',
+    tekst: 'Maak je je zorgen om je kind? In dit traject werk ik meestal met jou als ouder, niet rechtstreeks met je kind. We werken o.a. op de energetische laag: met behulp van de biotensor breng ik in kaart wat er onder de oppervlakte speelt. In uitzonderingen werk ik ook direct met je kind. Binnen een maand is er meer rust en vertrouwen. Happy kid, happy mom!',
+    slug: 'traject-kind',
   },
   {
     titel: 'Hartbewust Kids cursus',

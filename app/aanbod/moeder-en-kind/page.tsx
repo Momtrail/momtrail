@@ -16,11 +16,6 @@ const aanbod = [
     slug: 'traject-moeder',
   },
   {
-    titel: 'Het Leerfundament',
-    tekst: 'Drie sessies waarin we kijken wat je kind nodig heeft om weer tot leren te komen op school. We brengen zenuwstelsel, blokkades en de impact van de geboorteperiode in kaart, zodat er rust, veiligheid en ruimte voor ontwikkeling ontstaat.',
-    slug: 'leerfundament',
-  },
-  {
     titel: 'Somatic Yoga lessen',
     tekst: 'Perfect voor als je veel in je hoofd zit of thuis moeilijk tot ontspanning komt. Somatic Yoga combineert (yin) yoga en lichaamsgerichte oefeningen om je te helpen kalmeren en spanning op te lossen in je lichaam.',
     slug: 'somatic-yoga',

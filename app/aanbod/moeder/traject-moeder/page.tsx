@@ -221,32 +221,8 @@ export default function TrajectMoederPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="relative reveal">
-            {/* Witte card */}
-            <div className="bg-wit border border-primair/20 rounded-2xl p-8 md:pl-12">
-              <div className="md:flex md:gap-10 items-start">
-                {/* Links: lijst */}
-                <div className="flex-1 mb-8 md:mb-0 md:pl-48">
-                  <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
-                  <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
-                  <ul className="space-y-3 mb-8">
-                    {inclusief.map(i => (
-                      <li key={i} className="flex items-start gap-3 text-tekst/80">
-                        <Kompas />
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {/* Rechts: prijs */}
-                <div className="md:w-64 shrink-0 border-t md:border-t-0 md:border-l border-primair/10 pt-6 md:pt-0 md:pl-8">
-                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
-                  <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
-                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
-                </div>
-              </div>
-            </div>
-            {/* Foto - overlapt linksonder */}
-            <div className="hidden md:block absolute -bottom-12 left-0 w-52 z-10">
+            {/* Foto - overlapt linksboven */}
+            <div className="hidden md:block absolute -top-12 left-0 w-52 z-10">
               <div className="relative">
                 <div
                   className="absolute inset-0 bg-accent/40 -z-10"
@@ -264,6 +240,44 @@ export default function TrajectMoederPage() {
                     objectPosition: 'center 40%',
                   }}
                 />
+              </div>
+            </div>
+            {/* Witte card */}
+            <div className="bg-wit border border-primair/20 rounded-2xl p-8 md:pl-12 md:pt-16">
+              <div className="md:flex md:gap-10 items-start">
+                {/* Links: lijst */}
+                <div className="flex-1 mb-8 md:mb-0 md:pl-48">
+                  <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
+                  <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
+                  <ul className="space-y-3 mb-8">
+                    {inclusief.map(i => (
+                      <li key={i} className="flex items-start gap-3 text-tekst/80">
+                        <Kompas />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Rechts: prijs */}
+                <div className="md:w-64 shrink-0 border-t md:border-t-0 md:border-l border-primair/10 pt-6 md:pt-0 md:pl-8">
+                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
+                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking.</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4 mt-8 border-t border-primair/10 pt-8">
+                <div className="bg-primair/8 border border-primair/15 rounded-xl p-4 text-sm">
+                  <p className="font-bold text-tekst mb-1">Vergoed via je werkgever?</p>
+                  <p className="text-tekst/70 leading-relaxed mb-2">Veel moeders merken dat vastlopen thuis ook doorwerkt op het werk: minder focus, sneller geïrriteerd, moeilijker grenzen stellen. Dat maakt dit traject relevant voor je werkgever ook.</p>
+                  <p className="text-tekst/70 leading-relaxed mb-3">Vraag bij HR naar je <strong className="text-tekst">coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid.</strong> Veel werkgevers hebben dit, maar weinig mensen vragen ernaar.</p>
+                  <p className="text-tekst/50 text-xs italic">Tip: zeg dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.</p>
+                </div>
+                <div className="bg-achtergrond border border-primair/10 rounded-xl p-4 text-sm">
+                  <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
+                  <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
+                  <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
+                    Meer over PGB / ambulant →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

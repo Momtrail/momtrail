@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AanbodMatcher from '@/components/AanbodMatcher';
 
 export const metadata: Metadata = { title: 'Aanbod' };
 
@@ -19,13 +20,6 @@ const aanbod = [
     fotoPositie: '50% 50%',
   },
   {
-    titel: 'PGB / Ambulant',
-    slug: 'ambulante-begeleiding',
-    beschrijving: 'Loop je vast in het dagelijks leven? Met ambulante begeleiding ondersteun ik je thuis of in je eigen omgeving. Volledig gefinancierd via PGB (Wmo), voor inwoners van de regio Maas en Waal en de Betuwe.',
-    foto: '/fotos/IMG_1433.JPG',
-    fotoPositie: '70% 40%',
-  },
-  {
     titel: 'Zwanger & Kinderwens',
     slug: 'zwanger-en-kinderwens',
     beschrijving: 'Of je nu zwanger bent, net bevallen bent of al een tijdje probeert zwanger te worden: dit aanbod begeleidt je lichamelijk en emotioneel in één van de meest ingrijpende periodes van je leven.',
@@ -39,8 +33,16 @@ export default function AanbodPage() {
     <section className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-3xl font-bold text-primair mb-4">Mijn aanbod</h1>
       <p className="text-tekst/80 mb-12 leading-relaxed max-w-2xl">
-        Elke mama en elk kind verdient begeleiding die écht aansluit. In mijn praktijk werk ik niet met één aanpak, maar kijk ik naar wat jij of jouw kind op dit moment nodig heeft. Of je nu worstelt met het moederschap, een kinderwens hebt, zwanger bent of begeleiding zoekt voor je kind. Hieronder vind je wat ik kan bieden.
+        Elke mama en elk kind verdient begeleiding die écht aansluit. In mijn praktijk werk ik niet met één aanpak, maar kijk ik naar wat jij of jouw kind op dit moment nodig heeft.
       </p>
+
+      <div className="mb-16">
+        <h2 className="text-xl font-bold text-primair mb-2">Welk aanbod past bij mij?</h2>
+        <p className="text-tekst/60 text-sm mb-6">Beantwoord twee vragen en ontdek welk traject voor jou het meest krachtig is.</p>
+        <AanbodMatcher />
+      </div>
+
+      <h2 className="text-xl font-bold text-primair mb-8">Of bekijk alles</h2>
       <div className="grid gap-8 sm:grid-cols-2">
         {aanbod.map(item => (
           <div key={item.slug} className="bg-wit rounded-2xl shadow-sm border border-primair/10 flex flex-col overflow-hidden">

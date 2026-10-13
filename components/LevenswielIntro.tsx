@@ -26,10 +26,10 @@ export default function LevenswielIntro() {
   return (
     <div className="bg-achtergrond border border-primair/20 rounded-2xl p-6 mb-10">
       <p className="text-xs font-bold text-primair uppercase tracking-widest mb-2">
-        Vanuit jouw Levenswiel
+        Vanuit jouw Momtrail Scan
       </p>
       <p className="text-tekst/90 leading-relaxed mb-1">
-        Je hebt het Levenswiel ingevuld{avg ? ` met een gemiddelde van ${avg}/10` : ''}.
+        Je hebt de Momtrail Scan ingevuld{avg ? ` met een gemiddelde van ${avg}/10` : ''}.
         Je aandachtsgebied is <strong>{laagsteLabel}</strong>.
       </p>
       <p className="text-tekst/70 text-sm leading-relaxed">
