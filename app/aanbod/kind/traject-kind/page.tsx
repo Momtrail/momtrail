@@ -7,16 +7,62 @@ import StickyPodcast from '@/components/StickyPodcast';
 export const metadata: Metadata = { title: 'Littletrail traject' };
 
 const klachten = [
-  'Snel boos of verdrietig zijn',
-  'Heftig reageren op kleine dingen',
+  'Driftbuien, snel boos of verdrietig zijn',
+  'Faalangst, veel piekeren of spanning in het lijf',
   'Moeilijk in slaap vallen of vaak wakker worden',
-  'Veel piekeren of spanning in hun lijf hebben',
+  'Onrust, snel overprikkeld zijn of moeite met concentratie',
+  'Heftig reageren op kleine dingen, of zich juist terugtrekken',
   'Lichamelijke klachten zoals buikpijn, hoofdpijn of eczeem',
-  'Snel overprikkeld zijn',
-  'Moeite hebben met concentratie',
-  'Zich terugtrekken of juist explosief reageren',
   'Heimwee',
   'Zindelijkheidsproblemen',
+  'Een overweldigende geboorte of start in het leven',
+];
+
+const stappen = [
+  { nr: '1', titel: 'Gratis kennismaking', tekst: 'Telefonisch of via Google Meet brengen we jullie hulpvraag in kaart en kijken we of het traject past.' },
+  { nr: '2', titel: 'Voorbereiding', tekst: 'Je ontvangt de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte, die je minimaal drie dagen voor de eerste sessie terugstuurt.' },
+  { nr: '3', titel: 'De sessies', tekst: 'We kijken onder andere naar de invloed van de zwangerschap en geboorte op je kind, en werken op de energetische laag, bijvoorbeeld met de biotensor of met systemisch werk. Afhankelijk van de klacht gebruik ik methodes zoals NEI, EFT en zenuwstelselregulatie. Er zijn ook sessies die over jou gaan: over wat jij als ouder meeneemt, en hoe we de balans in jullie gezin herstellen.' },
+  { nr: '4', titel: 'Begeleiding tussendoor', tekst: 'Via WhatsApp en voiceberichten kun je bij me terecht, juist op de momenten dat het thuis knelt. Je krijgt oefeningen om thuis samen te doen.' },
+  { nr: '5', titel: 'Afronding', tekst: 'We evalueren wat er veranderd is en wat jullie nog nodig hebben.' },
+];
+
+const routes = [
+  {
+    naam: 'Littletrail Explore',
+    duur: '2 maanden',
+    sessies: '4 sessies',
+    prijs: '€697',
+    termijnen: '3 x €249',
+    tekst: 'Voor als je wilt ontdekken wat er echt speelt. We brengen de boodschap achter het gedrag in kaart en je krijgt concrete handvatten voor thuis.',
+    populair: false,
+  },
+  {
+    naam: 'Littletrail Pause',
+    duur: '3 maanden',
+    sessies: '6 sessies',
+    prijs: '€997',
+    termijnen: '3 x €349',
+    tekst: 'Voor als jullie weer op adem willen komen. Er is meer tijd om het thuis te oefenen: we kijken wat werkt, sturen bij en kijken ook naar wat er van jou meespeelt.',
+    populair: true,
+  },
+  {
+    naam: 'Littletrail Reset',
+    duur: '4 maanden',
+    sessies: '8 sessies',
+    prijs: '€1147',
+    termijnen: '3 x €399',
+    tekst: 'Voor als je het thuis echt anders wilt. Naast handvatten voor je kind werken we aan je eigen rust en patronen, zodat het in jullie gezin blijvend anders gaat.',
+    populair: false,
+  },
+];
+
+const inclusief = [
+  'Een gratis kennismaking',
+  'Sessies van 60 tot 75 minuten, in mijn praktijkruimte of online',
+  'De Zenuwstelsel Check en een overzicht van de geboortepatronen van je kind',
+  'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door',
+  'Oefeningen om thuis samen te doen',
+  'Een evaluatiemoment aan het eind',
 ];
 
 export default function TrajectKindPage() {
@@ -34,25 +80,33 @@ export default function TrajectKindPage() {
 
         <div className="bg-achtergrond rounded-2xl p-8 mb-12 reveal">
           <p className="text-tekst/80 leading-relaxed mb-4">
-            Herken je dit? Je maakt je zorgen en je hoofd blijft malen, omdat jullie al een tijdje vastlopen. Je kind is niet happy. Is er wat mis met hem of haar? Of pakken jullie het verkeerd aan? Jullie ervaren <strong>strijd en gedoe.</strong> Het gaat in elk geval niet zo makkelijk als het bij anderen lijkt te gaan.
+            Herken je dit? Je maakt je zorgen en je hoofd blijft malen, omdat jullie al een tijdje vastlopen. Misschien heeft je kind driftbuien, faalangst of slaapproblemen, of is het onrustig. Je kind is niet happy. Is er iets mis met hem of haar? Of pakken jullie het verkeerd aan? Jullie ervaren <strong>strijd en gedoe</strong>, en het gaat in elk geval niet zo makkelijk als het bij anderen lijkt te gaan.
           </p>
           <p className="text-tekst/80 leading-relaxed mb-4">
-            Je hebt Chat GPT geraadpleegd, vriendinnen om tips gevraagd, maar je komt geen steek verder. Ondertussen begin je te <strong>twijfelen aan jezelf...</strong>
+            Je hebt ChatGPT geraadpleegd en vriendinnen om tips gevraagd, maar je komt geen steek verder. Ondertussen begin je te <strong>twijfelen aan jezelf.</strong>
           </p>
-          <p className="text-tekst/80 leading-relaxed">
-            Misschien is er in het reguliere circuit al gekeken naar de (fysieke) klacht en behandeld. Zonder resultaat. Er zijn adviezen gegeven, maar het voelt alsof er iets meer onder zit. Je wilt niet alleen aan symptoombestrijding doen, maar <strong>begrijpen wat je kind probeert te vertellen.</strong>
+          <p className="text-tekst/80 leading-relaxed mb-4">
+            Misschien is er in het reguliere circuit al naar de klacht gekeken. Er zijn adviezen gegeven, maar het voelt alsof er iets meer onder zit. Je wilt niet alleen aan symptoombestrijding doen, maar <strong>begrijpen wat je kind probeert te vertellen.</strong>
+          </p>
+          <p className="font-bold text-tekst">
+            Met alleen praten kom je er niet. Niet voor jou, en niet voor je kind.
           </p>
         </div>
 
+        <h2 className="text-2xl font-bold text-primair mb-4 reveal">Jij bent de sleutel</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Het Littletrail traject is een traject waar we zes weken lang <strong>verder gaan kijken dan de klacht.</strong> Niet alleen naar wat zichtbaar is, maar juist naar wat eronder ligt.
+          In Littletrail werk ik meestal met jou als ouder, niet rechtstreeks met je kind. Jij kent je kind het best, en jij bent er elke dag. Als jij begrijpt wat er onder het gedrag ligt en weet wat je kind van je nodig heeft, verandert er thuis het meest. Of je kind een keer meekomt, bepalen we in overleg; dat hangt vooral af van de leeftijd.
+        </p>
+        <p className="text-tekst/80 leading-relaxed mb-12 reveal">
+          Kinderen spiegelen vaak wat er in hun omgeving speelt. Daarom kijken we in Littletrail ook echt naar jou: welke ervaringen, patronen en spanning neem jij mee in je ouderschap? Daar besteden we bewust een of meer sessies aan. Niet omdat jij het fout doet, maar omdat er thuis het meest verandert als de <strong>balans in jullie gezin</strong> hersteld wordt. Als jij meer rust voelt, krijgt je kind de ruimte om ook tot rust te komen.
         </p>
 
         <div className="bg-primair rounded-2xl p-8 mb-16 reveal">
           <p className="text-achtergrond/90 leading-relaxed italic">
-            Hoe zou het voor jullie zijn als er weer rust is voor je kind én jou? Stel je voor: je ziet een vrolijker, vrijer kind en er is minder spanning in huis. Je kind kan beter met emoties omgaan of die (fysieke) klacht is eindelijk over. En jij hebt als ouder weer het gevoel dat alles onder controle is. Dat is mogelijk als we samen aan de slag gaan met de <strong className="text-achtergrond">échte boodschap achter het gedrag of de klacht.</strong>
+            Hoe zou het voor jullie zijn als er weer rust is, voor je kind én voor jou? Stel je voor: je ziet een vrolijker, vrijer kind en er is minder spanning in huis. Je kind gaat beter met zijn emoties om, en veel ouders merken dat ook lichamelijke klachten afnemen. En jij hebt weer vertrouwen in jezelf als ouder. Dat is waar we samen aan werken: aan de <strong className="text-achtergrond">échte boodschap achter het gedrag of de klacht.</strong>
           </p>
         </div>
+
       </div>
 
       {/* Quote foto */}
@@ -71,7 +125,7 @@ export default function TrajectKindPage() {
       <div className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Voor wie is dit traject?</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Dit traject is voor jullie als je merkt dat je kind vastloopt, maar je weet niet precies waarom. Praten of strenger zijn werkt niet. Je voelt dat het geen lastig gedrag is, maar dat er een boodschap achter gedrag zit. Of je hebt het gevoel dat het lijf of de klacht van je kind je iets vertelt.
+          Dit traject is voor jullie als je merkt dat je kind vastloopt, maar je niet precies weet waarom. Praten of strenger zijn werkt niet. Je voelt dat het geen lastig gedrag is, maar dat er een boodschap achter zit. Of je hebt het gevoel dat het lijf of de klacht van je kind je iets vertelt.
         </p>
 
         <div className="border-l-4 border-accent pl-8 mb-16 reveal">
@@ -85,10 +139,9 @@ export default function TrajectKindPage() {
             ))}
           </ul>
         </div>
-
       </div>
 
-      {/* Zo ziet het traject eruit - rode sectie */}
+      {/* Zo ziet het traject eruit */}
       <section className="bg-primair pb-20">
         <div className="w-full overflow-hidden leading-none">
           <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
@@ -97,46 +150,83 @@ export default function TrajectKindPage() {
         </div>
         <div className="max-w-3xl mx-auto px-6 pt-10">
           <h2 className="text-2xl font-bold text-achtergrond mb-8 reveal">Zo ziet het traject eruit</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
-              <h3 className="font-bold text-achtergrond mb-2">Kennismaking & intake</h3>
-              <p className="text-achtergrond/80 leading-relaxed">
-                Telefonisch of via Google Meet. We brengen samen jullie hulpvraag in kaart en bekijken of het traject passend is. <strong className="text-achtergrond">Dit gesprek is kosteloos.</strong> Is je kind tussen de 6 en 12 jaar? Dan komen jullie allebei naar de fysieke kennismaking. Op basis van de intake bepalen we samen hoe het traject eruitziet. Wil je starten? Dan ontvang je de Zenuwstelsel Check en een vragenlijst over de zwangerschap en geboorte die je (tenminste) drie dagen voor de eerste sessie terugstuurt.
-              </p>
-            </div>
-            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
-              <h3 className="font-bold text-achtergrond mb-2">Tijdens de sessies</h3>
-              <p className="text-achtergrond/80 leading-relaxed">
-                In twee sessies gaan we dieper in op welke invloed de zwangerschap en geboorte heeft op je kind. Afhankelijk van de klacht gebruiken we verschillende methodes, zoals <strong className="text-achtergrond">NEI, EFT of zenuwstelselregulatie-technieken.</strong> In sommige gevallen doen we een sessie gericht op één van de ouders of het gezin als daar belangrijke aanknopingspunten liggen.
-              </p>
-            </div>
-            <div className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 reveal">
-              <h3 className="font-bold text-achtergrond mb-2">Begeleiding tussendoor</h3>
-              <p className="text-achtergrond/80 leading-relaxed">
-                Er is Whatsapp-begeleiding tussen de sessies in. Het kan zijn dat jullie gerichte oefeningen krijgen om samen te doen. Na ongeveer één à twee weken na de tweede sessie hebben we contact om te evalueren en het traject af te ronden.
-              </p>
-            </div>
+          <div className="flex flex-col gap-4">
+            {stappen.map(s => (
+              <div key={s.nr} className="bg-wit/15 border border-achtergrond/20 rounded-2xl p-6 flex gap-5 reveal">
+                <span className="text-3xl font-bold text-achtergrond/30 shrink-0 leading-none" style={{ fontFamily: 'var(--font-buydog)' }}>{s.nr}</span>
+                <div>
+                  <h3 className="font-bold text-achtergrond mb-1">{s.titel}</h3>
+                  <p className="text-achtergrond/80 leading-relaxed text-sm">{s.tekst}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
-          <h2 className="text-2xl font-bold text-primair mb-4">De investering</h2>
-          <p className="text-tekst/80 leading-relaxed mb-4">
-            Het traject duurt gemiddeld anderhalve maand. Geen quick fix, maar we gaan voor <strong>echte verandering.</strong> Inclusief kennismaking/intake, overzicht van geboortepatronen, twee sessies van 60-75 min., Whatsappbegeleiding gedurende zes weken en een telefonisch evaluatiecontact.
-          </p>
-          <p className="text-3xl font-bold text-primair">€299</p>
-        </div>
+      {/* Kies jouw trail */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Kies jouw trail</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {routes.map(r => (
+              <div key={r.naam} className={`rounded-2xl p-7 flex flex-col reveal ${r.populair ? 'bg-primair text-achtergrond ring-4 ring-primair/30' : 'bg-wit border border-primair/15'}`}>
+                {r.populair && (
+                  <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1 rounded-full mb-4 self-start tracking-widest uppercase">
+                    meest gekozen
+                  </span>
+                )}
+                <h3 className={`text-xl font-bold mb-1 ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.naam}</h3>
+                <p className={`text-sm mb-4 ${r.populair ? 'text-achtergrond/70' : 'text-tekst/50'}`}>{r.duur} · {r.sessies}</p>
+                <p className={`leading-relaxed text-sm flex-1 mb-6 ${r.populair ? 'text-achtergrond/85' : 'text-tekst/70'}`}>{r.tekst}</p>
+                <div className={`border-t pt-5 ${r.populair ? 'border-achtergrond/20' : 'border-primair/10'}`}>
+                  <p className={`text-2xl font-bold ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.prijs}</p>
+                  <p className={`text-sm mt-1 ${r.populair ? 'text-achtergrond/60' : 'text-tekst/40'}`}>of {r.termijnen}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <div className="bg-primair rounded-2xl p-8 text-center reveal">
-          <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
-          <p className="text-achtergrond/80 mb-6">Een kennismaking en intake is altijd <strong>kosteloos en vrijblijvend.</strong> We kijken dan samen naar jouw hulpvraag en of het Littletrail traject aansluit bij jullie.</p>
-          <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-            Plan een kennismaking →
-          </Link>
+          <div className="bg-wit border border-primair/20 rounded-2xl p-8">
+            <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
+            <ul className="space-y-3 mb-6">
+              {inclusief.map(i => (
+                <li key={i} className="flex items-start gap-3 text-tekst/80">
+                  <Kompas />
+                  {i}
+                </li>
+              ))}
+            </ul>
+            <div className="border-t border-primair/10 pt-5 mb-4">
+              <p className="text-tekst/70 text-sm leading-relaxed">
+                Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+              </p>
+            </div>
+            <p className="text-tekst/60 text-sm italic">
+              Merk je dat je eigen spanning of patronen een grote rol spelen? Kijk dan ook eens naar het{' '}
+              <Link href="/aanbod/moeder/traject-moeder" className="font-bold text-accent hover:underline">Momtrail traject</Link>.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-primair py-16 px-6">
+        <div className="max-w-2xl mx-auto text-center reveal">
+          <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
+          <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> We kijken samen naar je hulpvraag en of Littletrail bij jullie past. Wil je liever meteen aan de slag met één thema? Plan dan een Trailstart.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+              Plan een kennismaking →
+            </Link>
+            <Link href="/aanbod/trailstart" className="inline-block border-2 border-achtergrond/50 text-achtergrond font-bold px-8 py-3 rounded-full hover:border-achtergrond transition-colors">
+              Plan je Trailstart →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <ScrollReveal singles={['.reveal']} />
       <StickyPodcast />

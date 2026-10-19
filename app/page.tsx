@@ -208,10 +208,15 @@ export default function HomePage() {
       {/* Call to action */}
       <section className="max-w-2xl mx-auto px-6 py-20 text-center">
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Klaar om jouw momtrail te starten?</h2>
-        <p className="text-tekst/80 leading-relaxed mb-8 reveal">Een kennismaking is altijd kosteloos en vrijblijvend. Ik kijk ernaar uit je te ontmoeten.</p>
-        <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity reveal">
-          Plan een kennismaking →
-        </Link>
+        <p className="text-tekst/80 leading-relaxed mb-8 reveal">Een kennismaking is altijd kosteloos en vrijblijvend. Ik kijk ernaar uit je te ontmoeten. Wil je liever meteen aan de slag? Plan dan een Trailstart.</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center reveal">
+          <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+            Plan een kennismaking →
+          </Link>
+          <Link href="/aanbod/trailstart" className="inline-block border-2 border-primair text-primair font-bold px-8 py-3 rounded-full hover:bg-primair/5 transition-colors">
+            Plan je Trailstart →
+          </Link>
+        </div>
       </section>
 
       {/* Over mij preview */}

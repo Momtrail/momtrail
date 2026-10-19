@@ -6,19 +6,19 @@ export const metadata: Metadata = { title: 'Kind' };
 
 const aanbod = [
   {
-    titel: 'The Little Shift',
-    tekst: 'Eén sessie, één thema, één stap vooruit voor je kind. Een eenmalige kennismakingssessie van 60 tot 75 minuten. We duiken direct in wat nu het meest speelt. Besluit je daarna om het volledige traject in te stappen? Dan wordt de sessie verrekend.',
-    slug: 'little-shift',
+    titel: 'Trailstart',
+    tekst: 'Een losse sessie rond één thema, één stap vooruit voor je kind. We duiken direct in wat nu het meest speelt. Stap je binnen 7 dagen in een traject? Dan wordt de sessie verrekend.',
+    href: '/aanbod/trailstart',
   },
   {
-    titel: 'Little Trail traject',
-    tekst: 'Maak je je zorgen om je kind? In dit traject werk ik meestal met jou als ouder, niet rechtstreeks met je kind. We werken o.a. op de energetische laag: met behulp van de biotensor breng ik in kaart wat er onder de oppervlakte speelt. In uitzonderingen werk ik ook direct met je kind. Binnen een maand is er meer rust en vertrouwen. Happy kid, happy mom!',
-    slug: 'traject-kind',
+    titel: 'Littletrail traject',
+    tekst: 'Maak je je zorgen om je kind? In dit traject werk ik meestal met jou als ouder, niet rechtstreeks met je kind. We kijken verder dan het gedrag: naar de echte boodschap achter driftbuien, faalangst, slaapproblemen of onrust. Een traject van 2, 3 of 4 maanden. Happy kid, happy mom!',
+    href: '/aanbod/kind/traject-kind',
   },
   {
     titel: 'Hartbewust Kids cursus',
     tekst: 'Een cursus van 10 weken voor kinderen van 6 tot 12 jaar. Spelenderwijs leren ze weer rust te voelen, grip te krijgen op hun emoties en te ontdekken hoe waardevol en uniek ze zijn.',
-    slug: 'hartbewust-kids',
+    href: '/aanbod/kind/hartbewust-kids',
   },
 ];
 
@@ -33,7 +33,7 @@ export default function KindPage() {
           <div key={item.titel} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col reveal">
             <h2 className="text-xl font-bold text-primair mb-3">{item.titel}</h2>
             <p className="text-tekst/70 leading-relaxed flex-1 mb-4">{item.tekst}</p>
-            <Link href={`/aanbod/kind/${item.slug}`} className="font-bold text-accent hover:underline">
+            <Link href={item.href} className="font-bold text-accent hover:underline">
               Meer info →
             </Link>
           </div>

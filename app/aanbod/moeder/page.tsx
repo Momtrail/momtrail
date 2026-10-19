@@ -7,19 +7,19 @@ export const metadata: Metadata = { title: 'Moeder' };
 
 const aanbod = [
   {
-    titel: 'MomShift',
-    tekst: 'Eén sessie, één thema, één stap vooruit. Een eenmalige kennismakingssessie van 60 tot 75 minuten waarin we direct in het thema duiken dat nu het meest voor jou speelt. Besluit je daarna om het volledige traject in te stappen? Dan wordt de sessie verrekend.',
-    slug: 'momshift',
+    titel: 'Trailstart',
+    tekst: 'Een losse sessie van 60 tot 75 minuten rond één thema. Voor als je eerst wilt ervaren hoe ik werk, of nu gewoon iets wilt met wat er speelt. €97, verrekend als je binnen 7 dagen instapt.',
+    href: '/aanbod/trailstart',
   },
   {
     titel: 'Momtrail traject',
-    tekst: 'Voor de moeder die voelt: ik wil weer de energie hebben die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten. Een verdiepend traject van twee maanden gericht op jouw fundament.',
-    slug: 'traject-moeder',
+    tekst: 'Voor de moeder die voelt: ik wil weer de energie hebben die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten. Een lichaamsgericht traject van 3, 4 of 6 maanden, gericht op jouw fundament. Want met alleen praten kom je er niet.',
+    href: '/aanbod/moeder/traject-moeder',
   },
   {
     titel: 'Somatic Yoga lessen',
     tekst: 'Perfect voor als je veel in je hoofd zit of thuis moeilijk tot ontspanning komt. Somatic Yoga combineert (yin) yoga en lichaamsgerichte oefeningen om je te helpen kalmeren en spanning op te lossen in je lichaam.',
-    slug: 'somatic-yoga',
+    href: '/aanbod/moeder/somatic-yoga',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function MoederPage() {
           <div key={item.titel} className="bg-wit rounded-2xl p-8 shadow-sm border border-primair/10 flex flex-col reveal">
             <h2 className="text-xl font-bold text-primair mb-3">{item.titel}</h2>
             <p className="text-tekst/70 leading-relaxed flex-1 mb-4">{item.tekst}</p>
-            <Link href={`/aanbod/moeder/${item.slug}`} className="font-bold text-accent hover:underline">
+            <Link href={item.href} className="font-bold text-accent hover:underline">
               Meer info →
             </Link>
           </div>

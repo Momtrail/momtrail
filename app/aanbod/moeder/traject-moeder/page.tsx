@@ -7,13 +7,46 @@ import Kompas from '@/components/Kompas';
 import MomtrailMethodeCircle from '@/components/MomtrailMethodeCircle';
 
 const klachten = [
-  'Vaak moe bent en de dag zwaar voelt om door te komen',
-  'Hoofd vol zit met brainfog en je nergens echt focus hebt',
+  'Al moe bent voordat de dag begonnen is, en je energie steeds weer opraakt',
+  'Een hoofd vol hebt: onrust, brainfog, nergens echt focus',
+  'Spanning voelt in je kaken, schouders, nek of buik, of licht slaapt en vaak wakker wordt',
   'Weinig energie hebt om wat met je kinderen te doen',
-  'Vaak op je telefoon zit te scrollen terwijl je eigenlijk wil opladen',
-  'Sneller geïrriteerd of kort reageert dan je zou willen',
-  'Je vaak schuldig voelt',
-  'Lijf niet meewerkt, omdat je klachten hebt zoals vermoeidheid, stress of chronische pijnklachten',
+  'Vaak op je telefoon scrollt, terwijl je eigenlijk wilt opladen',
+  'Sneller geïrriteerd bent dan je wilt, en dat het dan ineens knalt',
+  'Toch toegeeft terwijl je eigenlijk niet wilt',
+  'Hoge eisen aan jezelf stelt en je vaak schuldig voelt',
+  'Soms ineens je eigen moeder hoort praten, terwijl je het juist anders wilde doen',
+  'Klachten hebt zoals vermoeidheid, stress of chronische pijn',
+];
+
+const routes = [
+  {
+    naam: 'Momtrail Pause',
+    duur: '3 maanden',
+    sessies: '6 sessies',
+    prijs: '€997',
+    termijnen: '3 x €349',
+    tekst: 'Voor als je eerst weer op adem wilt komen. We brengen rust in je lijf en je hoofd, ontdekken waar je energie weglekt en welke patronen meespelen. Je krijgt handvatten die je meteen thuis kunt gebruiken.',
+    populair: false,
+  },
+  {
+    naam: 'Momtrail Reset',
+    duur: '4 maanden',
+    sessies: '8 sessies',
+    prijs: '€1147',
+    termijnen: '3 x €399',
+    tekst: 'Voor als je het echt anders wilt doen. Naast rust en inzicht werken we aan je grenzen en aan de patronen uit je eigen jeugd. Er is tijd om het in het dagelijks leven te oefenen, en om bij te sturen als het weer even knelt.',
+    populair: true,
+  },
+  {
+    naam: 'Momtrail Rise',
+    duur: '6 maanden',
+    sessies: '10 sessies',
+    prijs: '€1297',
+    termijnen: '3 x €449',
+    tekst: 'Voor als je de verandering blijvend wilt maken en weer wilt opbloeien. We gaan dieper op wat er uit je eigen jeugd en eerdere generaties meekomt, en je hebt de tijd om nieuwe gewoontes te laten indalen. Ook door drukke periodes en terugvallen heen loop je niet alleen.',
+    populair: false,
+  },
 ];
 
 const dieptepunten = [
@@ -35,14 +68,12 @@ const opbrengsten = [
 ];
 
 const inclusief = [
-  'Kosteloze kennismaking/intake',
-  '3 individuele sessies van 75 minuten, in mijn praktijkruimte of online',
-  'Whatsapp-begeleiding tussendoor voor een check-in na een sessie en bij vragen',
-  '2 telefonische contactmomenten tussen de sessies door voor afstemming, vragen en ondersteuning',
+  'Een gratis kennismaking van 30 minuten',
+  'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
+  'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door, voor een check-in na een sessie en bij vragen',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
-  'Vanaf september: 6 maanden toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
-  'Toegang tot de Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
-  'Een persoonlijk cadeau bij de start (bijvoorbeeld een boek of kaartenset afgestemd op jouw hulpvraag)',
+  'Toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
+  'De Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
 ];
 
 const reviews = [
@@ -67,14 +98,15 @@ export default function TrajectMoederPage() {
       {/* Herkenning */}
       <section className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-tekst/80 leading-relaxed mb-6 text-lg reveal">
-          Als je eerlijk bent, voelt het moederschap op dit moment vooral... zwaar. Je denkt met regelmaat <strong>&apos;is dit het nou?&apos;</strong>
+          Als je eerlijk bent, voelt het moederschap op dit moment vooral... zwaar. Je denkt regelmatig: <strong>&apos;is dit het nou?&apos;</strong>
         </p>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Je staat de hele dag aan. Zorgen, regelen, de mental load dragen en doorgaan. Je hebt geleerd om sterk te zijn en het goed te doen voor iedereen. En ondertussen voel je: <strong>ik raak mezelf kwijt zo.</strong>
+          Je staat de hele dag aan. Zorgen, regelen, de mental load dragen en doorgaan. Het stopt nooit. Je hebt geleerd om sterk te zijn en het goed te doen voor iedereen. En ondertussen loop je helemaal leeg en voel je: <strong>ik raak mezelf kwijt zo.</strong>
         </p>
-        <p className="text-tekst/80 leading-relaxed mb-10 reveal">
-          Je hebt misschien al van alles geprobeerd: zelfhulpboeken, podcasts, mediteren, zelfs een psycholoog. Je hoofd begrijpt heel goed hoe het werkt, maar toch denk je: waarom lukt het me niet om het anders te doen? Dat komt, omdat je <strong>vooral met je hoofd bent gaan begrijpen. Je lijf doet nog niet mee.</strong>
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Je hebt misschien al van alles geprobeerd: zelfhulpboeken, podcasts, mediteren, misschien zelfs een psycholoog. Je hoofd begrijpt heel goed hoe het werkt. Maar toch lukt het je niet om het anders te doen. Dat komt omdat je <strong>vooral met je hoofd bent gaan begrijpen. Je lijf doet nog niet mee.</strong>
         </p>
+        <p className="font-bold text-tekst mb-10 reveal">Met alleen praten kom je er niet.</p>
 
         <div className="bg-achtergrond rounded-2xl p-8 reveal">
           <p className="font-semibold text-tekst mb-4">Misschien merk je wel dat je:</p>
@@ -217,67 +249,60 @@ export default function TrajectMoederPage() {
         </div>
       </div>
 
-      {/* Investering */}
+      {/* Kies jouw trail */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="relative reveal">
-            {/* Foto - overlapt linksboven */}
-            <div className="hidden md:block absolute -top-12 left-0 w-52 z-10">
-              <div className="relative">
-                <div
-                  className="absolute inset-0 bg-accent/40 -z-10"
-                  style={{
-                    borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
-                    transform: 'translate(8px, 8px) scale(1.04)',
-                  }}
-                />
-                <img
-                  src="/fotos/IMG_4912.jpg"
-                  alt="Marleen"
-                  className="w-full object-cover aspect-[3/4]"
-                  style={{
-                    borderRadius: '42% 58% 61% 39% / 48% 55% 45% 52%',
-                    objectPosition: 'center 40%',
-                  }}
-                />
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Kies jouw trail</h2>
+            <p className="text-tekst/70 leading-relaxed reveal">Iedere moeder loopt haar eigen pad. Daarom zijn er drie routes. Ze werken allemaal volgens de Momtrail methode; het verschil zit in hoeveel tijd je jezelf geeft.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {routes.map(r => (
+              <div key={r.naam} className={`rounded-2xl p-7 flex flex-col reveal ${r.populair ? 'bg-primair text-achtergrond ring-4 ring-primair/30' : 'bg-wit border border-primair/15'}`}>
+                {r.populair && (
+                  <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1 rounded-full mb-4 self-start tracking-widest uppercase">
+                    meest gekozen
+                  </span>
+                )}
+                <h3 className={`text-xl font-bold mb-1 ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.naam}</h3>
+                <p className={`text-sm mb-4 ${r.populair ? 'text-achtergrond/70' : 'text-tekst/50'}`}>{r.duur} · {r.sessies}</p>
+                <p className={`leading-relaxed text-sm flex-1 mb-6 ${r.populair ? 'text-achtergrond/85' : 'text-tekst/70'}`}>{r.tekst}</p>
+                <div className={`border-t pt-5 ${r.populair ? 'border-achtergrond/20' : 'border-primair/10'}`}>
+                  <p className={`text-2xl font-bold ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.prijs}</p>
+                  <p className={`text-sm mt-1 ${r.populair ? 'text-achtergrond/60' : 'text-tekst/40'}`}>of {r.termijnen}</p>
+                </div>
               </div>
+            ))}
+          </div>
+
+          <div className="bg-wit border border-primair/20 rounded-2xl p-8">
+            <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
+            <ul className="space-y-3 mb-6">
+              {inclusief.map(i => (
+                <li key={i} className="flex items-start gap-3 text-tekst/80">
+                  <Kompas />
+                  {i}
+                </li>
+              ))}
+            </ul>
+            <div className="border-t border-primair/10 pt-5 mb-6">
+              <p className="text-tekst/70 text-sm leading-relaxed">
+                Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+              </p>
             </div>
-            {/* Witte card */}
-            <div className="bg-wit border border-primair/20 rounded-2xl p-8 md:pl-12 md:pt-16">
-              <div className="md:flex md:gap-10 items-start">
-                {/* Links: lijst */}
-                <div className="flex-1 mb-8 md:mb-0 md:pl-48">
-                  <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
-                  <p className="font-semibold text-tekst mb-4">Wat je krijgt:</p>
-                  <ul className="space-y-3 mb-8">
-                    {inclusief.map(i => (
-                      <li key={i} className="flex items-start gap-3 text-tekst/80">
-                        <Kompas />
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {/* Rechts: prijs */}
-                <div className="md:w-64 shrink-0 border-t md:border-t-0 md:border-l border-primair/10 pt-6 md:pt-0 md:pl-8">
-                  <p className="text-4xl font-bold text-primair mb-4">€417</p>
-                  <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking.</p>
-                </div>
+            <div className="flex flex-col gap-4">
+              <div className="bg-primair/8 border border-primair/15 rounded-xl p-4 text-sm">
+                <p className="font-bold text-tekst mb-1">Vergoed via je werkgever?</p>
+                <p className="text-tekst/70 leading-relaxed mb-2">Veel moeders merken dat vastlopen thuis ook doorwerkt op het werk: minder focus, sneller geïrriteerd, moeilijker grenzen stellen. Dat maakt dit traject relevant voor je werkgever ook.</p>
+                <p className="text-tekst/70 leading-relaxed mb-3">Vraag bij HR naar je <strong className="text-tekst">coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid.</strong> Veel werkgevers hebben dit, maar weinig mensen vragen ernaar.</p>
+                <p className="text-tekst/50 text-xs italic">Tip: zeg dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.</p>
               </div>
-              <div className="flex flex-col gap-4 mt-8 border-t border-primair/10 pt-8">
-                <div className="bg-primair/8 border border-primair/15 rounded-xl p-4 text-sm">
-                  <p className="font-bold text-tekst mb-1">Vergoed via je werkgever?</p>
-                  <p className="text-tekst/70 leading-relaxed mb-2">Veel moeders merken dat vastlopen thuis ook doorwerkt op het werk: minder focus, sneller geïrriteerd, moeilijker grenzen stellen. Dat maakt dit traject relevant voor je werkgever ook.</p>
-                  <p className="text-tekst/70 leading-relaxed mb-3">Vraag bij HR naar je <strong className="text-tekst">coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid.</strong> Veel werkgevers hebben dit, maar weinig mensen vragen ernaar.</p>
-                  <p className="text-tekst/50 text-xs italic">Tip: zeg dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.</p>
-                </div>
-                <div className="bg-achtergrond border border-primair/10 rounded-xl p-4 text-sm">
-                  <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
-                  <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
-                  <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
-                    Meer over PGB / ambulant →
-                  </Link>
-                </div>
+              <div className="bg-achtergrond border border-primair/10 rounded-xl p-4 text-sm">
+                <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
+                <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
+                <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
+                  Meer over PGB / ambulant →
+                </Link>
               </div>
             </div>
           </div>
@@ -325,10 +350,15 @@ export default function TrajectMoederPage() {
       <section className="bg-primair py-16 px-6">
         <div className="max-w-2xl mx-auto text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
-          <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong></p>
-          <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-            Plan een kennismaking →
-          </Link>
+          <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> Wil je liever meteen aan de slag? Plan dan een Trailstart.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+              Plan een kennismaking →
+            </Link>
+            <Link href="/aanbod/trailstart" className="inline-block border-2 border-achtergrond/50 text-achtergrond font-bold px-8 py-3 rounded-full hover:border-achtergrond transition-colors">
+              Plan je Trailstart →
+            </Link>
+          </div>
         </div>
       </section>
 
