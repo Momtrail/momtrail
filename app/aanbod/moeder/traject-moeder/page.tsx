@@ -68,7 +68,7 @@ const opbrengsten = [
 ];
 
 const inclusief = [
-  'Een gratis kennismaking van 30 minuten',
+  'Intake',
   'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
   'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door, voor een check-in na een sessie en bij vragen',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
@@ -228,81 +228,97 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
-      {/* Foto slider - drieluik */}
-      <div className="overflow-hidden py-12">
-        <div className="flex gap-4 marquee-track" style={{ width: 'max-content' }}>
-          {[
-            'IMG_6936.jpg',
-            'IMG_6938.jpg',
-            'IMG_6939.jpg',
-            'IMG_6936.jpg',
-            'IMG_6938.jpg',
-            'IMG_6939.jpg',
-          ].map((foto, i) => (
-            <img
-              key={i}
-              src={`/fotos/${foto}`}
-              alt=""
-              className="h-80 w-auto object-cover rounded-xl shrink-0"
-            />
-          ))}
+      {/* Methodes */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+            <div>
+              <h2 className="text-xl font-bold text-primair reveal">Methodes die ik inzet</h2>
+              <p className="text-tekst/50 text-sm italic reveal">Ik kies wat past bij jouw hulpvraag.</p>
+            </div>
+            <Link href="/werkwijze" className="text-accent font-bold text-sm hover:underline reveal shrink-0">
+              Meer over mijn werkwijze →
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2.5 reveal">
+            {['NEI', 'Hartcoherentie', 'Ademhaling', 'EFT', 'Zenuwstelselregulatie', 'Systemisch werk'].map(m => (
+              <span key={m} className="bg-achtergrond border border-primair/15 text-tekst/80 font-medium px-4 py-2 rounded-full text-sm">
+                {m}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Kies jouw trail */}
-      <section className="py-20 px-6">
+      <section className="bg-achtergrond py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Kies jouw trail</h2>
-            <p className="text-tekst/70 leading-relaxed reveal">Iedere moeder loopt haar eigen pad. Daarom zijn er drie routes. Ze werken allemaal volgens de Momtrail methode; het verschil zit in hoeveel tijd je jezelf geeft.</p>
+            <p className="text-tekst/70 leading-relaxed max-w-2xl mx-auto reveal">Iedere moeder loopt haar eigen pad. Daarom zijn er drie routes. Ze werken allemaal volgens de Momtrail methode; het verschil zit in hoeveel tijd je jezelf geeft.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
             {routes.map(r => (
-              <div key={r.naam} className={`rounded-2xl p-7 flex flex-col reveal ${r.populair ? 'bg-primair text-achtergrond ring-4 ring-primair/30' : 'bg-wit border border-primair/15'}`}>
+              <div key={r.naam} className={`rounded-3xl p-9 flex flex-col reveal ${r.populair ? 'bg-primair shadow-xl' : 'bg-wit shadow-sm border border-primair/10'}`}>
                 {r.populair && (
-                  <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1 rounded-full mb-4 self-start tracking-widest uppercase">
+                  <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start tracking-widest uppercase">
                     meest gekozen
                   </span>
                 )}
-                <h3 className={`text-xl font-bold mb-1 ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.naam}</h3>
-                <p className={`text-sm mb-4 ${r.populair ? 'text-achtergrond/70' : 'text-tekst/50'}`}>{r.duur} · {r.sessies}</p>
-                <p className={`leading-relaxed text-sm flex-1 mb-6 ${r.populair ? 'text-achtergrond/85' : 'text-tekst/70'}`}>{r.tekst}</p>
-                <div className={`border-t pt-5 ${r.populair ? 'border-achtergrond/20' : 'border-primair/10'}`}>
-                  <p className={`text-2xl font-bold ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.prijs}</p>
-                  <p className={`text-sm mt-1 ${r.populair ? 'text-achtergrond/60' : 'text-tekst/40'}`}>of {r.termijnen}</p>
+                <h3 className={`text-2xl font-bold mb-2 ${r.populair ? 'text-achtergrond' : 'text-primair'}`} style={{ fontFamily: 'var(--font-buydog)' }}>{r.naam}</h3>
+                <p className={`mb-5 ${r.populair ? 'text-achtergrond/80' : 'text-tekst/60'}`}>
+                  <span className="text-lg font-semibold">{r.duur}</span>
+                  <span className="text-sm"> · {r.sessies}</span>
+                </p>
+                <p className={`leading-relaxed text-sm flex-1 mb-8 ${r.populair ? 'text-achtergrond/85' : 'text-tekst/70'}`}>{r.tekst}</p>
+                <div className={`border-t pt-6 ${r.populair ? 'border-achtergrond/20' : 'border-primair/10'}`}>
+                  <p className={`text-4xl font-bold ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.prijs}</p>
+                  <p className={`text-sm mt-1.5 ${r.populair ? 'text-achtergrond/55' : 'text-tekst/40'}`}>of {r.termijnen}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="bg-wit border border-primair/20 rounded-2xl p-8">
-            <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
-            <ul className="space-y-3 mb-6">
-              {inclusief.map(i => (
-                <li key={i} className="flex items-start gap-3 text-tekst/80">
-                  <Kompas />
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <div className="border-t border-primair/10 pt-5 mb-6">
-              <p className="text-tekst/70 text-sm leading-relaxed">
-                Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
-              </p>
+        {/* FAQ verwijzing */}
+        <div className="max-w-5xl mx-auto mb-10">
+          <div className="bg-wit border border-primair/15 rounded-2xl px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 reveal">
+            <div>
+              <p className="font-bold text-tekst mb-1">Vragen over (werkgevers)vergoeding, termijnen of hoe het in de praktijk werkt?</p>
+              <p className="text-tekst/60 text-sm">Antwoorden op de meest gestelde vragen staan op één plek.</p>
             </div>
-            <div className="flex flex-col gap-4">
-              <div className="bg-primair/8 border border-primair/15 rounded-xl p-4 text-sm">
-                <p className="font-bold text-tekst mb-1">Vergoed via je werkgever?</p>
-                <p className="text-tekst/70 leading-relaxed mb-2">Veel moeders merken dat vastlopen thuis ook doorwerkt op het werk: minder focus, sneller geïrriteerd, moeilijker grenzen stellen. Dat maakt dit traject relevant voor je werkgever ook.</p>
-                <p className="text-tekst/70 leading-relaxed mb-3">Vraag bij HR naar je <strong className="text-tekst">coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid.</strong> Veel werkgevers hebben dit, maar weinig mensen vragen ernaar.</p>
-                <p className="text-tekst/50 text-xs italic">Tip: zeg dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.</p>
+            <Link href="/faq" className="inline-block bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity shrink-0 text-sm">
+              Veelgestelde vragen →
+            </Link>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-wit rounded-3xl p-10 shadow-sm">
+            <div className="md:flex md:gap-12">
+              <div className="flex-1 mb-8 md:mb-0">
+                <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
+                <ul className="space-y-3.5">
+                  {inclusief.map(i => (
+                    <li key={i} className="flex items-start gap-3 text-tekst/80">
+                      <Kompas />
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-tekst/60 text-sm leading-relaxed mt-6 border-t border-primair/10 pt-5">
+                  Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+                </p>
               </div>
-              <div className="bg-achtergrond border border-primair/10 rounded-xl p-4 text-sm">
-                <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
-                <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
-                <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
-                  Meer over PGB / ambulant →
-                </Link>
+              <div className="md:w-72 shrink-0">
+                <div className="bg-achtergrond border border-primair/10 rounded-2xl p-5 text-sm">
+                  <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
+                  <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
+                  <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
+                    Meer over PGB / ambulant →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

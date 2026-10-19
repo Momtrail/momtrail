@@ -5,6 +5,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Momtrail · Alle rechten voorbehouden</p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <a href="/contact" className="hover:text-wit transition-colors">Contact</a>
+          <a href="/faq" className="hover:text-wit transition-colors">Veelgestelde vragen</a>
           <a href="/algemene-voorwaarden" className="hover:text-wit transition-colors">Algemene voorwaarden</a>
           <a href="/privacyverklaring" className="hover:text-wit transition-colors">Privacyverklaring</a>
           <a href="/cookiebeleid" className="hover:text-wit transition-colors">Cookiebeleid</a>

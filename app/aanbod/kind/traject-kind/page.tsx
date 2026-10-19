@@ -164,6 +164,28 @@ export default function TrajectKindPage() {
         </div>
       </section>
 
+      {/* Methodes */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+            <div>
+              <h2 className="text-xl font-bold text-primair reveal">Methodes die ik inzet</h2>
+              <p className="text-tekst/50 text-sm italic reveal">Ik kies wat past bij de hulpvraag van jou en je kind.</p>
+            </div>
+            <Link href="/werkwijze" className="text-accent font-bold text-sm hover:underline reveal shrink-0">
+              Meer over mijn werkwijze →
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2.5 reveal">
+            {['NEI', 'Geboortepsychologie', 'EFT', 'Zenuwstelselregulatie', 'Systemisch werk', 'Ademhaling'].map(m => (
+              <span key={m} className="bg-achtergrond border border-primair/15 text-tekst/80 font-medium px-4 py-2 rounded-full text-sm">
+                {m}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Kies jouw trail */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">

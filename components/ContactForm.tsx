@@ -50,6 +50,13 @@ export default function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="telefoon" className="block text-sm font-medium text-tekst mb-1">Telefoonnummer</label>
+        <input
+          id="telefoon" name="telefoon" type="tel" required
+          className="w-full rounded-xl border border-primair/20 bg-wit px-4 py-3 text-tekst focus:outline-none focus:ring-2 focus:ring-primair/40"
+        />
+      </div>
+      <div>
         <label htmlFor="bericht" className="block text-sm font-medium text-tekst mb-1">Bericht</label>
         <textarea
           id="bericht" name="bericht" rows={5} required

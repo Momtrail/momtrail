@@ -14,26 +14,31 @@ export default function AgendaPage() {
           Hier vind je alle komende lessen, workshops en evenementen van Momtrail. Of je nu voor het eerst komt of al vaker meedeed, je bent altijd welkom. Wil je op de hoogte blijven van nieuwe data? Meld je dan aan via het contactformulier.
         </p>
 
-        {/* Ouder-kind retraite */}
-        <div className="bg-primair rounded-2xl p-8 md:p-12 mb-20 reveal">
-          <p className="text-achtergrond/70 font-semibold text-sm mb-2 uppercase tracking-wide">Voorjaar 2027</p>
-          <h2 className="text-2xl font-bold text-achtergrond mb-4">Ouder-kind retraite</h2>
-          <p className="text-achtergrond/80 leading-relaxed mb-4">
-            In het voorjaar organiseer ik een retraite voor ouders en kinderen samen. Een dag om te landen, te vertragen en weer verbinding te voelen, met jezelf en met elkaar.
-          </p>
-          <p className="text-achtergrond/80 leading-relaxed mb-6">
-            De details worden nog uitgewerkt. Wil je als eerste weten wanneer dit definitief gepland is en hoe je kunt meedoen? Schrijf je in voor de interesselijst.
-          </p>
-
-          {/* Mailblue formulier */}
-          <div className="bg-achtergrond rounded-xl p-6">
-            <p className="text-primair font-bold mb-1">Schrijf je in voor de interesselijst</p>
-            <p className="text-tekst/60 text-sm mb-4">Je ontvangt als eerste de details zodra de datum bekend is, én als inschrijver op de interesselijst krijg je een speciale bonus.</p>
-
-            <div className="_form_1" />
-            <Script src="https://momtrail.activehosted.com/f/embed.php?id=1" strategy="lazyOnload" />
-
+        {/* Ouder-kind klankreis */}
+        <div className="bg-wit border border-primair/15 rounded-2xl p-8 md:p-12 mb-10 reveal">
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Aankomend</span>
           </div>
+          <h2 className="text-2xl font-bold text-primair mb-2">Ouder-kind klankreis</h2>
+          <p className="text-primair font-semibold text-lg mb-1">31 januari 2027</p>
+          <p className="text-tekst/60 text-sm mb-6">Ochtend · De Korenbloem, Boven-Leeuwen · 6 t/m 15 jaar</p>
+          <p className="text-tekst/80 leading-relaxed mb-4">
+            Met de ontspanning en de mooie klanken van Wendy van Flowing Sounds hoeven jullie even helemaal niets te doen. Een fijne ochtend voor meer verbinding met je kind.
+          </p>
+          <p className="text-tekst/80 leading-relaxed mb-8">
+            Meer details volgen. Schrijf je in voor de interesselijst en je ontvangt als eerste alle informatie en een kennismakingskorting.
+          </p>
+
+          <details className="group">
+            <summary className="inline-block bg-primair text-wit font-bold px-7 py-3 rounded-full cursor-pointer hover:opacity-90 transition-opacity list-none">
+              Schrijf je in voor de interesselijst →
+            </summary>
+            <div className="bg-achtergrond rounded-xl p-6 mt-4">
+              <p className="text-tekst/60 text-sm mb-4">Je krijgt als eerste de details en een kennismakingskorting.</p>
+              <div className="_form_1" />
+              <Script src="https://momtrail.activehosted.com/f/embed.php?id=1" strategy="lazyOnload" />
+            </div>
+          </details>
         </div>
 
         <div className="bg-achtergrond rounded-2xl p-8 text-center reveal">

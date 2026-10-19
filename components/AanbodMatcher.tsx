@@ -20,19 +20,18 @@ function getResultaten(stap1: string, stap2: string | null): Resultaat[] {
   if (stap1 === 'mezelf') {
     if (stap2 === 'uitgeput') return [{ titel: 'Traject Moeder', tag: '2 maanden · voor jou', omschrijving: 'Voor de mama die aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en écht aanwezig te zijn.', slug: '/aanbod/moeder/traject-moeder' }];
     if (stap2 === 'rust') return [{ titel: 'Somatic Yoga', tag: 'losse lessen · voor jou', omschrijving: 'Combineert (yin) yoga en lichaamsgerichte oefeningen om je te helpen kalmeren en spanning op te lossen in je lichaam. Perfect als je veel in je hoofd zit.', slug: '/aanbod/moeder/somatic-yoga' }];
-    if (stap2 === 'proeven') return [{ titel: 'MomShift', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit. Je gaat direct aan de slag en voelt hoe ik werk. Besluit je daarna om het volledige traject in te stappen? Dan wordt deze sessie verrekend.', slug: '/aanbod/moeder/momshift' }];
+    if (stap2 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit. Je gaat direct aan de slag en voelt hoe ik werk. Besluit je daarna om het volledige traject in te stappen? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
   }
 
   if (stap1 === 'kind') {
     if (stap2 === 'klachten') return [{ titel: 'Little Trail traject', tag: '1 maand · voor je kind', omschrijving: 'We kijken verder dan het gedrag, naar wat er écht speelt. Na één maand is er meer rust en vertrouwen voor jullie allebei.', slug: '/aanbod/kind/traject-kind' }];
     if (stap2 === 'emoties') return [{ titel: 'Hartbewust Kids cursus', tag: '10 weken · 6 tot 12 jaar', omschrijving: 'Spelenderwijs leren kinderen van 6 tot 12 jaar rust te voelen, grip te krijgen op hun emoties en te ontdekken hoe waardevol en uniek ze zijn.', slug: '/aanbod/kind/hartbewust-kids' }];
-    if (stap2 === 'proeven') return [{ titel: 'The Little Shift', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit voor je kind. Je ervaart hoe ik werk en gaat met iets concreets naar huis. Stap je daarna in het traject? Dan wordt deze sessie verrekend.', slug: '/aanbod/kind/little-shift' }];
+    if (stap2 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit voor je kind. Je ervaart hoe ik werk en gaat met iets concreets naar huis. Stap je daarna in het traject? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
   }
 
   if (stap1 === 'samen') {
     if (stap2 === 'beiden') return [
-      { titel: 'Traject Moeder', tag: 'begin bij jezelf', omschrijving: 'Als jullie allebei vastlopen is het krachtigst om bij mama te beginnen. Jouw rust geeft je kind de ruimte om ook te groeien.', slug: '/aanbod/moeder/traject-moeder' },
-      { titel: 'Traject Kind', tag: 'én voor je kind', omschrijving: 'Combineer met het kindtraject voor het meest complete resultaat, voor jullie samen.', slug: '/aanbod/kind/traject-kind' },
+      { titel: 'Traject Moeder', tag: 'de basis — begin bij mama', omschrijving: 'We starten altijd bij jou. Jouw rust en regulatie werken direct door op je kind. In de uitgebreidere trajecten (Reset of Rise) is er ook ruimte om samen met je kind stappen te zetten.', slug: '/aanbod/moeder/traject-moeder' },
     ];
   }
 

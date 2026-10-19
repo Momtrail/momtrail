@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = { title: 'Over mij' };
@@ -62,6 +63,13 @@ export default function OverMijPage() {
           Veel liefs,<br />
           <span className="text-3xl" style={{ fontFamily: 'var(--font-buydog)' }}>Marleen</span>
         </p>
+
+        <div className="mt-12 pt-10 border-t border-primair/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 reveal">
+          <p className="text-tekst/60 text-sm">Benieuwd naar de methodes waarmee ik werk?</p>
+          <Link href="/werkwijze" className="font-bold text-accent hover:underline text-sm shrink-0">
+            Bekijk mijn werkwijze →
+          </Link>
+        </div>
 
       </section>
       <ScrollReveal singles={['.reveal']} />

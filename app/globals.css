@@ -221,3 +221,51 @@ body {
   border: 3px solid var(--color-wit);
   cursor: pointer;
 }
+
+/* ─── Mailblue / ActiveCampaign formulier ──────────────────── */
+
+._form_1 ._form-content,
+._form_1 ._form-inner {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+._form_1 ._form-title,
+._form_1 ._form-branding {
+  display: none !important;
+}
+
+._form_1 input[type="text"],
+._form_1 input[type="email"],
+._form_1 input[type="tel"] {
+  border: 1.5px solid var(--color-accent) !important;
+  border-radius: 0.5rem !important;
+  background: var(--color-wit) !important;
+  color: var(--color-tekst) !important;
+  font-family: var(--font-hoofd) !important;
+  padding: 0.6rem 0.9rem !important;
+  width: 100% !important;
+}
+
+._form_1 input[type="text"]:focus,
+._form_1 input[type="email"]:focus,
+._form_1 input[type="tel"]:focus {
+  outline: none !important;
+  border-color: var(--color-primair) !important;
+}
+
+._form_1 ._submit {
+  background-color: var(--color-primair) !important;
+  color: var(--color-wit) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-family: var(--font-hoofd) !important;
+  font-weight: 700 !important;
+  padding: 0.75rem 2rem !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s !important;
+}
+
+._form_1 ._submit:hover {
+  opacity: 0.85 !important;
+}
