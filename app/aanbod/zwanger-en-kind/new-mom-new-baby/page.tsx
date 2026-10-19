@@ -71,29 +71,46 @@ export default function NewMomNewBabyPage() {
           Via zenuwstelselregulatie, lichaamsgerichte technieken en ruimte voor jouw verhaal zoeken we uit wat jij of jullie kindje nodig heeft om spanning te verlichten en de draad weer op te pakken. Zodat er ruimte komt om samen ook te gaan genieten.
         </p>
 
-        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-8 reveal">
-          <h2 className="text-2xl font-bold text-primair mb-6">De investering</h2>
-          <ul className="space-y-3 mb-8">
+        <h2 className="text-2xl font-bold text-primair mb-6 reveal">De investering</h2>
+        <div className="grid sm:grid-cols-3 gap-6 mb-6">
+          {[
+            { naam: 'Explore', duur: '2 maanden', sessies: '4 sessies', prijs: '€697', termijnen: '3 x €249', populair: false },
+            { naam: 'Pause', duur: '3 maanden', sessies: '6 sessies', prijs: '€997', termijnen: '3 x €349', populair: true },
+            { naam: 'Reset', duur: '4 maanden', sessies: '8 sessies', prijs: '€1147', termijnen: '3 x €399', populair: false },
+          ].map(r => (
+            <div key={r.naam} className={`rounded-3xl p-8 flex flex-col reveal ${r.populair ? 'bg-primair shadow-xl' : 'bg-wit border border-primair/10 shadow-sm'}`}>
+              {r.populair && (
+                <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1.5 rounded-full mb-4 self-start tracking-widest uppercase">meest gekozen</span>
+              )}
+              <h3 className={`text-2xl font-bold mb-2 ${r.populair ? 'text-achtergrond' : 'text-primair'}`} style={{ fontFamily: 'var(--font-buydog)' }}>{r.naam}</h3>
+              <p className={`mb-6 ${r.populair ? 'text-achtergrond/80' : 'text-tekst/60'}`}>
+                <span className="text-lg font-semibold">{r.duur}</span>
+                <span className="text-sm"> · {r.sessies}</span>
+              </p>
+              <div className={`border-t pt-5 mt-auto ${r.populair ? 'border-achtergrond/20' : 'border-primair/10'}`}>
+                <p className={`text-4xl font-bold ${r.populair ? 'text-achtergrond' : 'text-primair'}`}>{r.prijs}</p>
+                <p className={`text-sm mt-1.5 ${r.populair ? 'text-achtergrond/55' : 'text-tekst/40'}`}>of {r.termijnen}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-wit border border-primair/10 rounded-2xl p-6 mb-8 reveal">
+          <ul className="space-y-3 mb-5">
             {[
-              'Kosteloze kennismaking/intake',
-              '3 individuele sessies van 75 minuten, in mijn praktijkruimte of online',
-              'Whatsapp-begeleiding tussendoor voor een check-in na een sessie en bij vragen',
-              '2 telefonische contactmomenten tussen de sessies door voor afstemming, vragen en ondersteuning',
+              'Intake',
+              'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
+              'Begeleiding via WhatsApp en voiceberichten tussen de sessies door',
               'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
-              'Vanaf september: 6 maanden toegang tot de online leeromgeving',
               'Toegang tot de Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
-              'Een persoonlijk cadeau bij de start',
             ].map(i => (
-              <li key={i} className="flex items-start gap-3 text-tekst/80">
+              <li key={i} className="flex items-start gap-3 text-tekst/80 text-sm">
                 <Kompas />
                 {i}
               </li>
             ))}
           </ul>
-          <div className="border-t border-primair/10 pt-6">
-            <p className="text-4xl font-bold text-primair mb-2">€417</p>
-            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
-          </div>
+          <p className="text-tekst/60 text-sm border-t border-primair/10 pt-4">Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoed worden. Wil je daarna doorgaan? Je kunt het traject verlengen met een <strong className="text-tekst">Trailpass</strong> van 3 sessies voor €397.</p>
         </div>
 
         <div className="bg-primair rounded-2xl p-8 text-center reveal">

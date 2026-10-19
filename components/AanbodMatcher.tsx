@@ -9,7 +9,7 @@ type Resultaat = {
   slug: string;
 };
 
-function getResultaten(stap1: string, stap2: string | null): Resultaat[] {
+function getResultaten(stap1: string, stap2: string | null, stap3: string | null): Resultaat[] {
   if (stap1 === 'zwanger') return [{
     titel: 'Zwanger & Kinderwens',
     tag: 'voor jou',
@@ -24,9 +24,13 @@ function getResultaten(stap1: string, stap2: string | null): Resultaat[] {
   }
 
   if (stap1 === 'kind') {
-    if (stap2 === 'klachten') return [{ titel: 'Little Trail traject', tag: '1 maand · voor je kind', omschrijving: 'We kijken verder dan het gedrag, naar wat er écht speelt. Na één maand is er meer rust en vertrouwen voor jullie allebei.', slug: '/aanbod/kind/traject-kind' }];
-    if (stap2 === 'emoties') return [{ titel: 'Hartbewust Kids cursus', tag: '10 weken · 6 tot 12 jaar', omschrijving: 'Spelenderwijs leren kinderen van 6 tot 12 jaar rust te voelen, grip te krijgen op hun emoties en te ontdekken hoe waardevol en uniek ze zijn.', slug: '/aanbod/kind/hartbewust-kids' }];
-    if (stap2 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit voor je kind. Je ervaart hoe ik werk en gaat met iets concreets naar huis. Stap je daarna in het traject? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
+    if (stap2 === '0-5') return [{ titel: 'Littletrail traject', tag: 'voor je kind · 0 tot 5 jaar', omschrijving: 'We kijken verder dan het gedrag, naar wat er écht speelt — ook naar vroege ervaringen zoals de zwangerschap en geboorte. Meer rust en vertrouwen voor jullie allebei.', slug: '/aanbod/kind/traject-kind' }];
+    if (stap2 === '13-18') return [{ titel: 'Littletrail traject', tag: 'voor je kind · 13 tot 18 jaar', omschrijving: 'Ook voor tieners kijken we verder dan het gedrag. Lichaamsgerichte begeleiding die aansluit bij wat er écht speelt, op een manier die past bij deze leeftijd.', slug: '/aanbod/kind/traject-kind' }];
+    if (stap2 === '6-12') {
+      if (stap3 === 'klachten') return [{ titel: 'Littletrail traject', tag: 'voor je kind · 6 tot 12 jaar', omschrijving: 'We kijken verder dan het gedrag, naar wat er écht speelt. Na het traject is er meer rust en vertrouwen voor jullie allebei.', slug: '/aanbod/kind/traject-kind' }];
+      if (stap3 === 'emoties') return [{ titel: 'Hartbewust Kids cursus', tag: '10 weken · 6 tot 12 jaar', omschrijving: 'Spelenderwijs leren kinderen van 6 tot 12 jaar rust te voelen, grip te krijgen op hun emoties en te ontdekken hoe waardevol en uniek ze zijn.', slug: '/aanbod/kind/hartbewust-kids' }];
+      if (stap3 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit voor je kind. Je ervaart hoe ik werk en gaat met iets concreets naar huis. Stap je daarna in het traject? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
+    }
   }
 
   if (stap1 === 'samen') {
@@ -48,11 +52,11 @@ const stap2Opties: Record<string, { vraag: string; opties: { key: string; label:
     ],
   },
   kind: {
-    vraag: 'Wat speelt er bij je kind?',
+    vraag: 'Hoe oud is je kind?',
     opties: [
-      { key: 'klachten', label: 'Emotionele of lichamelijke klachten, driftbuien of teruggetrokken gedrag' },
-      { key: 'emoties', label: 'Moeite met emoties reguleren, faalangst of veel spanning' },
-      { key: 'proeven', label: 'Ik wil eerst één sessie voelen of dit bij ons past' },
+      { key: '0-5', label: '0 tot 5 jaar' },
+      { key: '6-12', label: '6 tot 12 jaar' },
+      { key: '13-18', label: '13 tot 18 jaar' },
     ],
   },
   samen: {
@@ -63,17 +67,39 @@ const stap2Opties: Record<string, { vraag: string; opties: { key: string; label:
   },
 };
 
+const stap3Opties: Record<string, { vraag: string; opties: { key: string; label: string }[] }> = {
+  'kind-6-12': {
+    vraag: 'Wat speelt er bij je kind?',
+    opties: [
+      { key: 'klachten', label: 'Emotionele of lichamelijke klachten, driftbuien of teruggetrokken gedrag' },
+      { key: 'emoties', label: 'Moeite met emoties reguleren, faalangst of veel spanning' },
+      { key: 'proeven', label: 'Ik wil eerst één sessie voelen of dit bij ons past' },
+    ],
+  },
+};
+
 export default function AanbodMatcher() {
   const [stap1, setStap1] = useState<string | null>(null);
   const [stap2, setStap2] = useState<string | null>(null);
+  const [stap3, setStap3] = useState<string | null>(null);
 
   const heeftStap2 = stap1 && stap1 !== 'zwanger';
-  const toonResultaat = stap1 === 'zwanger' || (stap1 && stap2);
-  const resultaten = toonResultaat ? getResultaten(stap1!, stap2) : [];
+  const stap3Key = stap1 && stap2 ? `${stap1}-${stap2}` : null;
+  const heeftStap3 = stap3Key && stap3Opties[stap3Key];
+  const toonResultaat = stap1 === 'zwanger'
+    || (stap1 && stap2 && !heeftStap3)
+    || (stap1 && stap2 && stap3);
+  const resultaten = toonResultaat ? getResultaten(stap1!, stap2, stap3) : [];
 
   function kiesStap1(key: string) {
     setStap1(key);
     setStap2(null);
+    setStap3(null);
+  }
+
+  function kiesStap2(key: string) {
+    setStap2(key);
+    setStap3(null);
   }
 
   return (
@@ -109,9 +135,31 @@ export default function AanbodMatcher() {
             {stap2Opties[stap1!].opties.map(o => (
               <button
                 key={o.key}
-                onClick={() => setStap2(o.key)}
+                onClick={() => kiesStap2(o.key)}
                 className={`px-5 py-3 rounded-xl text-sm font-bold border text-left transition-all cursor-pointer ${
                   stap2 === o.key
+                    ? 'bg-primair text-wit border-primair'
+                    : 'bg-achtergrond text-tekst border-primair/20 hover:border-primair/50'
+                }`}
+              >
+                {o.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {heeftStap3 && stap3Opties[stap3Key!] && (
+        <div className="border-t border-primair/10 pt-8 mb-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-primair/50 mb-2">Stap 3</p>
+          <p className="text-lg font-bold text-tekst mb-5">{stap3Opties[stap3Key!].vraag}</p>
+          <div className="flex flex-col gap-3">
+            {stap3Opties[stap3Key!].opties.map(o => (
+              <button
+                key={o.key}
+                onClick={() => setStap3(o.key)}
+                className={`px-5 py-3 rounded-xl text-sm font-bold border text-left transition-all cursor-pointer ${
+                  stap3 === o.key
                     ? 'bg-primair text-wit border-primair'
                     : 'bg-achtergrond text-tekst border-primair/20 hover:border-primair/50'
                 }`}
