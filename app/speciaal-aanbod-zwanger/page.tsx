@@ -9,22 +9,24 @@ export const metadata: Metadata = {
 };
 
 const inbegrepen = [
-  'Kosteloze kennismaking/intake',
-  '3 individuele sessies van 75 minuten, in mijn praktijkruimte of online',
+  'Intake',
+  '3 individuele sessies van 60 minuten, in mijn praktijkruimte of online',
   'Whatsapp-begeleiding tussendoor voor een check-in na een sessie en bij vragen',
-  '2 telefonische contactmomenten tussen de sessies voor afstemming en ondersteuning',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
-  'Vanaf september: 6 maanden toegang tot de online leeromgeving',
+  'Toegang tot de online leeromgeving ten tijde van het traject',
   'Toegang tot de Rust Reset: 7 dagen introductie in zenuwstelselregulatie',
-  'Een persoonlijk cadeau bij de start',
 ];
 
 export default function SpeciaalAanbodZwangerPage() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-primair py-16 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <div
+        className="relative py-24 px-6"
+        style={{ backgroundImage: "url('/fotos/IMG_8861.JPG')", backgroundSize: 'cover', backgroundPosition: 'center 50%' }}
+      >
+        <div className="absolute inset-0 bg-primair/70" />
+        <div className="relative max-w-3xl mx-auto text-center">
           <span className="inline-block bg-accent text-wit text-sm font-bold px-4 py-1 rounded-full mb-6 uppercase tracking-wide">
             Exclusief aanbod
           </span>
@@ -40,8 +42,14 @@ export default function SpeciaalAanbodZwangerPage() {
       <div className="max-w-3xl mx-auto px-6 py-16">
 
         {/* Intro */}
+        <p className="text-tekst/80 leading-relaxed mb-4 text-lg reveal">
+          Leuk dat je hier bent! Omdat je bij Shalamayura komt, ontvang je een speciaal aanbod.
+        </p>
+        <p className="text-tekst font-semibold text-xl leading-relaxed mb-4 reveal">
+          Je krijgt namelijk een gratis sessie cadeau van Momtrail!
+        </p>
         <p className="text-tekst/80 leading-relaxed mb-12 text-lg reveal">
-          Ik ben blij dat je hier bent! Via deze pagina ontvang jij een speciaal aanbod voor het Bewust Zwanger traject. Een zwangerschap verandert iets — niet alleen fysiek, maar ook emotioneel. Ik begeleid je zodat je niet alleen fysiek, maar ook van binnenuit klaar bent voor wat er komen gaat.
+          We focussen op 1 thema. Wil je daarna verder met meerdere thema's? Dan kun je altijd instappen in het traject.
         </p>
 
         {/* Herken je dit */}
@@ -51,7 +59,7 @@ export default function SpeciaalAanbodZwangerPage() {
           <ul className="space-y-3">
             {[
               'Je bent sneller overprikkeld dan normaal',
-              'Oude thema\'s komen ineens boven',
+              'Oude thema\'s komen ineens boven, zoals hoe je zelf bent opgevoed, de relatie met je ouders, of patronen die je liever niet doorgeeft',
               'Je twijfelt aan jezelf',
               'Je lijf geeft signalen dat je wat rustiger aan mag doen',
               'Je voelt angst voor de bevalling',
@@ -63,7 +71,6 @@ export default function SpeciaalAanbodZwangerPage() {
               </li>
             ))}
           </ul>
-          <p className="text-tekst/80 mt-6 font-medium">Dat is heel normaal. En er is iets aan te doen.</p>
         </div>
 
         {/* Hoe zou het zijn */}
@@ -86,15 +93,17 @@ export default function SpeciaalAanbodZwangerPage() {
 
         {/* Wat we doen */}
         <h2 className="text-2xl font-bold text-primair mb-4 reveal">Wat we samen doen</h2>
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          We beginnen met wat er bij jou speelt. Misschien is dat ontspanning en rust in je lijf, misschien is het voorbereiding op de bevalling, of juist iets van vroeger dat nu de kop opsteekt. Dat bepalen we voor elke sessie samen.
+        </p>
         <p className="text-tekst/80 leading-relaxed mb-16 reveal">
-          We werken aan zenuwstelselregulatie en je leert somatische oefeningen om met stress om te gaan tijdens de zwangerschap, bevalling én daarna. We gaan aan de slag met hechting, voorbereiding op de kraamtijd en als het nodig is ook met emotionele blokkades via NEI of de biotensor. Zo kom je straks niet alleen uitgerust, maar ook vol vertrouwen aan de finish.
+          Ik stem de sessies af op de thema's waar jij mee wil werken. Zo wordt het traject echt iets waar jij wat aan hebt.
         </p>
 
         {/* Prijsblok met korting */}
         <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-8 reveal">
           <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
             <h2 className="text-2xl font-bold text-primair">Jouw exclusieve aanbod</h2>
-            <span className="bg-accent text-wit text-sm font-bold px-3 py-1 rounded-full">10% korting</span>
           </div>
           <ul className="space-y-3 mb-8">
             {inbegrepen.map(i => (
@@ -107,27 +116,32 @@ export default function SpeciaalAanbodZwangerPage() {
           <div className="border-t border-primair/10 pt-6">
             <div className="flex items-baseline gap-3 mb-1">
               <p className="text-4xl font-bold text-primair">€375</p>
-              <p className="text-tekst/40 line-through text-xl">€417</p>
             </div>
-            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk. Wil je een traject op maat? Bespreek het tijdens de kennismaking.</p>
+            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk. Wil je iets bespreken? Dat doen we tijdens de intake.</p>
           </div>
         </div>
 
         {/* CTA */}
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
-          <h2 className="text-2xl font-bold text-achtergrond mb-3">
+          <h2 className="text-2xl font-bold text-achtergrond mb-6">
             Klaar om met vertrouwen je zwangerschap in te gaan?
           </h2>
-          <p className="text-achtergrond/80 mb-6">
-            Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong>
-          </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://calendly.com/momtrail/consult"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
           >
-            Plan een kennismaking →
-          </Link>
+            Plan hier je gratis sessie →
+          </a>
         </div>
+
+        <p className="text-center text-tekst/50 text-sm mt-8 reveal">
+          Meer weten over Bewust Zwanger?{' '}
+          <Link href="/aanbod/zwanger-en-kind/bewust-zwanger" className="underline hover:text-primair transition-colors">
+            Bekijk het volledige traject →
+          </Link>
+        </p>
 
       </div>
 
