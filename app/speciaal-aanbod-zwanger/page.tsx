@@ -171,7 +171,12 @@ export default function SpeciaalAanbodZwangerPage() {
                 Ik ben Marleen. Zelf moeder van twee dochters, en dat moederschap was voor mij een grote uitnodiging om dichter bij mezelf te komen. Ik stond totaal niet meer in verbinding met mijn lijf en mijn gevoel, mijn zenuwstelsel was al jaren ontregeld.
               </p>
               <p className="text-achtergrond/80 leading-relaxed">
-                Wat mij heeft geholpen, is wat ik nu ook inzet voor jou: <strong className="text-achtergrond">NEI (Neuro Emotionele Integratie)</strong> en somatische oefeningen voor zenuwstelselregulatie. NEI werkt met het lichaam om emotionele blokkades op te lossen die je bewust vaak niet eens kent. Zo werken we niet alleen aan hoe je je voelt, maar ook aan wat er dieper ligt.
+                Wat mij heeft geholpen, is wat ik nu ook inzet voor jou: <strong className="text-achtergrond">NEI (Neuro Emotionele Integratie)</strong> en somatische oefeningen voor <strong className="text-achtergrond">zenuwstelselregulatie</strong>. NEI werkt met het lichaam om emotionele blokkades op te lossen die je bewust vaak niet eens kent. Zo werken we niet alleen aan hoe je je voelt, maar ook aan wat er dieper ligt.
+              </p>
+              <p className="text-achtergrond/80 leading-relaxed">
+                Ik werk ook vanuit <strong className="text-achtergrond">geboortepsychologie</strong>: de wetenschap dat geboorte voor zowel jou als je kindje een diepe indruk achterlaat.              </p>
+              <p className="text-achtergrond/80 leading-relaxed">
+                En deze methodes samen? Die zijn magisch wat mij betreft!
               </p>
             </div>
           </div>
