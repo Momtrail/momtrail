@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Script from 'next/script';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = { title: 'Agenda & events' };
@@ -25,20 +24,12 @@ export default function AgendaPage() {
           <p className="text-tekst/80 leading-relaxed mb-4">
             Met de ontspanning en de mooie klanken van Wendy van Flowing Sounds hoeven jullie even helemaal niets te doen. Een fijne ochtend voor meer verbinding met je kind.
           </p>
-          <p className="text-tekst/80 leading-relaxed mb-8">
-            Meer details volgen. Schrijf je in voor de interesselijst en je ontvangt als eerste alle informatie en een kennismakingskorting.
-          </p>
-
-          <details className="group">
-            <summary className="inline-block bg-primair text-wit font-bold px-7 py-3 rounded-full cursor-pointer hover:opacity-90 transition-opacity list-none">
-              Schrijf je in voor de interesselijst →
-            </summary>
-            <div className="bg-achtergrond rounded-xl p-6 mt-4">
-              <p className="text-tekst/60 text-sm mb-4">Je krijgt als eerste de details en een kennismakingskorting.</p>
-              <div className="_form_1" />
-              <Script src="https://momtrail.activehosted.com/f/embed.php?id=1" strategy="lazyOnload" />
-            </div>
-          </details>
+          <a
+            href="https://momtrail.kennis.shop/pay/ouder-kind-klankreis"
+            className="inline-block bg-primair text-wit font-bold px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
+          >
+            Schrijf je in →
+          </a>
         </div>
 
         <div className="bg-achtergrond rounded-2xl p-8 text-center reveal">
