@@ -100,8 +100,8 @@ export default function SpeciaalAanbodZwangerPage() {
           Ik stem de sessies af op de thema's waar jij mee wil werken. Zo wordt het traject echt iets waar jij wat aan hebt.
         </p>
 
-        {/* Prijsblok met korting */}
-        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-8 reveal">
+        {/* Prijsblok */}
+        <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
           <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
             <h2 className="text-2xl font-bold text-primair">Jouw exclusieve aanbod</h2>
           </div>
@@ -114,10 +114,65 @@ export default function SpeciaalAanbodZwangerPage() {
             ))}
           </ul>
           <div className="border-t border-primair/10 pt-6">
+            <div className="flex items-center gap-2 text-tekst/50 text-base mb-3">
+              <span className="line-through">€417 traject</span>
+              <span>+</span>
+              <span className="line-through">€99 losse sessie</span>
+              <span>=</span>
+              <span className="line-through">€516</span>
+            </div>
             <div className="flex items-baseline gap-3 mb-1">
               <p className="text-4xl font-bold text-primair">€375</p>
             </div>
-            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk. Wil je iets bespreken? Dat doen we tijdens de intake.</p>
+            <p className="text-tekst/60 text-sm">Betalen in termijnen is mogelijk.</p>
+          </div>
+        </div>
+
+        {/* Reviews */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {[
+            { naam: 'Lonneke', tekst: 'Ik voel me vaker ontspannen, neem sneller rust en krijg steeds meer vertrouwen in de zwangerschap. Het is fijn om vaker te verbinden met mijn kindje.' },
+            { naam: 'Sara',    tekst: 'De oefeningen die je thuis kan doen zijn heel fijn. Ik merk meer rust in mezelf sinds ik ben gestart. Er wordt echt geluisterd naar je. Mijn angst voor de bevalling is zoveel minder.' },
+          ].map(r => (
+            <div key={r.naam} className="bg-achtergrond rounded-2xl p-6 reveal flex flex-col">
+              <p className="text-tekst/80 leading-relaxed italic flex-1 mb-4">&ldquo;{r.tekst}&rdquo;</p>
+              <p className="font-bold text-primair">{r.naam}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Over Marleen */}
+        <div className="bg-tekst rounded-2xl p-8 mb-16 reveal">
+          <div className="flex flex-col md:flex-row gap-10 items-start">
+            <div className="md:w-52 shrink-0 flex justify-center">
+              <div className="relative w-44">
+                <div
+                  className="absolute inset-0 bg-accent/40 -z-10"
+                  style={{
+                    borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%',
+                    transform: 'translate(8px, 8px) scale(1.04)',
+                  }}
+                />
+                <img
+                  src="/fotos/portret.jpg"
+                  alt="Marleen"
+                  className="w-full object-cover aspect-[3/4]"
+                  style={{
+                    borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%',
+                    objectPosition: '65% 20%',
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex-1 space-y-3">
+              <h2 className="text-2xl font-bold text-achtergrond">Over mij</h2>
+              <p className="text-achtergrond/80 leading-relaxed">
+                Ik ben Marleen. Zelf moeder van twee dochters, en dat moederschap was voor mij een grote uitnodiging om dichter bij mezelf te komen. Ik stond totaal niet meer in verbinding met mijn lijf en mijn gevoel, mijn zenuwstelsel was al jaren ontregeld.
+              </p>
+              <p className="text-achtergrond/80 leading-relaxed">
+                Wat mij heeft geholpen, is wat ik nu ook inzet voor jou: <strong className="text-achtergrond">NEI (Neuro Emotionele Integratie)</strong> en somatische oefeningen voor zenuwstelselregulatie. NEI werkt met het lichaam om emotionele blokkades op te lossen die je bewust vaak niet eens kent. Zo werken we niet alleen aan hoe je je voelt, maar ook aan wat er dieper ligt.
+              </p>
+            </div>
           </div>
         </div>
 
