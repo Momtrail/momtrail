@@ -49,7 +49,7 @@ export default function SpeciaalAanbodZwangerPage() {
           Je krijgt namelijk een gratis sessie cadeau van Momtrail!
         </p>
         <p className="text-tekst/80 leading-relaxed mb-12 text-lg reveal">
-          We focussen op 1 thema. Wil je daarna verder met meerdere thema's? Dan kun je altijd instappen in het traject.
+          We focussen op één thema. Instappen in het traject daarna is niet verplicht, maar het kan altijd als je verder wilt met een dieper of meerdere thema's.
         </p>
 
         {/* Herken je dit */}
@@ -129,12 +129,13 @@ export default function SpeciaalAanbodZwangerPage() {
         </div>
 
         {/* Reviews */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <h2 className="text-2xl font-bold text-primair mb-6 reveal">Wat anderen zeggen</h2>
+        <div id="reviews-zwanger" className="grid md:grid-cols-2 gap-6 mb-16">
           {[
             { naam: 'Lonneke', tekst: 'Ik voel me vaker ontspannen, neem sneller rust en krijg steeds meer vertrouwen in de zwangerschap. Het is fijn om vaker te verbinden met mijn kindje.' },
             { naam: 'Sara',    tekst: 'De oefeningen die je thuis kan doen zijn heel fijn. Ik merk meer rust in mezelf sinds ik ben gestart. Er wordt echt geluisterd naar je. Mijn angst voor de bevalling is zoveel minder.' },
           ].map(r => (
-            <div key={r.naam} className="bg-achtergrond rounded-2xl p-6 reveal flex flex-col">
+            <div key={r.naam} className="bg-achtergrond rounded-2xl p-6 flex flex-col">
               <p className="text-tekst/80 leading-relaxed italic flex-1 mb-4">&ldquo;{r.tekst}&rdquo;</p>
               <p className="font-bold text-primair">{r.naam}</p>
             </div>
@@ -200,7 +201,7 @@ export default function SpeciaalAanbodZwangerPage() {
 
       </div>
 
-      <ScrollReveal singles={['.reveal']} />
+      <ScrollReveal singles={['.reveal']} grids={['#reviews-zwanger']} />
     </>
   );
 }
