@@ -17,8 +17,8 @@ const aanbod = [
     href: '/aanbod/moeder/traject-moeder',
   },
   {
-    titel: 'Somatic Yoga lessen',
-    tekst: 'Perfect voor als je veel in je hoofd zit of thuis moeilijk tot ontspanning komt. Somatic Yoga combineert (yin) yoga en lichaamsgerichte oefeningen om je te helpen kalmeren en spanning op te lossen in je lichaam.',
+    titel: 'Mindful Moms',
+    tekst: 'Een maandelijkse zondagochtend voor jou, even geen mama-modus. We beginnen in ons lijf met zachte somatische en yoga-oefeningen, daarna is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.',
     href: '/aanbod/moeder/somatic-yoga',
   },
 ];

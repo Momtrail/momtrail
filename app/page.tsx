@@ -13,7 +13,7 @@ const aanbodPreview = [
   { titel: 'Moeder',                foto: '/fotos/IMG_6045 2.jpg', positie: '50% 45%', href: '/aanbod/moeder' },
   { titel: 'Kind',                  foto: '/fotos/DSC_4242-2.jpg', positie: '50% 50%', href: '/aanbod/kind' },
   { titel: 'PGB / Ambulant',        foto: '/fotos/IMG_1433.JPG', positie: '70% 40%', href: '/aanbod/ambulante-begeleiding' },
-  { titel: 'Zwanger & Kinderwens',  foto: '/fotos/DSC_4049-2.jpg', positie: '50% 50%', href: '/aanbod/zwanger-en-kinderwens' },
+  { titel: 'Zwanger',  foto: '/fotos/DSC_4049-2.jpg', positie: '50% 50%', href: '/aanbod/zwanger-en-kinderwens' },
 ];
 
 const reviews = [

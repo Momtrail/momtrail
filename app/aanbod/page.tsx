@@ -20,7 +20,7 @@ const aanbod = [
     fotoPositie: '50% 50%',
   },
   {
-    titel: 'Zwanger & Kinderwens',
+    titel: 'Zwanger',
     slug: 'zwanger-en-kinderwens',
     beschrijving: 'Of je nu zwanger bent, net bevallen bent of al een tijdje probeert zwanger te worden: dit aanbod begeleidt je lichamelijk en emotioneel in één van de meest ingrijpende periodes van je leven.',
     foto: '/fotos/DSC_4049-2.jpg',

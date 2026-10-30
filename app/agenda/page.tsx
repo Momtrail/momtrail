@@ -23,7 +23,7 @@ export default function AgendaPage() {
           <p className="text-primair font-semibold text-lg mb-1">Zo 20 december 2026 · stilstaan bij jouw jaar</p>
           <p className="text-tekst/60 text-sm mb-6">10:00–12:00 · De Korenbloem, Boven-Leeuwen</p>
           <p className="text-tekst/80 leading-relaxed mb-4">
-            Even geen mama-modus: je lijf komt tot rust en je voelt weer wat er in jou leeft. We beginnen met zachte somatische en yoga-oefeningen: rekken, ademen, spanning loslaten. Dan is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.
+            Even geen mama-modus: je lijf komt tot rust en je voelt weer wat er in jou leeft. We beginnen met zachte somatische en yoga-oefeningen, rekken, ademen en spanning loslaten. Dan is er ruimte voor het thema van deze ochtend: <strong>terugblikken op jouw jaar.</strong> Wat heeft dit jaar jou gebracht? Wat mag je loslaten, en wat neem je mee naar 2027?
           </p>
           <a
             href="https://momtrail.kennis.shop/pay/mindful-moms"
@@ -42,7 +42,7 @@ export default function AgendaPage() {
           <p className="text-primair font-semibold text-lg mb-1">Zo 24 januari 2027 · visionboard voor 2027</p>
           <p className="text-tekst/60 text-sm mb-6">10:00–12:00 · De Korenbloem, Boven-Leeuwen</p>
           <p className="text-tekst/80 leading-relaxed mb-4">
-            Even geen mama-modus: je lijf komt tot rust en je voelt weer wat er in jou leeft. We beginnen met zachte somatische en yoga-oefeningen: rekken, ademen, spanning loslaten. Dan is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.
+            Even geen mama-modus: je lijf komt tot rust en je voelt weer wat er in jou leeft. We beginnen met zachte somatische en yoga-oefeningen, rekken, ademen en spanning loslaten. Dan is er ruimte voor het thema van deze ochtend: <strong>jouw visionboard voor 2027.</strong> Wat wil jij dit jaar leven? We maken ruimte voor dromen, richting en wat jij nodig hebt om het jaar goed te beginnen.
           </p>
           <a
             href="https://momtrail.kennis.shop/pay/mindful-moms"
@@ -52,13 +52,30 @@ export default function AgendaPage() {
           </a>
         </div>
 
+        {/* Cursus Biotensor */}
+        <div className="bg-wit border border-primair/15 rounded-2xl p-8 md:p-12 mb-10 reveal">
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Aankomend</span>
+          </div>
+          <h2 className="text-2xl font-bold text-primair mb-2">Cursus Biotensor</h2>
+          <p className="text-primair font-semibold text-lg mb-1">Za 13 februari 2027</p>
+          <p className="text-tekst/60 text-sm mb-6">De Korenbloem, Boven-Leeuwen</p>
+          <p className="text-tekst/80 leading-relaxed mb-4">
+            Meer informatie volgt binnenkort.
+          </p>
+          <p className="text-tekst/80 font-semibold mb-4">Investering: €130</p>
+          <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-7 py-3 rounded-full hover:opacity-90 transition-opacity">
+            Zet me op de wachtlijst →
+          </Link>
+        </div>
+
         {/* Ouder-kind klankreis */}
         <div className="bg-wit border border-primair/15 rounded-2xl p-8 md:p-12 mb-10 reveal">
           <div className="flex flex-wrap items-center gap-3 mb-5">
             <span className="bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Aankomend</span>
           </div>
           <h2 className="text-2xl font-bold text-primair mb-2">Ouder-kind klankreis</h2>
-          <p className="text-primair font-semibold text-lg mb-1">31 januari 2027</p>
+          <p className="text-primair font-semibold text-lg mb-1">Zo 31 januari 2027</p>
           <p className="text-tekst/60 text-sm mb-6">Ochtend · De Korenbloem, Boven-Leeuwen · 6 t/m 15 jaar</p>
           <p className="text-tekst/80 leading-relaxed mb-4">
             Met de ontspanning en de mooie klanken van Wendy van Flowing Sounds hoeven jullie even helemaal niets te doen. Een fijne ochtend voor meer verbinding met je kind.

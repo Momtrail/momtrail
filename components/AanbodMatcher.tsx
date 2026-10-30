@@ -11,15 +11,21 @@ type Resultaat = {
 
 function getResultaten(stap1: string, stap2: string | null, stap3: string | null): Resultaat[] {
   if (stap1 === 'zwanger') return [{
-    titel: 'Zwanger & Kinderwens',
+    titel: 'Zwanger',
     tag: 'voor jou',
     omschrijving: 'Of je nu zwanger bent, net bevallen of al een tijdje probeert zwanger te worden: begeleiding voor lichaam én emoties in één van de meest ingrijpende periodes van je leven.',
     slug: '/aanbod/zwanger-en-kinderwens',
   }];
 
   if (stap1 === 'mezelf') {
-    if (stap2 === 'uitgeput') return [{ titel: 'Traject Moeder', tag: '2 maanden · voor jou', omschrijving: 'Voor de mama die aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en écht aanwezig te zijn.', slug: '/aanbod/moeder/traject-moeder' }];
-    if (stap2 === 'rust') return [{ titel: 'Somatic Yoga', tag: 'losse lessen · voor jou', omschrijving: 'Combineert (yin) yoga en lichaamsgerichte oefeningen om je te helpen kalmeren en spanning op te lossen in je lichaam. Perfect als je veel in je hoofd zit.', slug: '/aanbod/moeder/somatic-yoga' }];
+    if (stap2 === 'uitgeput') {
+      if (stap3 === 'maasenwaal') return [
+        { titel: 'Traject Moeder', tag: 'voor jou', omschrijving: 'Voor de mama die aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en écht aanwezig te zijn.', slug: '/aanbod/moeder/traject-moeder' },
+        { titel: 'Ambulante begeleiding via PGB', tag: 'voor jou · Maas en Waal & Betuwe', omschrijving: 'Woon je in Maas en Waal of de Betuwe? Dan kun je mogelijk in aanmerking komen voor begeleiding via een PGB. Neem contact op om te kijken wat er voor jou mogelijk is.', slug: '/aanbod/ambulante-begeleiding' },
+      ];
+      if (stap3 === 'buiten') return [{ titel: 'Traject Moeder', tag: 'voor jou', omschrijving: 'Voor de mama die aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en écht aanwezig te zijn.', slug: '/aanbod/moeder/traject-moeder' }];
+    }
+    if (stap2 === 'rust') return [{ titel: 'Mindful Moms', tag: 'maandelijkse ochtend · voor jou', omschrijving: 'Een zondagochtend even geen mama-modus. We beginnen in ons lijf met zachte somatische en yoga-oefeningen, daarna is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.', slug: '/aanbod/moeder/somatic-yoga' }];
     if (stap2 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit. Je gaat direct aan de slag en voelt hoe ik werk. Besluit je daarna om het volledige traject in te stappen? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
   }
 
@@ -31,12 +37,6 @@ function getResultaten(stap1: string, stap2: string | null, stap3: string | null
       if (stap3 === 'emoties') return [{ titel: 'Hartbewust Kids cursus', tag: '10 weken · 6 tot 12 jaar', omschrijving: 'Spelenderwijs leren kinderen van 6 tot 12 jaar rust te voelen, grip te krijgen op hun emoties en te ontdekken hoe waardevol en uniek ze zijn.', slug: '/aanbod/kind/hartbewust-kids' }];
       if (stap3 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit voor je kind. Je ervaart hoe ik werk en gaat met iets concreets naar huis. Stap je daarna in het traject? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
     }
-  }
-
-  if (stap1 === 'samen') {
-    if (stap2 === 'beiden') return [
-      { titel: 'Traject Moeder', tag: 'de basis — begin bij mama', omschrijving: 'We starten altijd bij jou. Jouw rust en regulatie werken direct door op je kind. In de uitgebreidere trajecten (Reset of Rise) is er ook ruimte om samen met je kind stappen te zetten.', slug: '/aanbod/moeder/traject-moeder' },
-    ];
   }
 
   return [];
@@ -59,20 +59,21 @@ const stap2Opties: Record<string, { vraag: string; opties: { key: string; label:
       { key: '13-18', label: '13 tot 18 jaar' },
     ],
   },
-  samen: {
-    vraag: 'Waar gaat het het meest over?',
-    opties: [
-      { key: 'beiden', label: 'We willen allebei groeien, mama én kind' },
-    ],
-  },
 };
 
 const stap3Opties: Record<string, { vraag: string; opties: { key: string; label: string }[] }> = {
+  'mezelf-uitgeput': {
+    vraag: 'Waar woon je?',
+    opties: [
+      { key: 'maasenwaal', label: 'In Maas en Waal of de Betuwe' },
+      { key: 'buiten', label: 'Buiten Maas en Waal en de Betuwe' },
+    ],
+  },
   'kind-6-12': {
     vraag: 'Wat speelt er bij je kind?',
     opties: [
       { key: 'klachten', label: 'Emotionele of lichamelijke klachten, driftbuien of teruggetrokken gedrag' },
-      { key: 'emoties', label: 'Moeite met emoties reguleren, faalangst of veel spanning' },
+      { key: 'emoties', label: 'Ik wil mijn kind beter leren omgaan met emoties, stress, (hoog)gevoeligheid of onrust en boosheid' },
       { key: 'proeven', label: 'Ik wil eerst één sessie voelen of dit bij ons past' },
     ],
   },
@@ -110,8 +111,7 @@ export default function AanbodMatcher() {
         {[
           { key: 'mezelf', label: 'Voor mezelf (als mama)' },
           { key: 'kind', label: 'Voor mijn kind' },
-          { key: 'samen', label: 'Voor ons samen' },
-          { key: 'zwanger', label: 'Zwanger of kinderwens' },
+          { key: 'zwanger', label: 'Zwanger' },
         ].map(o => (
           <button
             key={o.key}

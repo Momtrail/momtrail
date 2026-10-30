@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Zwanger & Kinderwens' };
+export const metadata: Metadata = { title: 'Zwanger' };
 
 const opties = [
   {
@@ -12,20 +12,13 @@ const opties = [
     foto: '/fotos/DSC_4049-2.jpg',
     fotoPositie: '50% 55%',
   },
-  {
-    titel: 'Kinderwenstraject',
-    href: '/aanbod/kinderwens',
-    beschrijving: 'Jullie verlangen naar een kindje, maar het lukt maar niet. In samenwerking met Health & Happiness begeleiden we je op alle lagen: van hormonen en voeding tot zenuwstelsel en onverwerkte emoties.',
-    foto: '/fotos/IMG_7036.jpg',
-    fotoPositie: '50% 50%',
-  },
 ];
 
 export default function ZwangerEnKinderwensPage() {
   return (
     <section className="max-w-4xl mx-auto px-6 py-20">
       <Link href="/aanbod" className="text-accent hover:underline text-sm mb-8 inline-block">← Terug naar aanbod</Link>
-      <h1 className="text-3xl font-bold text-primair mb-12 reveal">Zwanger &amp; Kinderwens</h1>
+      <h1 className="text-3xl font-bold text-primair mb-12 reveal">Zwanger</h1>
 
       <div className="grid gap-8 sm:grid-cols-2">
         {opties.map(item => (
