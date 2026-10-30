@@ -60,6 +60,7 @@ function CtaBlock({ lowestLabel, lowestKey, avg }: { lowestLabel: string; lowest
 
 export default function Levenswiel() {
   const [values, setValues] = useState<Values>(initialValues);
+  const [naam, setNaam] = useState('');
   const [email, setEmail] = useState('');
   const [emailStatus, setEmailStatus] = useState<EmailStatus>('idle');
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -153,7 +154,7 @@ export default function Levenswiel() {
       const res = await fetch('/api/levenswiel', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, values, avg, lowestKey: lowest.key, lowestLabel: lowest.label }),
+        body: JSON.stringify({ naam, email, values, avg, lowestKey: lowest.key, lowestLabel: lowest.label }),
       });
       if (!res.ok) throw new Error('mislukt');
       setEmailStatus('success');
@@ -215,23 +216,33 @@ export default function Levenswiel() {
               <p className="text-center text-tekst/60 text-sm mb-6">
                 Ik stuur je een samenvatting van jouw scores + één tip van mij voor jouw aandachtsgebied.
               </p>
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <form onSubmit={handleEmailSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
                 <input
-                  type="email"
+                  type="text"
                   required
-                  placeholder="jouw@email.nl"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-full border border-primair/20 bg-achtergrond text-tekst placeholder:text-tekst/40 focus:outline-none focus:border-primair text-sm"
+                  placeholder="Jouw voornaam"
+                  value={naam}
+                  onChange={e => setNaam(e.target.value)}
+                  className="px-4 py-3 rounded-full border border-primair/20 bg-achtergrond text-tekst placeholder:text-tekst/40 focus:outline-none focus:border-primair text-sm"
                 />
-                <button
-                  type="submit"
-                  className="bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity whitespace-nowrap text-sm"
-                >
-                  Stuur mijn verslag →
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    required
+                    placeholder="jouw@email.nl"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    className="flex-1 px-4 py-3 rounded-full border border-primair/20 bg-achtergrond text-tekst placeholder:text-tekst/40 focus:outline-none focus:border-primair text-sm"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity whitespace-nowrap text-sm"
+                  >
+                    Stuur mijn verslag →
+                  </button>
+                </div>
               </form>
-              <p className="text-center text-tekst/40 text-xs mt-3">Geen spam. Alleen dit ene mailtje.</p>
+              <p className="text-center text-tekst/40 text-xs mt-3">Je ontvangt je persoonlijke verslag en je krijgt maandelijks de Momtrail Mail. Afmelden kan altijd.</p>
             </>
           )}
           {emailStatus === 'submitting' && (

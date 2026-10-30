@@ -134,14 +134,15 @@ function buildEmailHtml(
       <p style="margin:10px 0 0;font-size:12px;color:#76473a99;">30 minuten · vrijblijvend · online of bij Momtrail</p>
     </div>
     <hr style="border:none;border-top:1px solid #dda49440;margin:0 0 20px;"/>
-    <p style="margin:0;font-size:12px;color:#76473a80;line-height:1.6;">Je ontvangt deze mail omdat je het gratis Levenswiel op momtrail.nl hebt ingevuld. Je staat niet automatisch op een nieuwsbrief.</p>
+    <p style="margin:0;font-size:12px;color:#76473a80;line-height:1.6;">Je ontvangt deze mail omdat je het gratis Levenswiel op momtrail.nl hebt ingevuld. Je staat nu ook op de Momtrail Mail — afmelden kan altijd via de link onderaan de nieuwsbrief.</p>
   </div>
 </div>
 </body></html>`;
 }
 
 export async function POST(req: NextRequest) {
-  const { email, values, avg, lowestKey, lowestLabel } = await req.json() as {
+  const { naam, email, values, avg, lowestKey, lowestLabel } = await req.json() as {
+    naam: string;
     email: string;
     values: Record<string, number>;
     avg: string;
@@ -193,7 +194,7 @@ export async function POST(req: NextRequest) {
     try {
       const syncRes: { contact?: { id: string } } = await mailblueFetch(mbUrl, mbKey, '/contact/sync', {
         method: 'POST',
-        body: JSON.stringify({ contact: { email } }),
+        body: JSON.stringify({ contact: { email, firstName: naam ?? '' } }),
       });
       const contactId = Number(syncRes.contact?.id);
       if (contactId) {
