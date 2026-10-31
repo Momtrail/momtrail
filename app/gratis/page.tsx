@@ -137,6 +137,29 @@ export default function GratisPage() {
         </div>
       </div>
 
+      {/* Blog */}
+      <section className="max-w-3xl mx-auto px-6 pb-16">
+        <h2 className="text-2xl font-bold text-primair mb-2 reveal">Blog</h2>
+        <p className="text-tekst/60 italic mb-8 reveal">Eerlijke verhalen en praktische inzichten</p>
+        <div className="flex flex-col gap-6">
+          {artikelen.map((a) => (
+            <Link key={a.slug} href={`/blog/${a.slug}`} className="block bg-wit border border-primair/10 rounded-2xl p-8 reveal hover:border-primair/40 hover:shadow-sm transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full tracking-wide uppercase">
+                  {a.categorie}
+                </span>
+                <span className="text-tekst/40 text-sm">{a.datum}</span>
+              </div>
+              <h3 className="text-xl font-bold text-primair mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>
+                {a.titel}
+              </h3>
+              <p className="text-tekst/75 leading-relaxed mb-5">{a.intro}</p>
+              <span className="inline-block text-primair font-bold text-sm">Lees verder →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Levenswiel embedded */}
       <section id="levenswiel" className="bg-primair pb-20">
         <div className="w-full overflow-hidden leading-none">
@@ -149,31 +172,6 @@ export default function GratisPage() {
             Hoe balanceer jij als mama?
           </h2>
           <Levenswiel />
-        </div>
-      </section>
-
-      {/* Blog */}
-      <section className="max-w-3xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-bold text-primair mb-2 reveal">Blog</h2>
-        <p className="text-tekst/60 italic mb-8 reveal">Eerlijke verhalen en praktische inzichten</p>
-        <div className="flex flex-col gap-6">
-          {artikelen.map((a) => (
-            <article key={a.slug} className="bg-wit border border-primair/10 rounded-2xl p-8 reveal">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full tracking-wide uppercase">
-                  {a.categorie}
-                </span>
-                <span className="text-tekst/40 text-sm">{a.datum}</span>
-              </div>
-              <h3 className="text-xl font-bold text-primair mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>
-                {a.titel}
-              </h3>
-              <p className="text-tekst/75 leading-relaxed mb-5">{a.intro}</p>
-              <Link href={`/blog/${a.slug}`} className="inline-block text-primair font-bold text-sm hover:opacity-70 transition-opacity">
-                Lees verder →
-              </Link>
-            </article>
-          ))}
         </div>
       </section>
 
