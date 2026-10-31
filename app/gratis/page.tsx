@@ -138,37 +138,39 @@ export default function GratisPage() {
       </div>
 
       {/* Blog */}
-      <section className="max-w-3xl mx-auto px-6 pb-16">
-        <h2 className="text-2xl font-bold text-primair mb-2 reveal">Blog</h2>
-        <p className="text-tekst/60 italic mb-8 reveal">Eerlijke verhalen en praktische inzichten</p>
-        <div className="flex flex-col gap-6">
-          {artikelen.map((a) => (
-            <Link key={a.slug} href={`/blog/${a.slug}`} className="block bg-wit border border-primair/10 rounded-2xl p-8 reveal hover:border-primair/40 hover:shadow-sm transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full tracking-wide uppercase">
-                  {a.categorie}
-                </span>
-                <span className="text-tekst/40 text-sm">{a.datum}</span>
-              </div>
-              <h3 className="text-xl font-bold text-primair mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>
-                {a.titel}
-              </h3>
-              <p className="text-tekst/75 leading-relaxed mb-5">{a.intro}</p>
-              <span className="inline-block text-primair font-bold text-sm">Lees verder →</span>
-            </Link>
-          ))}
+      <section className="bg-primair py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-achtergrond mb-2 reveal">Blog</h2>
+          <p className="text-achtergrond/60 italic mb-8 reveal">Eerlijke verhalen en praktische inzichten</p>
+          <div className="flex flex-col gap-6">
+            {artikelen.map((a) => (
+              <Link key={a.slug} href={`/blog/${a.slug}`} className="block bg-wit/10 border border-achtergrond/20 rounded-2xl p-8 reveal hover:bg-wit/20 transition-all">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-block bg-achtergrond/20 text-achtergrond text-xs font-bold px-3 py-1 rounded-full tracking-wide uppercase">
+                    {a.categorie}
+                  </span>
+                  <span className="text-achtergrond/40 text-sm">{a.datum}</span>
+                </div>
+                <h3 className="text-xl font-bold text-achtergrond mb-3" style={{ fontFamily: 'var(--font-buydog)' }}>
+                  {a.titel}
+                </h3>
+                <p className="text-achtergrond/75 leading-relaxed mb-5">{a.intro}</p>
+                <span className="inline-block text-achtergrond font-bold text-sm">Lees verder →</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Levenswiel embedded */}
-      <section id="levenswiel" className="bg-primair pb-20">
+      <section id="levenswiel" className="bg-achtergrond pb-20">
         <div className="w-full overflow-hidden leading-none">
           <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
-            <path fill="#fae8e1" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />
+            <path fill="#c16052" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />
           </svg>
         </div>
         <div className="max-w-3xl mx-auto px-6 pt-10 text-center">
-          <h2 className="text-2xl font-bold text-achtergrond mb-3 reveal" style={{ fontFamily: 'var(--font-hoofd)' }}>
+          <h2 className="text-2xl font-bold text-primair mb-3 reveal" style={{ fontFamily: 'var(--font-hoofd)' }}>
             Hoe balanceer jij als mama?
           </h2>
           <Levenswiel />
