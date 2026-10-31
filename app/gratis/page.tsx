@@ -19,6 +19,15 @@ const weggevers = [
     intern: true,
   },
   {
+    tag: 'Voor moeders',
+    titel: 'Momtrail podcast',
+    omschrijving:
+      'Luister gratis naar de Momtrail podcast op Spotify. Eerlijke gesprekken en inzichten over het moederschap, je lijf en alles wat daarbij komt kijken.',
+    cta: 'Luister op Spotify →',
+    href: 'https://open.spotify.com/search/momtrail',
+    intern: false,
+  },
+  {
     tag: 'Over je kind',
     titel: 'De secret podcast',
     omschrijving:
