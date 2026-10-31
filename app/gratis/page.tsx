@@ -24,7 +24,7 @@ const weggevers = [
     omschrijving:
       'Luister gratis naar de Momtrail podcast op Spotify. Eerlijke gesprekken en inzichten over het moederschap, je lijf en alles wat daarbij komt kijken.',
     cta: 'Luister op Spotify →',
-    href: 'https://open.spotify.com/search/momtrail',
+    href: 'https://open.spotify.com/show/1wQQkL716h4rfmLKvi9NE5',
     intern: false,
   },
   {
