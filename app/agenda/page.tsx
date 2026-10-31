@@ -14,6 +14,33 @@ export default function AgendaPage() {
           Hier vind je alle komende lessen, workshops en evenementen van Momtrail. Of je nu voor het eerst komt of al vaker meedeed, je bent altijd welkom. Wil je op de hoogte blijven van nieuwe data? Meld je dan aan via het contactformulier.
         </p>
 
+        {/* Tijdelijke melding */}
+        <div className="bg-accent/15 border border-accent/30 rounded-2xl px-7 py-5 mb-10 reveal flex gap-4 items-start">
+          <span className="text-xl mt-0.5">🛠</span>
+          <div>
+            <p className="font-bold text-tekst mb-1">Betaalpagina&apos;s zijn dit weekend even offline</p>
+            <p className="text-tekst/70 text-sm leading-relaxed">
+              Wil je je inschrijven? Stuur me gerust een berichtje via <Link href="/contact" className="text-accent font-bold hover:underline">het contactformulier</Link> of kom na het weekend terug, dan kan het weer gewoon via de knop.
+            </p>
+          </div>
+        </div>
+
+        {/* Kerstborrel Pure Business Trail */}
+        <div className="bg-wit border border-primair/15 rounded-2xl p-8 md:p-12 mb-10 reveal">
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="bg-accent/20 text-primair text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Aankomend</span>
+          </div>
+          <h2 className="text-2xl font-bold text-primair mb-2">Kerstborrel Pure Business Trail</h2>
+          <p className="text-primair font-semibold text-lg mb-1">Wo 16 december 2026</p>
+          <p className="text-tekst/60 text-sm mb-6">19:30–22:00</p>
+          <p className="text-tekst/80 leading-relaxed mb-4">
+            Puur Tonique en Momtrail organiseren een gezellige kerstborrel voor vrouwelijke ondernemers. Nieuwe gezichten ontmoeten en het jaar goed afsluiten.
+          </p>
+          <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-7 py-3 rounded-full hover:opacity-90 transition-opacity">
+            Meer info of aanmelden →
+          </Link>
+        </div>
+
         {/* Mindful Moms – 20 december */}
         <div className="bg-wit border border-primair/15 rounded-2xl p-8 md:p-12 mb-10 reveal">
           <div className="flex flex-wrap items-center gap-3 mb-5">

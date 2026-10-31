@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -67,13 +68,14 @@ const opbrengsten = [
   'Je voelt vertrouwen in het moederschap en jouw goede energie werkt aanstekelijk op je kind(eren) en partner.',
 ];
 
-const inclusief = [
+const inclusief: React.ReactNode[] = [
   'Intake',
   'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
   'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door, voor een check-in na een sessie en bij vragen',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
   'Toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
   'De Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
+  <>Toegang tot <a href="https://momtrail.kennis.shop/pay/mindful-moms" className="text-accent font-bold hover:underline">Mindful Moms</a> gedurende het traject</>,
 ];
 
 const reviews = [
@@ -300,8 +302,8 @@ export default function TrajectMoederPage() {
               <div className="flex-1 mb-8 md:mb-0">
                 <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
                 <ul className="space-y-3.5">
-                  {inclusief.map(i => (
-                    <li key={i} className="flex items-start gap-3 text-tekst/80">
+                  {inclusief.map((i, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-tekst/80">
                       <Kompas />
                       {i}
                     </li>
