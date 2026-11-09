@@ -25,7 +25,10 @@ function getResultaten(stap1: string, stap2: string | null, stap3: string | null
       ];
       if (stap3 === 'buiten') return [{ titel: 'Traject Moeder', tag: 'voor jou', omschrijving: 'Voor de mama die aan het overleven is en weer wil voelen hoe het is om energie te hebben, grenzen te stellen en écht aanwezig te zijn.', slug: '/aanbod/moeder/traject-moeder' }];
     }
-    if (stap2 === 'rust') return [{ titel: 'Mindful Moms', tag: 'maandelijkse ochtend · voor jou', omschrijving: 'Een zondagochtend even geen mama-modus. We beginnen in ons lijf met zachte somatische en yoga-oefeningen, daarna is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.', slug: '/aanbod/moeder/somatic-yoga' }];
+    if (stap2 === 'rust') return [
+      { titel: 'Mindful Moms', tag: 'maandelijkse ochtend · voor jou', omschrijving: 'Een zondagochtend even geen mama-modus. We beginnen in ons lijf met zachte somatische en yoga-oefeningen, daarna is er ruimte voor mindfulness. Elke ochtend heeft een eigen thema.', slug: '/aanbod/moeder/somatic-yoga' },
+      { titel: 'Agenda & events', tag: 'workshops en events', omschrijving: 'Bekijk alle komende workshops, events en ochtenden van Momtrail. Er is vast iets wat bij jou past.', slug: '/agenda' },
+    ];
     if (stap2 === 'inzichten') return [{ titel: 'Trailpass', tag: 'losse sessies · voor jou', omschrijving: 'Voor de mama die af en toe een sessie wil voor nieuwe inzichten, zonder vast traject. Op jouw tempo, wanneer jij er behoefte aan hebt.', slug: '/aanbod/moeder/trailpass' }];
     if (stap2 === 'proeven') return [{ titel: 'Trailstart', tag: 'kennismakingssessie · 60-75 min', omschrijving: 'Één sessie, één thema, één stap vooruit. Je gaat direct aan de slag en voelt hoe ik werk. Besluit je daarna om het volledige traject in te stappen? Dan wordt deze sessie verrekend.', slug: '/aanbod/trailstart' }];
   }

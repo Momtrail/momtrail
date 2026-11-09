@@ -220,7 +220,7 @@ export default function HomePage() {
       </section>
 
       {/* Over mij preview */}
-      <section className="bg-primair pb-20">
+      <section className="bg-primair pb-20" style={{ borderTop: '2px solid #fae8e1' }}>
         <div className="w-full overflow-hidden leading-none">
           <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
             <path fill="#fae8e1" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />

@@ -17,7 +17,7 @@ export default function ContactPage() {
       </Suspense>
 
       <p className="text-tekst/80 leading-relaxed mb-4">
-        Wil je een kosteloze kennismaking plannen en je hulpvraag bespreken? Of wil je een consult of een somatic yoga les boeken?
+        Wil je een kosteloze kennismaking plannen en je hulpvraag bespreken? Of wil je een consult boeken?
         Hieronder vind je mijn digitale agenda.
       </p>
       <p className="text-tekst/80 leading-relaxed mb-8">
