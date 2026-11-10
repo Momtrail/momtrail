@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Veelgestelde vragen' };
+export const metadata: Metadata = {
+  title: 'Veelgestelde vragen',
+  description: 'Antwoorden op veelgestelde vragen over het Momtrail en Littletrail traject, de Trailstart, Trailpass, vergoeding via werkgever of PGB en betalen in termijnen.',
+};
 
 const vragen = [
   {
@@ -10,7 +13,7 @@ const vragen = [
     items: [
       {
         vraag: 'Kan ik dit traject vergoed krijgen via mijn werkgever?',
-        antwoord: 'Dat is vaker mogelijk dan je denkt. Veel werkgevers hebben een coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid. Vraag ernaar bij HR — weinig mensen doen dat, maar het staat er vaak wel in de arbeidsvoorwaarden. Tip: benoem dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.',
+        antwoord: 'Dat is vaker mogelijk dan je denkt. Veel werkgevers hebben een coachingsbudget, vitaliteitsbudget of budget voor duurzame inzetbaarheid. Vraag ernaar bij HR: weinig mensen doen dat, maar het staat er vaak wel in de arbeidsvoorwaarden. Tip: benoem dat je een burnout wilt voorkomen. Verzuim kost een werkgever al snel meer dan dit traject.',
       },
       {
         vraag: 'Kan ik betalen in termijnen?',
@@ -28,12 +31,12 @@ const vragen = [
     items: [
       {
         vraag: 'Wat is een Trailstart?',
-        antwoord: 'De Trailstart is een losse sessie van 60 tot 75 minuten rond één thema — voor jou als moeder of voor je kind. Voor als je eerst wilt ervaren hoe ik werk, of gewoon nu iets wilt met wat er speelt. Je gaat naar huis met iets concreets.',
+        antwoord: 'De Trailstart is een losse sessie van 60 tot 75 minuten rond één thema, voor jou als moeder of voor je kind. Voor als je eerst wilt ervaren hoe ik werk, of gewoon nu iets wilt met wat er speelt. Je gaat naar huis met iets concreets.',
         link: { tekst: 'Meer over de Trailstart →', href: '/aanbod/trailstart' },
       },
       {
         vraag: 'Wordt de Trailstart verrekend als ik daarna een traject start?',
-        antwoord: 'Ja. Doe je binnen 7 dagen na de Trailstart mee aan een traject, dan wordt de €97 verrekend met de trajectprijs. Bovendien telt de Trailstart dan als extra sessie — je krijgt dus het volledige traject én de Trailstart erbij, cadeau. Dit is een tijdelijke actie.',
+        antwoord: 'Ja. Doe je binnen 7 dagen na de Trailstart mee aan een traject, dan wordt de €97 verrekend met de trajectprijs en telt de Trailstart als eerste sessie van je traject.',
       },
       {
         vraag: 'Wat kost een Trailstart?',
@@ -46,12 +49,12 @@ const vragen = [
     items: [
       {
         vraag: 'Wat is het verschil tussen een Momtrail en een Littletrail traject?',
-        antwoord: 'Het Momtrail traject is voor jou als moeder: je eigen energie, patronen en zenuwstelsel staan centraal. Het Littletrail traject is voor als je je zorgen maakt om je kind. Daarin werk ik meestal met jou als ouder — jij bent er elke dag en kent je kind het best. Soms overlappen de twee: dan is een combinatie of verwijzing mogelijk.',
+        antwoord: 'Het Momtrail traject is voor jou als moeder: je eigen energie, patronen en zenuwstelsel staan centraal. Het Littletrail traject is voor als je je zorgen maakt om je kind. Daarin werk ik meestal met jou als ouder: jij bent er elke dag en kent je kind het best. Soms overlappen de twee: dan is een combinatie of verwijzing mogelijk.',
         link: { tekst: 'Bekijk het Momtrail traject →', href: '/aanbod/moeder/traject-moeder' },
       },
       {
         vraag: 'Kan ik een traject verlengen?',
-        antwoord: 'Ja, met een Trailpass. De Trailpass is een verlenging van 3 sessies, geldig voor 3 maanden, voor €397. Je kunt hem toevoegen aan elk traject als je na afloop meer tijd wilt.',
+        antwoord: 'Ja, met een Trailpass. De Trailpass is een verlenging van 3 sessies, 12 maanden geldig, voor €397. Je kunt hem toevoegen aan elk traject als je na afloop meer tijd wilt.',
       },
       {
         vraag: 'Waar vinden de sessies plaats?',
@@ -118,7 +121,7 @@ export default function FaqPage() {
 
         <div className="bg-achtergrond rounded-2xl p-8 text-center reveal">
           <p className="font-semibold text-tekst mb-2">Staat je vraag er niet bij?</p>
-          <p className="text-tekst/70 text-sm mb-5">Een kennismaking is kosteloos en vrijblijvend — ik beantwoord al je vragen graag persoonlijk.</p>
+          <p className="text-tekst/70 text-sm mb-5">Een kennismaking is kosteloos en vrijblijvend. Ik beantwoord al je vragen graag persoonlijk.</p>
           <Link href="/contact" className="inline-block bg-primair text-wit font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
             Plan een kennismaking →
           </Link>

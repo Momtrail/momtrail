@@ -6,12 +6,12 @@ export const metadata: Metadata = { title: 'Moeder & Kind' };
 
 const aanbod = [
   {
-    titel: '1 op 1 traject kind (1 maand)',
-    tekst: 'Maak je je zorgen om je kind? Ervaart hij of zij lichamelijke of emotionele klachten? Binnen een maand zorgen we er samen voor dat er weer vertrouwen en rust komt. Happy kid, happy mom!',
+    titel: 'Littletrail traject',
+    tekst: 'Maak je je zorgen om je kind? Ervaart hij of zij lichamelijke of emotionele klachten? We kijken verder dan het gedrag, naar de échte boodschap eronder. Happy kid, happy mom!',
     slug: 'traject-kind',
   },
   {
-    titel: '1 op 1 traject moeder (2 maanden)',
+    titel: 'Momtrail traject',
     tekst: "Wanneer je merkt dat je aan het overleven bent en je voelt dat je flink onder spanning staat. Jij bent die typische millenialmom 'who does it all', maar het moederschap óók gewoon heel overweldigend vindt met momenten.",
     slug: 'traject-moeder',
   },

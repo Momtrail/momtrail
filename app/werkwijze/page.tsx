@@ -2,13 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Werkwijze' };
+export const metadata: Metadata = {
+  title: 'Werkwijze',
+  description: 'Hoe werkt Momtrail? Ik gebruik NEI, hartcoherentie, EFT, zenuwstelselregulatie en geboortepsychologie. Lichaamsgericht, met hoofd én hart.',
+};
 
 const methodes = [
   {
     naam: 'NEI',
     voluit: 'Neuro Emotional Integration',
-    tekst: 'Een lichaamsgerichte methode waarbij vastgelopen emoties en zenuwstelselpatronen worden opgelost via het lichaam zelf. Ik werk hierbij ook op de energetische laag — zonder dat je alles in woorden hoeft te vatten.',
+    tekst: 'Een lichaamsgerichte methode waarbij vastgelopen emoties en zenuwstelselpatronen worden opgelost via het lichaam zelf. Ik werk hierbij ook op de energetische laag, zonder dat je alles in woorden hoeft te vatten.',
     voor: 'Moeder & kind',
   },
   {
@@ -38,13 +41,13 @@ const methodes = [
   {
     naam: 'Systemisch werk',
     voluit: null,
-    tekst: 'Opstellingen en systemisch denken om patronen in je familie of gezin zichtbaar te maken. Vaak speelt er meer dan wat je zelf ziet — systemisch werk maakt die lagen toegankelijk.',
+    tekst: 'Opstellingen en systemisch denken om patronen in je familie of gezin zichtbaar te maken. Vaak speelt er meer dan wat je zelf ziet: systemisch werk maakt die lagen toegankelijk.',
     voor: 'Moeder & kind',
   },
   {
     naam: 'Geboortepsychologie',
     voluit: null,
-    tekst: 'De zwangerschap en geboorte hebben een diepere invloed dan we vaak beseffen — op het zenuwstelsel van je kind én op jou als moeder. In het Littletrail traject kijken we bewust naar die eerste ervaringen.',
+    tekst: 'De zwangerschap en geboorte hebben een diepere invloed dan we vaak beseffen, op het zenuwstelsel van je kind én op jou als moeder. In het Littletrail traject kijken we bewust naar die eerste ervaringen.',
     voor: 'Kind',
   },
 ];
@@ -63,10 +66,10 @@ export default function WerkwijzePage() {
       <section className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold text-primair mb-5 reveal">Mijn achtergrond</h2>
         <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-          Ik werk al meer dan 16 jaar in de begeleiding. Mijn basis ligt in de <strong>GGZ, social work en reïntegratie</strong> — werkvelden waar ik leerde kijken achter het gedrag en de klacht, en waar ik merkte dat praten alleen zelden genoeg is.
+          Ik werk al meer dan 16 jaar in de begeleiding. Mijn basis ligt in de <strong>GGZ, social work en reïntegratie</strong>, werkvelden waar ik leerde kijken achter het gedrag en de klacht, en waar ik merkte dat praten alleen zelden genoeg is.
         </p>
         <p className="text-tekst/80 leading-relaxed mb-4 reveal">
-          Die ervaring neem ik mee in alles wat ik doe. Ik begrijp hoe systemen werken, wat mensen vastzet en wat er nodig is om echt iets te laten verschuiven. Tegelijkertijd weet ik hoe het is om zelf moeder te zijn en vast te lopen — dat maakt mijn begeleiding concreet en herkenbaar.
+          Die ervaring neem ik mee in alles wat ik doe. Ik begrijp hoe systemen werken, wat mensen vastzet en wat er nodig is om echt iets te laten verschuiven. Tegelijkertijd weet ik hoe het is om zelf moeder te zijn en vast te lopen. Dat maakt mijn begeleiding concreet en herkenbaar.
         </p>
         <p className="text-tekst/80 leading-relaxed reveal">
           In de loop der jaren heb ik me gespecialiseerd in <strong>lichaamsgerichte therapie</strong>: het lichaam als toegang tot wat er écht speelt. Niet alleen praten over wat er is, maar voelen, bewegen en integreren. Dat is de rode draad in alles wat ik doe.
@@ -84,7 +87,7 @@ export default function WerkwijzePage() {
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <div>
                     <span className="font-bold text-primair text-lg">{m.naam}</span>
-                    {m.voluit && <span className="text-tekst/40 text-sm ml-2">— {m.voluit}</span>}
+                    {m.voluit && <span className="text-tekst/40 text-sm ml-2">· {m.voluit}</span>}
                   </div>
                   <span className="text-xs font-bold uppercase tracking-widest text-primair/40 shrink-0 mt-1">{m.voor}</span>
                 </div>

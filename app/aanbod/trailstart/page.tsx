@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Trailstart' };
+export const metadata: Metadata = {
+  title: 'Trailstart',
+  description: 'De Trailstart is een losse sessie van 60-75 minuten rond één thema, voor jou als moeder of je kind. Je gaat naar huis met iets concreets. €97, verrekend als je binnen 7 dagen instapt.',
+};
 
 export default function TrailstartPage() {
   return (
@@ -67,7 +70,7 @@ export default function TrailstartPage() {
         <div className="bg-primair rounded-2xl p-8 mb-12 reveal">
           <h3 className="text-xl font-bold text-achtergrond mb-3">Wil je daarna verder?</h3>
           <p className="text-achtergrond/80 leading-relaxed">
-            Na de Trailstart heb je zeven dagen de tijd om te beslissen of je een traject wilt starten. Doe je dat, dan wordt de €97 verrekend met de trajectprijs én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau.
+            Na de Trailstart heb je zeven dagen de tijd om te beslissen of je een traject wilt starten. Doe je dat, dan wordt de €97 verrekend met de trajectprijs en telt je Trailstart als eerste sessie van je traject.
           </p>
         </div>
 

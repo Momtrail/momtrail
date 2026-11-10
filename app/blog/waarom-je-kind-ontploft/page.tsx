@@ -96,7 +96,7 @@ export default function BlogOntploftPage() {
 
         <div className="bg-primair rounded-2xl p-8 mb-12 reveal">
           <p className="text-achtergrond text-xl italic leading-relaxed" style={{ fontFamily: 'var(--font-buydog)' }}>
-            &ldquo;Kinderen doen het goed als ze het kunnen. Als ze het niet kunnen, hebben ze onze hulp nodig — geen straf.&rdquo;
+            &ldquo;Kinderen doen het goed als ze het kunnen. Als ze het niet kunnen, hebben ze onze hulp nodig, geen straf.&rdquo;
           </p>
           <p className="text-achtergrond/60 text-sm mt-4">Ross Greene, klinisch psycholoog</p>
         </div>

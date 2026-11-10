@@ -4,7 +4,10 @@ import ScrollReveal from '@/components/ScrollReveal';
 import Kompas from '@/components/Kompas';
 import StickyPodcast from '@/components/StickyPodcast';
 
-export const metadata: Metadata = { title: 'Littletrail traject' };
+export const metadata: Metadata = {
+  title: 'Littletrail traject',
+  description: 'Het Littletrail traject begeleidt kinderen met driftbuien, faalangst, slaapproblemen of onrust. Ik werk meestal met jou als ouder en kijk verder dan het gedrag. Vanaf €695.',
+};
 
 const klachten = [
   'Driftbuien, snel boos of verdrietig zijn',
@@ -28,30 +31,30 @@ const stappen = [
 
 const routes = [
   {
-    naam: 'Littletrail Explore',
+    naam: 'Littletrail Pause',
     duur: '2 maanden',
     sessies: '4 sessies',
-    prijs: '€697',
+    prijs: '€695',
     termijnen: '3 x €249',
-    tekst: 'Voor als je wilt ontdekken wat er echt speelt. We brengen de boodschap achter het gedrag in kaart en je krijgt concrete handvatten voor thuis.',
+    tekst: 'Voor als jullie weer op adem willen komen. We brengen de boodschap achter het gedrag in kaart en je krijgt concrete handvatten voor thuis.',
     populair: false,
-  },
-  {
-    naam: 'Littletrail Pause',
-    duur: '3 maanden',
-    sessies: '6 sessies',
-    prijs: '€997',
-    termijnen: '3 x €349',
-    tekst: 'Voor als jullie weer op adem willen komen. Er is meer tijd om het thuis te oefenen: we kijken wat werkt, sturen bij en kijken ook naar wat er van jou meespeelt.',
-    populair: true,
   },
   {
     naam: 'Littletrail Reset',
     duur: '4 maanden',
     sessies: '8 sessies',
+    prijs: '€997',
+    termijnen: '3 x €349',
+    tekst: 'Voor als je het thuis echt anders wilt. We kijken wat werkt, sturen bij en werken ook aan wat jij als ouder meeneemt, zodat de balans in jullie gezin hersteld wordt.',
+    populair: true,
+  },
+  {
+    naam: 'Littletrail Rise',
+    duur: '1 jaar',
+    sessies: '12 sessies',
     prijs: '€1147',
-    termijnen: '3 x €399',
-    tekst: 'Voor als je het thuis echt anders wilt. Naast handvatten voor je kind werken we aan je eigen rust en patronen, zodat het in jullie gezin blijvend anders gaat.',
+    termijnen: '12 x €99 per maand',
+    tekst: 'Voor als je je kind een jaar lang wilt begeleiden. Er is ruimte voor wat er onderweg verandert, zoals een nieuwe school of een nieuwe ontwikkelingsfase, en we werken blijvend aan rust en balans in jullie gezin.',
     populair: false,
   },
 ];
@@ -223,7 +226,7 @@ export default function TrajectKindPage() {
             </ul>
             <div className="border-t border-primair/10 pt-5 mb-4">
               <p className="text-tekst/70 text-sm leading-relaxed">
-                Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+                Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend en telt je Trailstart als eerste sessie van je traject. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
               </p>
             </div>
             <p className="text-tekst/60 text-sm italic">

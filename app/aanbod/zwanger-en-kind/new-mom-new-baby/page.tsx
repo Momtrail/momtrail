@@ -74,9 +74,9 @@ export default function NewMomNewBabyPage() {
         <h2 className="text-2xl font-bold text-primair mb-6 reveal">De investering</h2>
         <div className="grid sm:grid-cols-3 gap-6 mb-6">
           {[
-            { naam: 'Explore', duur: '2 maanden', sessies: '4 sessies', prijs: '€697', termijnen: '3 x €249', populair: false },
-            { naam: 'Pause', duur: '3 maanden', sessies: '6 sessies', prijs: '€997', termijnen: '3 x €349', populair: true },
-            { naam: 'Reset', duur: '4 maanden', sessies: '8 sessies', prijs: '€1147', termijnen: '3 x €399', populair: false },
+            { naam: 'Pause', duur: '2 maanden', sessies: '4 sessies', prijs: '€695', termijnen: '3 x €249', populair: false },
+            { naam: 'Reset', duur: '4 maanden', sessies: '8 sessies', prijs: '€997', termijnen: '3 x €349', populair: true },
+            { naam: 'Rise', duur: '1 jaar', sessies: '12 sessies', prijs: '€1147', termijnen: '12 x €99 per maand', populair: false },
           ].map(r => (
             <div key={r.naam} className={`rounded-3xl p-8 flex flex-col reveal ${r.populair ? 'bg-primair shadow-xl' : 'bg-wit border border-primair/10 shadow-sm'}`}>
               {r.populair && (

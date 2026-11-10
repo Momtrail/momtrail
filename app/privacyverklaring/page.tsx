@@ -122,12 +122,12 @@ export default function PrivacyverklaringPage() {
           <h2 className="text-xl font-bold text-primair mb-3">Rechten</h2>
           <p className="mb-2">Als cliënt heb je de volgende rechten:</p>
           <ul className="list-disc list-inside space-y-2 ml-2">
-            <li><strong>Inzage</strong> — je kunt altijd vragen welke gegevens ik van je verwerk.</li>
-            <li><strong>Correctie</strong> — als gegevens onjuist zijn, kun je vragen ze aan te passen.</li>
-            <li><strong>Verwijdering</strong> — voor zover niet in strijd met wettelijke bewaarplichten.</li>
-            <li><strong>Beperking van verwerking</strong> — tijdelijk beperken van de verwerking.</li>
-            <li><strong>Overdracht</strong> — jouw gegevens digitaal ontvangen of overdragen aan een andere organisatie.</li>
-            <li><strong>Bezwaar</strong> — bezwaar maken tegen verwerking op basis van gerechtvaardigd belang.</li>
+            <li><strong>Inzage</strong>:je kunt altijd vragen welke gegevens ik van je verwerk.</li>
+            <li><strong>Correctie</strong>:als gegevens onjuist zijn, kun je vragen ze aan te passen.</li>
+            <li><strong>Verwijdering</strong>:voor zover niet in strijd met wettelijke bewaarplichten.</li>
+            <li><strong>Beperking van verwerking</strong>:tijdelijk beperken van de verwerking.</li>
+            <li><strong>Overdracht</strong>:jouw gegevens digitaal ontvangen of overdragen aan een andere organisatie.</li>
+            <li><strong>Bezwaar</strong>:bezwaar maken tegen verwerking op basis van gerechtvaardigd belang.</li>
           </ul>
           <p className="mt-4">
             Voor het uitoefenen van je rechten of bij vragen kun je contact opnemen via{' '}

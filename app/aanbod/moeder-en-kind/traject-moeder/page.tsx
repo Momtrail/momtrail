@@ -35,11 +35,11 @@ const opbrengsten = [
 
 const inclusief = [
   'Kosteloze kennismaking/intake',
-  '3 individuele sessies van 75 minuten, in mijn praktijkruimte of online',
+  'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
   'Whatsapp-begeleiding tussendoor voor een check-in na een sessie en bij vragen',
   '2 telefonische contactmomenten tussen de sessies door voor afstemming, vragen en ondersteuning',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
-  'Vanaf september: 6 maanden toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
+  'Toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
   'Toegang tot de Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
   'Een persoonlijk cadeau bij de start (bijvoorbeeld een boek of kaartenset afgestemd op jouw hulpvraag)',
 ];
@@ -156,9 +156,9 @@ export default function TrajectMoederPage() {
               </li>
             ))}
           </ul>
-          <p className="text-3xl font-bold text-primair mb-3">€417</p>
+          <p className="text-3xl font-bold text-primair mb-3">Vanaf €695</p>
           <p className="text-tekst/60 text-sm mb-2">Tip: soms is er vanuit je werkgever budget beschikbaar voor coaching of vitaliteit. Vraag naar de mogelijkheden bij HR.</p>
-          <p className="text-tekst/60 text-sm">Behoefte aan een korter of langer traject op maat? Plan dan een gratis kennismaking. Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
+          <p className="text-tekst/60 text-sm">Kom je uit de gemeente West Maas en Waal of de Betuwe? Dan kan begeleiding mogelijk via PGB voor 100% vergoeding in aanmerking komen, na goedkeuring van de gemeente.</p>
         </div>
 
         {/* Reviews */}

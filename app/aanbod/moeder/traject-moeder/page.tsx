@@ -1,5 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Momtrail traject',
+  description: 'Een lichaamsgericht begeleidingstraject voor moeders die weer energie, rust en plezier willen in het moederschap. Kies Pause (2 mnd), Reset (4 mnd) of Rise (1 jaar). Vanaf €695.',
+};
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import Levenswiel from '@/components/Levenswiel';
@@ -23,10 +28,10 @@ const klachten = [
 const routes = [
   {
     naam: 'Momtrail Pause',
-    duur: '3 maanden',
-    sessies: '6 sessies',
-    prijs: '€997',
-    termijnen: '3 x €349',
+    duur: '2 maanden',
+    sessies: '4 sessies',
+    prijs: '€695',
+    termijnen: '3 x €249',
     tekst: 'Voor als je eerst weer op adem wilt komen. We brengen rust in je lijf en je hoofd, ontdekken waar je energie weglekt en welke patronen meespelen. Je krijgt handvatten die je meteen thuis kunt gebruiken.',
     populair: false,
   },
@@ -34,18 +39,18 @@ const routes = [
     naam: 'Momtrail Reset',
     duur: '4 maanden',
     sessies: '8 sessies',
-    prijs: '€1147',
-    termijnen: '3 x €399',
+    prijs: '€997',
+    termijnen: '3 x €349',
     tekst: 'Voor als je het echt anders wilt doen. Naast rust en inzicht werken we aan je grenzen en aan de patronen uit je eigen jeugd. Er is tijd om het in het dagelijks leven te oefenen, en om bij te sturen als het weer even knelt.',
     populair: true,
   },
   {
     naam: 'Momtrail Rise',
-    duur: '6 maanden',
-    sessies: '10 sessies',
-    prijs: '€1297',
-    termijnen: '3 x €449',
-    tekst: 'Voor als je de verandering blijvend wilt maken en weer wilt opbloeien. We gaan dieper op wat er uit je eigen jeugd en eerdere generaties meekomt, en je hebt de tijd om nieuwe gewoontes te laten indalen. Ook door drukke periodes en terugvallen heen loop je niet alleen.',
+    duur: '1 jaar',
+    sessies: '12 sessies',
+    prijs: '€1147',
+    termijnen: '12 x €99 per maand',
+    tekst: 'Voor als je de verandering blijvend wilt maken. Een jaar lang loop ik met je mee, door drukke periodes, terugvallen en nieuwe fases heen. We gaan dieper op wat er uit je eigen jeugd en eerdere generaties meekomt, en je hebt de tijd om nieuwe gewoontes echt te laten indalen.',
     populair: false,
   },
 ];
@@ -310,7 +315,7 @@ export default function TrajectMoederPage() {
                   ))}
                 </ul>
                 <p className="text-tekst/60 text-sm leading-relaxed mt-6 border-t border-primair/10 pt-5">
-                  Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject. Je Trailstart is dan een extra sessie, cadeau. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+                  Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend en telt je Trailstart als eerste sessie van je traject. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
                 </p>
               </div>
               <div className="md:w-72 shrink-0">

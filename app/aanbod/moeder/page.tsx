@@ -13,7 +13,7 @@ const aanbod = [
   },
   {
     titel: 'Momtrail traject',
-    tekst: 'Voor de moeder die voelt: ik wil weer de energie hebben die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten. Een lichaamsgericht traject van 3, 4 of 6 maanden, gericht op jouw fundament. Want met alleen praten kom je er niet.',
+    tekst: 'Voor de moeder die voelt: ik wil weer de energie hebben die ik vroeger had en van de tijd met mijn kind(eren) kunnen genieten. Een lichaamsgericht traject van 2 of 4 maanden, of een jaartraject, gericht op jouw fundament. Want met alleen praten kom je er niet.',
     href: '/aanbod/moeder/traject-moeder',
   },
   {

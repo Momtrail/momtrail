@@ -47,7 +47,7 @@ export default function TrajectKindPage() {
 
         {/* Wat is het traject */}
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Het Littletrail traject is een traject waar we zes weken lang <strong>verder gaan kijken dan de klacht.</strong> Niet alleen naar wat zichtbaar is, maar juist naar wat eronder ligt.
+          Het Littletrail traject is een traject waar we <strong>verder gaan kijken dan de klacht.</strong> Niet alleen naar wat zichtbaar is, maar juist naar wat eronder ligt.
         </p>
 
         {/* Hoe zou het zijn */}
@@ -118,9 +118,9 @@ export default function TrajectKindPage() {
         <div className="bg-wit border border-primair/20 rounded-2xl p-8 mb-16 reveal">
           <h2 className="text-2xl font-bold text-primair mb-4">De investering</h2>
           <p className="text-tekst/80 leading-relaxed mb-4">
-            Het traject duurt gemiddeld anderhalve maand. Geen quick fix, maar we gaan voor <strong>echte verandering.</strong> Inclusief kennismaking/intake, overzicht van geboortepatronen, twee sessies van 60-75 min., Whatsappbegeleiding gedurende zes weken en een telefonisch evaluatiecontact.
+            Geen quick fix, maar we gaan voor <strong>echte verandering.</strong> Inclusief kennismaking/intake, overzicht van geboortepatronen, sessies van 60-75 min., WhatsApp-begeleiding en een evaluatiemoment.
           </p>
-          <p className="text-3xl font-bold text-primair">€299</p>
+          <p className="text-3xl font-bold text-primair">Vanaf €695</p>
         </div>
 
         {/* CTA */}

@@ -41,7 +41,7 @@ export default function CookiebeleidPage() {
               <p className="text-sm mb-2 text-tekst/60">Optioneel · alleen met toestemming</p>
               <p className="mb-3">
                 Deze website kan gebruik maken van Google Analytics om inzicht te krijgen in het gebruik van
-                de website — zoals welke pagina&apos;s worden bezocht en hoe lang bezoekers blijven. Dit helpt om
+                de website, zoals welke pagina&apos;s worden bezocht en hoe lang bezoekers blijven. Dit helpt om
                 de website te verbeteren.
               </p>
               <p className="mb-3">

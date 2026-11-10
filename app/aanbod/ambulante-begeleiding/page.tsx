@@ -3,7 +3,10 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import Kompas from '@/components/Kompas';
 
-export const metadata: Metadata = { title: 'Ambulante begeleiding (PGB)' };
+export const metadata: Metadata = {
+  title: 'Ambulante begeleiding (PGB)',
+  description: 'Woon je in de gemeente West Maas en Waal of de Betuwe? Begeleiding via Momtrail kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.',
+};
 
 const hulpBij = [
   'Structuur en overzicht in het dagelijks leven',

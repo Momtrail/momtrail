@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AanbodMatcher from '@/components/AanbodMatcher';
 
-export const metadata: Metadata = { title: 'Aanbod' };
+export const metadata: Metadata = {
+  title: 'Aanbod',
+  description: 'Bekijk het volledige aanbod van Momtrail: trajecten voor moeders en kinderen, Trailstart, Somatic Yoga en meer. In de regio Maas en Waal en online.',
+};
 
 const aanbod = [
   {

@@ -4,7 +4,10 @@ import { Suspense } from 'react';
 import ContactForm from '@/components/ContactForm';
 import LevenswielIntro from '@/components/LevenswielIntro';
 
-export const metadata: Metadata = { title: 'Contact' };
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Plan een gratis kennismaking met Marleen van Momtrail. Telefonisch of online, kosteloos en vrijblijvend. Of stel je vraag via het contactformulier.',
+};
 
 export default function ContactPage() {
   return (

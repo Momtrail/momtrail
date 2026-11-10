@@ -10,7 +10,18 @@ export const metadata: Metadata = {
     default: 'Momtrail · Begeleiding voor moeders en kinderen',
     template: '%s · Momtrail',
   },
-  description: 'Momtrail begeleidt moeders en kinderen met lichaamsgerichte therapie. Voor meer rust, verbinding en plezier in het moederschap.',
+  description: 'Momtrail biedt lichaamsgerichte begeleiding voor moeders en kinderen, in de regio Maas en Waal en online. Voor meer rust, verbinding en plezier in het moederschap.',
+  metadataBase: new URL('https://www.momtrail.nl'),
+  openGraph: {
+    siteName: 'Momtrail',
+    locale: 'nl_NL',
+    type: 'website',
+    images: [{ url: '/fotos/portret.jpg', width: 1200, height: 630, alt: 'Marleen van Momtrail' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/fotos/portret.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

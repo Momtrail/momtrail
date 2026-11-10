@@ -6,10 +6,10 @@ import Kompas from '@/components/Kompas';
 const routes = [
   {
     naam: 'Momtrail Pause',
-    duur: '3 maanden',
-    sessies: '6 sessies',
-    prijs: '€997',
-    termijnen: '3 x €349',
+    duur: '2 maanden',
+    sessies: '4 sessies',
+    prijs: '€695',
+    termijnen: '3 x €249',
     tekst: 'Voor als je eerst weer op adem wilt komen. We brengen rust in je lijf en je hoofd, werken aan angsten rondom de bevalling en geven je handvatten die je meteen kunt gebruiken.',
     populair: false,
   },
@@ -17,17 +17,17 @@ const routes = [
     naam: 'Momtrail Reset',
     duur: '4 maanden',
     sessies: '8 sessies',
-    prijs: '€1147',
-    termijnen: '3 x €399',
+    prijs: '€997',
+    termijnen: '3 x €349',
     tekst: 'Voor als je dieper wilt gaan. Naast rust en inzicht werken we aan patronen uit je eigen verleden die nu naar boven komen. Er is tijd om het te oefenen en bij te sturen.',
     populair: true,
   },
   {
     naam: 'Momtrail Rise',
-    duur: '6 maanden',
-    sessies: '10 sessies',
-    prijs: '€1297',
-    termijnen: '3 x €449',
+    duur: '1 jaar',
+    sessies: '12 sessies',
+    prijs: '€1147',
+    termijnen: '12 x €99 per maand',
     tekst: 'Voor als je de verandering blijvend wilt maken. We gaan dieper op wat er meekomt uit jouw eigen start in het leven. Je hebt de tijd om nieuwe gewoontes te laten indalen, ook door de drukke periode na de bevalling.',
     populair: false,
   },
@@ -189,7 +189,7 @@ export default function BewustZwangerPage() {
               ))}
             </ul>
             <p className="text-tekst/60 text-sm leading-relaxed mt-6 border-t border-primair/10 pt-5">
-              Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend én krijg je het volledige traject als extra sessie cadeau.
+              Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend en telt je Trailstart als eerste sessie van je traject.
             </p>
           </div>
         </div>

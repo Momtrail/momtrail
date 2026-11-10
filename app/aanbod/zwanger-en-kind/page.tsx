@@ -17,7 +17,7 @@ export default function ZwangerEnKindPage() {
 
       <section className="max-w-4xl mx-auto px-6 py-16">
         <p className="text-tekst/80 leading-relaxed mb-12 text-lg reveal">
-          Of je nu zwanger bent en je emotioneel en lichamelijk wilt voorbereiden, of je baby er al is en de start anders verloopt dan gehoopt — er is begeleiding die bij jou past. Kies hieronder wat het beste bij je situatie aansluit.
+          Of je nu zwanger bent en je emotioneel en lichamelijk wilt voorbereiden, of je baby er al is en de start anders verloopt dan gehoopt: er is begeleiding die bij jou past. Kies hieronder wat het beste bij je situatie aansluit.
         </p>
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -49,7 +49,7 @@ export default function ZwangerEnKindPage() {
             </div>
             <div className="p-8 flex flex-col flex-1">
               <p className="text-tekst/70 leading-relaxed mb-6 flex-1">
-                De roze wolk blijft uit en jullie start was anders dan gehoopt. Meer rust, vertrouwen en verbinding — voor jou én je baby.
+                De roze wolk blijft uit en jullie start was anders dan gehoopt. Meer rust, vertrouwen en verbinding, voor jou én je baby.
               </p>
               <span className="font-bold text-accent group-hover:underline">Meer info →</span>
             </div>

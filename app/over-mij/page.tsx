@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = { title: 'Over mij' };
+export const metadata: Metadata = {
+  title: 'Over mij',
+  description: 'Ik ben Marleen, oprichter van Momtrail. Lichaamsgerichte therapeut voor moeders en kinderen in de regio Maas en Waal en online. Ik werk met NEI, zenuwstelselregulatie en geboortepsychologie.',
+};
 
 export default function OverMijPage() {
   return (
