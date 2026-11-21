@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Waarom jouw kind ontploft (en wat hij écht nodig heeft) | Blog Momtrail',
   description:
-    'Je kind valt uit het niets uit, gooit, schreeuwt of klapt dicht. Wat er op dat moment in het brein en zenuwstelsel van je kind gebeurt, en wat écht helpt.',
+    'Je kind valt uit het niets uit, gooit, schreeuwt of klapt dicht. Wat er op dat moment in het brein en zenuwstelsel van je kind gebeurt, en wat écht helpt. Momtrail begeleidt kinderen in de regio Maas en Waal en de Betuwe.',
   keywords: [
     'waarom ontploft mijn kind',
     'kind driftbui oorzaak',
@@ -19,6 +19,23 @@ export const metadata: Metadata = {
     'kind tantrum brein',
     'gedragsproblemen kind oorzaak',
     'kind reageert heftig',
+    'driftbuien kind Maas en Waal',
+    'driftbuien kind Betuwe',
+    'kind driftbui begeleiding Druten',
+    'kind driftbui begeleiding Wijchen',
+    'kind driftbui begeleiding Nijmegen',
+    'kind driftbui begeleiding Tiel',
+    'kinderbegeleiding Maas en Waal',
+    'kinderbegeleiding Betuwe',
+    'gedragsproblemen kind Maas en Waal',
+    'kind gedragsproblemen Betuwe',
+    'NEI kind Maas en Waal',
+    'lichaamsgerichte kinderbegeleiding Maas en Waal',
+    'kindercoach Maas en Waal',
+    'kindercoach Betuwe',
+    'kindercoach Druten',
+    'kindercoach Wijchen',
+    'kindertherapeut Maas en Waal',
   ],
 };
 
@@ -111,7 +128,7 @@ export default function BlogOntploftPage() {
 
         <ul className="space-y-3 mb-12 reveal">
           {[
-            'Uitleggen waarom het gedrag niet mag. Je kind kan je op dit moment niet verwerken.',
+            'Uitleggen waarom het gedrag niet mag. Je kind kan je op dit moment gewoon niet horen.',
             'Straffen of dreigen. Dit voegt spanning toe aan een zenuwstelsel dat al overbelast is.',
             'Vragen om te kalmeren of te stoppen met huilen. Je kind wil dat zelf ook, maar kan het niet.',
             'Je eigen frustratie laten zien. Je zenuwstelsel en dat van je kind beïnvloeden elkaar direct.',
@@ -160,6 +177,42 @@ export default function BlogOntploftPage() {
         </div>
 
         <h2 className="text-2xl font-bold text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>
+          Verbindingskapitaal: wat je buiten de storm kunt doen
+        </h2>
+
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Kinderpsycholoog Dr. Becky Kennedy gebruikt het begrip <strong>verbindingskapitaal</strong>: de verbinding tussen jou en je kind is als een bankrekening. Elke keer dat je er echt voor je kind bent, samen lacht, een spelletje doet of een moeilijk gevoel van je kind serieus neemt, maak je een storting. Elke grens, elk &ldquo;nee&rdquo;, elke ontplofte situatie doet een opname.
+        </p>
+
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Een kind met een volle rekening kan een teleurstelling, een correctie of een grens veel beter verdragen. Een kind met een lege rekening raakt eerder van slag, verzet zich meer en lijkt moeilijker bereikbaar.
+        </p>
+
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Dat betekent: wat je <em>buiten</em> de moeilijke momenten doet, bepaalt mede hoe ze verlopen. Niet door meer te belonen of minder grenzen te stellen, maar door dagelijks kleine momenten van echte verbinding te zoeken. Tien minuten onverdeelde aandacht, op het tempo van je kind, zonder telefoon en zonder agenda, kan meer doen dan een uur praten over gedrag.
+        </p>
+
+        <div className="bg-achtergrond rounded-2xl p-8 mb-12 reveal">
+          <p className="font-semibold text-tekst mb-4">Kleine stortingen die groot verschil maken:</p>
+          <ul className="space-y-3">
+            {[
+              { stap: 'Volg je kind even in zijn spel, zonder te sturen.', sub: 'Laat hem de baas zijn. Dat geeft een gevoel van controle en veiligheid.' },
+              { stap: 'Benoem wat je ziet, zonder oordeel.', sub: '"Je bent echt boos." Niet: "Doe niet zo." Erkenning kalmeert het zenuwstelsel.' },
+              { stap: 'Zoek dagelijks een moment van fysiek contact.', sub: 'Een knuffel, samen op de bank, een high five. Kleine dingen tellen mee.' },
+              { stap: 'Herstel na een moeilijk moment.', sub: '"Dat ging niet zo goed net. Maar ik hou altijd van je." Herstel is ook een storting.' },
+            ].map((s) => (
+              <li key={s.stap} className="flex items-start gap-3">
+                <span className="text-primair mt-0.5 shrink-0">→</span>
+                <div>
+                  <p className="text-tekst/80 text-sm font-medium">{s.stap}</p>
+                  <p className="text-tekst/50 text-xs mt-0.5">{s.sub}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <h2 className="text-2xl font-bold text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>
           Wanneer zijn de uitbarstingen een signaal van iets meer?
         </h2>
 
@@ -167,15 +220,32 @@ export default function BlogOntploftPage() {
           Uitbarstingen horen bij kinderen zijn. Zeker in de peuter- en kleutertijd. Maar als je merkt dat het vaker voorkomt, heftiger wordt, of als je kind ook buiten de uitbarstingen om gespannen, teruggetrokken of onrustig is, dan vertelt zijn gedrag je iets.
         </p>
 
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Niet dat er iets mis is met je kind. Maar dat er iets onder de oppervlakte speelt wat aandacht verdient. En dat &ldquo;iets&rdquo; hoeft niet altijd bij je kind zelf te liggen.
+        </p>
+
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          In een begeleidingstraject kijk ik altijd naar het hele gezin. Hoe gaat het met jou als ouder? Wat draag jij mee, bewust of onbewust? Kinderen zijn gevoelig voor de spanning om hen heen, zelfs als jij denkt dat je het goed verbergt. Ze pikken op wat er in het systeem leeft.
+        </p>
+
+        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
+          Daarnaast spelen er soms dingen mee op een energetisch of systemisch niveau: onverwerkte ervaringen van jou of je kind, patronen die al generaties meegaan, of een moeilijke zwangerschap of geboorte die nog niet verwerkt is. Met methodes zoals <strong>NEI</strong> (Neuro Emotionele Integratie) kijk ik op die diepere laag, ook bij jonge kinderen. Dat kan verrassend veel verklaren, juist als het gedrag nergens op lijkt te slaan.
+        </p>
+
         <p className="text-tekst/80 leading-relaxed mb-12 reveal">
-          Niet dat er iets mis is met je kind. Maar dat er iets onder de oppervlakte speelt wat aandacht verdient. Dat kan van alles zijn: een periode van veel verandering, spanning die hij oppikt, iets wat hij niet kan verwoorden. Een buitenstaander die meekijkt, kan soms in één gesprek meer zien dan jij na maanden zoeken.
+          Een buitenstaander die meekijkt, kan soms in één gesprek meer zien dan jij na maanden zoeken. Niet omdat jij het fout doet, maar omdat je er middenin zit.{' '}
+          <Link href="/aanbod/kind/traject-kind" className="text-accent font-bold hover:underline">
+            Meer over hoe een Littletrail traject eruitziet →
+          </Link>
         </p>
 
         <div className="bg-primair rounded-2xl p-8 text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Herken je dit bij jouw kind?</h2>
-          <p className="text-achtergrond/80 mb-6 leading-relaxed">
-            Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong><br />
-            We kijken samen wat er speelt en wat jouw kind nodig heeft.
+          <p className="text-achtergrond/80 mb-4 leading-relaxed">
+            Zoek je een kindercoach in de regio Maas en Waal of de Betuwe die met je mee kan kijken? Ik werk als lichaamsgerichte begeleider voor kinderen en ouders. Dat gaat verder dan coaching. Ik kijk naar het gedrag, het lijf, het zenuwstelsel én wat er in het gezin meespeelt.
+          </p>
+          <p className="text-achtergrond/60 text-sm mb-6">
+            Praktijk in de regio Maas en Waal (Druten, Wijchen, Nijmegen, Tiel e.o.) en online. Een kennismaking is altijd <strong className="text-achtergrond/80">kosteloos en vrijblijvend.</strong>
           </p>
           <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
             Plan een kennismaking →

@@ -2,11 +2,27 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import Kompas from '@/components/Kompas';
-import StickyPodcast from '@/components/StickyPodcast';
+import StickyKind from '@/components/StickyKind';
 
 export const metadata: Metadata = {
-  title: 'Littletrail traject',
-  description: 'Het Littletrail traject begeleidt kinderen met driftbuien, faalangst, slaapproblemen of onrust. Ik werk meestal met jou als ouder en kijk verder dan het gedrag. Vanaf €695.',
+  title: 'Littletrail traject | Kinderbegeleiding Maas en Waal · Momtrail',
+  description: 'Kindercoach in de regio Maas en Waal en Betuwe. Het Littletrail traject begeleidt kinderen met driftbuien, faalangst, slaapproblemen of onrust. Ik werk met NEI, zenuwstelselregulatie en systemisch werk. Vanaf €695.',
+  keywords: [
+    'kindercoach Maas en Waal',
+    'kindercoach Betuwe',
+    'kindercoach Druten',
+    'kindercoach Wijchen',
+    'kindercoach Nijmegen',
+    'kindercoach Tiel',
+    'kinderbegeleiding Maas en Waal',
+    'kindertherapeut Maas en Waal',
+    'kind driftbuien begeleiding Maas en Waal',
+    'faalangst kind Maas en Waal',
+    'slaapproblemen kind Maas en Waal',
+    'overprikkeld kind begeleiding Maas en Waal',
+    'NEI kind Maas en Waal',
+    'lichaamsgerichte kinderbegeleiding',
+  ],
 };
 
 const klachten = [
@@ -254,7 +270,7 @@ export default function TrajectKindPage() {
       </section>
 
       <ScrollReveal singles={['.reveal']} />
-      <StickyPodcast />
+      <StickyKind />
     </>
   );
 }

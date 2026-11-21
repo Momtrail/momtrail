@@ -8,22 +8,16 @@ export const metadata: Metadata = {
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import WerkgeverFAQ from '@/components/WerkgeverFAQ';
-import Levenswiel from '@/components/Levenswiel';
-import StickyWeggever from '@/components/StickyWeggever';
+import StickyScan from '@/components/StickyScan';
 import Kompas from '@/components/Kompas';
 import MomtrailMethodeCircle from '@/components/MomtrailMethodeCircle';
 
 const klachten = [
   'Al moe bent voordat de dag begonnen is, en je energie steeds weer opraakt',
   'Een hoofd vol hebt: onrust, brainfog, nergens echt focus',
-  'Spanning voelt in je kaken, schouders, nek of buik, of licht slaapt en vaak wakker wordt',
-  'Weinig energie hebt om wat met je kinderen te doen',
-  'Vaak op je telefoon scrollt, terwijl je eigenlijk wilt opladen',
   'Sneller geïrriteerd bent dan je wilt, en dat het dan ineens knalt',
-  'Toch toegeeft terwijl je eigenlijk niet wilt',
   'Hoge eisen aan jezelf stelt en je vaak schuldig voelt',
-  'Soms ineens je eigen moeder hoort praten, terwijl je het juist anders wilde doen',
-  'Klachten hebt zoals vermoeidheid, stress of chronische pijn',
+  'Spanning voelt in je kaken, schouders, nek of buik',
 ];
 
 const routes = [
@@ -56,38 +50,20 @@ const routes = [
   },
 ];
 
-const dieptepunten = [
-  { nr: '01', titel: 'Hechtingsgeschiedenis', tekst: 'Je hechtingsgeschiedenis en jouw start in het leven, want die legt het fundament voor alles.' },
-  { nr: '02', titel: 'Zenuwstelsel', tekst: 'Hoe jouw zenuwstelsel reageert onder druk. En ja, die druk is enorm in het moederschap.' },
-  { nr: '03', titel: 'Patronen', tekst: 'Patronen die je meeneemt en die je steeds opnieuw tegenkomt, ook al wil je het anders.' },
-  { nr: '04', titel: 'Dynamieken', tekst: 'Relatie- en/of moederdynamieken die steeds terugkeren en je meer kosten dan je doorhebt.' },
-  { nr: '05', titel: 'Regulatie', tekst: 'Ademhaling en lichaamsgerichte technieken zodat je stress los kunt laten en je emoties weer kunt voelen.' },
-];
-
-const opbrengsten = [
-  'Je weet hoe je op kan laden in het dagelijks leven, ook al is het druk en chaotisch. Een dagje sauna is geen bittere noodzaak meer, maar gewoon een heerlijk dagje weg.',
-  'Piekeren is verleden tijd en je begrijpt de signalen van je lijf én kan hier op tijd naar luisteren.',
-  'Je maakt keuzes die goed voor jou voelen en leeft voor aan je kind wat je zo graag wil meegeven: emoties voelen en voor jezelf gaan staan.',
-  'Je kijkt met compassie naar jezelf in plaats van met dat eeuwig knagende schuldgevoel.',
-  'Fluitend loop je door je werkdag heen en zelfs daarna heb je nog energie over om je kind(eren) naar bed te brengen, mét geduld.',
-  'In het contact met je kind ervaar je minder gemopper en kun je heldere grenzen stellen zonder te hoeven schreeuwen.',
-  'Je voelt vertrouwen in het moederschap en jouw goede energie werkt aanstekelijk op je kind(eren) en partner.',
-];
-
 const inclusief: React.ReactNode[] = [
   'Intake',
   'Individuele sessies van 75 minuten, in mijn praktijkruimte of online',
-  'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door, voor een check-in na een sessie en bij vragen',
+  'Persoonlijke begeleiding via WhatsApp en voiceberichten tussen de sessies door',
   'Lichaamsgerichte oefeningen en kleine opdrachten voor thuis',
-  'Toegang tot de online leeromgeving met verdiepende opdrachten, visualisatieopstellingen en lichaamsgerichte oefeningen',
+  'Toegang tot de online leeromgeving met verdiepende opdrachten en oefeningen',
   'De Rust Reset: een programma van 7 dagen met een introductie in zenuwstelselregulatie',
   <>Toegang tot <a href="https://momtrail.kennis.shop/pay/mindful-moms" className="text-accent font-bold hover:underline">Mindful Moms</a> gedurende het traject</>,
 ];
 
 const reviews = [
   { naam: 'Maureen', tekst: 'Marleen heeft zowel mij als mijn zoontje goed geholpen met verschillende hulpvragen. Haar consulten zijn down to earth, wat ik persoonlijk heel prettig vind. Ze is geïnteresseerd, stelt goede vragen en is ook nog eens gezellig.' },
-  { naam: 'Kimberley', tekst: 'Ik ben ontzettend blij dat ik met Marleen in contact ben gekomen! Ik kwam bij haar vanwege pijnklachten die ik al 15 jaar had en waar ik maar geen oplossing voor kon vinden. Door middel van NEI sessies zijn we gaan kijken waar de klachten vandaan kwamen en welke patronen ik had ontwikkeld. Tijdens een opstelling had ik een groot besefmoment. Sindsdien voel ik een soort rust over me heen gevallen.' },
-  { naam: 'Fera', tekst: 'Ik was positief verrast over de dingen die er uitkwamen. Voor mij herkenbare zaken maar ook dingen vanuit eerdere generaties die uiteindelijk ook wel op z\'n plek vielen. Geen ingewikkelde vragen of veel praten en toch klopte er zo veel. Na de sessie was ik moe maar inmiddels ervaar ik een stukje meer rust en dus absoluut een positieve verandering.' },
+  { naam: 'Kimberley', tekst: 'Ik ben ontzettend blij dat ik met Marleen in contact ben gekomen! Ik kwam bij haar vanwege pijnklachten die ik al 15 jaar had en waar ik maar geen oplossing voor kon vinden. Tijdens een opstelling had ik een groot besefmoment. Sindsdien voel ik een soort rust over me heen gevallen.' },
+  { naam: 'Fera', tekst: 'Ik was positief verrast over de dingen die er uitkwamen. Voor mij herkenbare zaken maar ook dingen vanuit eerdere generaties die uiteindelijk ook wel op z\'n plek vielen. Geen ingewikkelde vragen of veel praten en toch klopte er zo veel. Na de sessie was ik moe maar inmiddels ervaar ik een stukje meer rust.' },
 ];
 
 export default function TrajectMoederPage() {
@@ -109,12 +85,9 @@ export default function TrajectMoederPage() {
           Als je eerlijk bent, voelt het moederschap op dit moment vooral... zwaar. Je denkt regelmatig: <strong>&apos;is dit het nou?&apos;</strong>
         </p>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Je staat de hele dag aan. Zorgen, regelen, de mental load dragen en doorgaan. Het stopt nooit. Je hebt geleerd om sterk te zijn en het goed te doen voor iedereen. En ondertussen loop je helemaal leeg en voel je: <strong>ik raak mezelf kwijt zo.</strong>
+          Je staat de hele dag aan. Zorgen, regelen, de mental load dragen en doorgaan. Je hebt geleerd om sterk te zijn en het goed te doen voor iedereen. En ondertussen loop je leeg en voel je: <strong>ik raak mezelf kwijt zo.</strong>
         </p>
-        <p className="text-tekst/80 leading-relaxed mb-6 reveal">
-          Je hebt misschien al van alles geprobeerd: zelfhulpboeken, podcasts, mediteren, misschien zelfs een psycholoog. Je hoofd begrijpt heel goed hoe het werkt. Maar toch lukt het je niet om het anders te doen. Dat komt omdat je <strong>vooral met je hoofd bent gaan begrijpen. Je lijf doet nog niet mee.</strong>
-        </p>
-        <p className="font-bold text-tekst mb-10 reveal">Met alleen praten kom je er niet.</p>
+        <p className="font-bold text-tekst mb-10 reveal">Je hebt misschien al van alles geprobeerd. Maar met alleen praten kom je er niet. Je lijf doet nog niet mee.</p>
 
         <div className="bg-achtergrond rounded-2xl p-8 reveal">
           <p className="font-semibold text-tekst mb-4">Misschien merk je wel dat je:</p>
@@ -142,7 +115,7 @@ export default function TrajectMoederPage() {
         </div>
       </div>
 
-      {/* Perspectief - full width */}
+      {/* Perspectief */}
       <section className="bg-primair py-20 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl text-achtergrond mb-8 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>
@@ -157,33 +130,7 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
-      {/* Aanpak - nummered cards */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-5xl md:text-6xl text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Het Momtrail traject</h2>
-            <p className="text-tekst/60 italic reveal">Afhankelijk van jouw hulpvraag duiken we in:</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            {dieptepunten.map(d => (
-              <div key={d.nr} className="bg-achtergrond rounded-2xl p-6 flex gap-4 reveal">
-                <span
-                  className="text-6xl font-bold text-primair/15 shrink-0 leading-none -mt-1"
-                  style={{ fontFamily: 'var(--font-buydog)' }}
-                >
-                  {d.nr}
-                </span>
-                <div className="pt-1">
-                  <h3 className="font-bold text-primair mb-1.5">{d.titel}</h3>
-                  <p className="text-tekst/70 leading-relaxed text-sm">{d.tekst}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Momtrail methode */}
+      {/* De Momtrail methode */}
       <section className="py-20 px-6 bg-achtergrond">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -196,16 +143,16 @@ export default function TrajectMoederPage() {
             </div>
             <div className="flex-1 flex flex-col gap-5">
               {[
-                { nr: '01', titel: 'Reguleren', sub: 'Je zenuwstelsel begeleiden', tekst: 'Je leert jezelf te begeleiden wanneer je uit balans raakt. Met lichaamsgerichte oefeningen creëer je veiligheid, ruimte en rust, zodat je weer kunt voelen en kiezen.', tag: 'Van overleefstand naar regulatie' },
-                { nr: '02', titel: 'Voelen', sub: 'Je lichaam verstaan', tekst: 'Je leert luisteren naar de signalen van je lichaam en je zenuwstelsel. Je herkent spanning, onrust en overprikkeling steeds eerder.', tag: 'Van hoofd naar lichaamsbewustzijn' },
-                { nr: '03', titel: 'Begrijpen', sub: 'Je patronen herkennen', tekst: 'Je onderzoekt wat er onder je gedrag ligt. Je krijgt inzicht in je patronen, overtuigingen en automatische reacties, ook de onbewuste.', tag: 'Van onbewust naar bewust' },
-                { nr: '04', titel: 'Kiezen', sub: 'Nieuwe patronen creëren', tekst: 'Vanuit rust en bewustzijn maak je andere keuzes. Je stelt grenzen, spreekt uit en doet anders. Zo herschrijf je je patronen in de praktijk.', tag: 'Van automatische reactie naar bewuste keuze' },
+                { nr: '01', titel: 'Reguleren', tekst: 'Je leert jezelf te begeleiden wanneer je uit balans raakt. Met lichaamsgerichte oefeningen creëer je rust, zodat je weer kunt voelen en kiezen.', tag: 'Van overleefstand naar regulatie' },
+                { nr: '02', titel: 'Voelen', tekst: 'Je leert luisteren naar de signalen van je lichaam en je zenuwstelsel. Je herkent spanning, onrust en overprikkeling steeds eerder.', tag: 'Van hoofd naar lichaamsbewustzijn' },
+                { nr: '03', titel: 'Begrijpen', tekst: 'Je onderzoekt wat er onder je gedrag ligt: patronen, overtuigingen en automatische reacties, ook de onbewuste.', tag: 'Van onbewust naar bewust' },
+                { nr: '04', titel: 'Kiezen', tekst: 'Vanuit rust en bewustzijn maak je andere keuzes. Je stelt grenzen, spreekt uit en doet anders. Zo herschrijf je je patronen in de praktijk.', tag: 'Van automatische reactie naar bewuste keuze' },
               ].map(s => (
                 <div key={s.nr} className="bg-wit rounded-2xl p-5 flex gap-4 reveal">
                   <span className="text-4xl font-bold text-primair/15 shrink-0 leading-none -mt-1" style={{ fontFamily: 'var(--font-buydog)' }}>{s.nr}</span>
                   <div>
-                    <p className="font-bold text-primair">{s.titel} <span className="text-primair/30 mx-1">·</span> <span className="font-normal text-tekst/50 text-sm">{s.sub}</span></p>
-                    <p className="text-tekst/70 text-sm leading-relaxed mt-1 mb-2">{s.tekst}</p>
+                    <p className="font-bold text-primair mb-1">{s.titel}</p>
+                    <p className="text-tekst/70 text-sm leading-relaxed mb-2">{s.tekst}</p>
                     <p className="text-primair/50 text-xs italic">{s.tag}</p>
                   </div>
                 </div>
@@ -215,60 +162,17 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
-      {/* Opbrengsten - full width primair met golf */}
-      <section className="bg-primair pb-20">
-        <div className="w-full overflow-hidden leading-none">
-          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
-            <path fill="#fae8e1" d="M0,0 L1440,0 L1440,50 C1080,10 360,10 0,50 Z" />
-          </svg>
-        </div>
-        <div className="max-w-5xl mx-auto px-6 pt-10">
-          <h2 className="text-2xl font-bold text-achtergrond mb-3 text-center reveal">Wat levert het je op?</h2>
-          <p className="text-achtergrond/60 italic text-center mb-10 reveal">Zodat jij, als je jouw binnenwereld meer begrijpt, je je kinderen écht iets anders doorgeeft.</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            {opbrengsten.map(o => (
-              <div key={o} className="bg-wit/15 border border-achtergrond/20 rounded-xl p-5 flex items-start gap-3 reveal">
-                <Kompas className="text-achtergrond/60 mt-1 shrink-0" />
-                <p className="text-achtergrond/90 leading-relaxed text-sm">{o}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Methodes */}
-      <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
-            <div>
-              <h2 className="text-xl font-bold text-primair reveal">Methodes die ik inzet</h2>
-              <p className="text-tekst/50 text-sm italic reveal">Ik kies wat past bij jouw hulpvraag.</p>
-            </div>
-            <Link href="/werkwijze" className="text-accent font-bold text-sm hover:underline reveal shrink-0">
-              Meer over mijn werkwijze →
-            </Link>
-          </div>
-          <div className="flex flex-wrap gap-2.5 reveal">
-            {['NEI', 'Hartcoherentie', 'Ademhaling', 'EFT', 'Zenuwstelselregulatie', 'Systemisch werk'].map(m => (
-              <span key={m} className="bg-achtergrond border border-primair/15 text-tekst/80 font-medium px-4 py-2 rounded-full text-sm">
-                {m}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Kies jouw trail */}
-      <section className="bg-achtergrond py-24 px-6">
+      <section className="bg-wit py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-buydog)' }}>Kies jouw trail</h2>
-            <p className="text-tekst/70 leading-relaxed max-w-2xl mx-auto reveal">Iedere moeder loopt haar eigen pad. Daarom zijn er drie routes. Ze werken allemaal volgens de Momtrail methode; het verschil zit in hoeveel tijd je jezelf geeft.</p>
+            <p className="text-tekst/70 leading-relaxed max-w-2xl mx-auto reveal">Iedere moeder loopt haar eigen pad. Het verschil zit in hoeveel tijd je jezelf geeft.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-10">
             {routes.map(r => (
-              <div key={r.naam} className={`rounded-3xl p-9 flex flex-col reveal ${r.populair ? 'bg-primair shadow-xl' : 'bg-wit shadow-sm border border-primair/10'}`}>
+              <div key={r.naam} className={`rounded-3xl p-9 flex flex-col reveal ${r.populair ? 'bg-primair shadow-xl' : 'bg-achtergrond shadow-sm border border-primair/10'}`}>
                 {r.populair && (
                   <span className="inline-block bg-achtergrond text-primair text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start tracking-widest uppercase">
                     meest gekozen
@@ -287,10 +191,8 @@ export default function TrajectMoederPage() {
               </div>
             ))}
           </div>
-        </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-wit rounded-3xl p-10 shadow-sm">
+          <div className="bg-achtergrond rounded-3xl p-10">
             <div className="md:flex md:gap-12">
               <div className="flex-1 mb-8 md:mb-0">
                 <h3 className="text-lg font-bold text-primair mb-5">Bij elke route inbegrepen</h3>
@@ -303,11 +205,11 @@ export default function TrajectMoederPage() {
                   ))}
                 </ul>
                 <p className="text-tekst/60 text-sm leading-relaxed mt-6 border-t border-primair/10 pt-5">
-                  Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend en telt je Trailstart als eerste sessie van je traject. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
+                  Heb je al een Trailstart gedaan en stap je binnen 7 dagen in? Dan wordt de €97 verrekend en telt je Trailstart als eerste sessie. Een traject kan altijd verlengd worden met een Trailpass van 3 sessies voor €397.
                 </p>
               </div>
               <div className="md:w-72 shrink-0">
-                <div className="bg-achtergrond border border-primair/10 rounded-2xl p-5 text-sm">
+                <div className="bg-wit border border-primair/10 rounded-2xl p-5 text-sm">
                   <p className="font-bold text-tekst mb-1">Woon je in de regio Maas en Waal of de Betuwe?</p>
                   <p className="text-tekst/60 leading-relaxed mb-3">Begeleiding kan mogelijk via PGB voor 100% vergoed worden, na goedkeuring van de gemeente.</p>
                   <Link href="/aanbod/ambulante-begeleiding" className="font-bold text-accent hover:underline text-sm">
@@ -320,7 +222,9 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
-      {/* Reviews - full width */}
+      <WerkgeverFAQ />
+
+      {/* Reviews */}
       <section className="bg-achtergrond py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-primair mb-2 text-center reveal">Wat anderen zeggen</h2>
@@ -341,30 +245,12 @@ export default function TrajectMoederPage() {
         </div>
       </section>
 
-      {/* Levenswiel */}
-      <section className="max-w-3xl mx-auto px-6 py-20">
-        <div className="text-center mb-8">
-          <span className="inline-block bg-accent/20 text-primair text-xs font-bold px-4 py-1.5 rounded-full mb-4 tracking-widest uppercase reveal">
-            Gratis tool
-          </span>
-          <h2 className="text-2xl font-bold text-primair mb-4 reveal" style={{ fontFamily: 'var(--font-hoofd)' }}>
-            Hoe balanceer jij als mama?
-          </h2>
-          <p className="text-tekst/80 leading-relaxed reveal">
-            Benieuwd waar jij nu staat? Vul het Levenswiel in en ontvang een <strong>persoonlijk mini-verslag</strong> met één tip van mij.
-          </p>
-        </div>
-        <Levenswiel />
-      </section>
-
-      <WerkgeverFAQ />
-
       {/* CTA */}
       <section className="bg-primair py-16 px-6">
         <div className="max-w-2xl mx-auto text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
-          <p className="text-achtergrond/80 mb-8">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> Wil je liever meteen aan de slag? Plan dan een Trailstart.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <p className="text-achtergrond/80 mb-8">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong></p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a href="https://calendly.com/momtrail" target="_blank" rel="noopener noreferrer" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
               Plan een kennismaking →
             </a>
@@ -372,17 +258,14 @@ export default function TrajectMoederPage() {
               Plan je Trailstart →
             </Link>
           </div>
-          <p className="text-achtergrond/50 text-sm">
-            Nog niet helemaal zeker?{' '}
-            <Link href="/gratis#levenswiel" className="text-achtergrond/70 underline hover:text-achtergrond transition-colors">
-              Doe eerst de gratis Momtrail scan →
-            </Link>
+          <p className="text-achtergrond/70 text-sm">
+            Wil je eerst een sessie ervaren? Met een <Link href="/aanbod/trailstart" className="underline hover:text-achtergrond transition-colors">Trailstart</Link> proef je de aanpak in één sessie van 60-75 minuten. Stap je daarna in een traject? Dan wordt de €97 gewoon verrekend.
           </p>
         </div>
       </section>
 
       <ScrollReveal singles={['.reveal']} />
-      <StickyWeggever />
+      <StickyScan />
     </>
   );
 }
