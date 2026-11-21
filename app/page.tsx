@@ -28,8 +28,11 @@ export default function HomePage() {
       {/* Hero */}
       <div className="hero-section" style={{ backgroundImage: "url('/fotos/portret.jpg')" }}>
         <div className="hero-overlay">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 max-w-2xl leading-tight text-achtergrond" style={{ fontFamily: 'var(--font-hoofd)' }}>
+          <p className="text-lg mb-2 text-achtergrond/80" style={{ fontFamily: 'var(--font-buydog)' }}>
             Welkom bij Momtrail
+          </p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 max-w-2xl leading-tight text-achtergrond" style={{ fontFamily: 'var(--font-hoofd)' }}>
+            Lichaamsgerichte begeleiding voor moeders en kinderen
           </h1>
           <p className="hero-subtitle max-w-xl text-2xl leading-relaxed mb-2 text-achtergrond/90" style={{ fontFamily: 'var(--font-buydog)' }}>
             Ben je klaar met overleven en het allemaal alleen doen?
@@ -42,7 +45,7 @@ export default function HomePage() {
 
       {/* Introductie */}
       <section className="max-w-3xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-2xl font-bold text-primair mb-10 reveal">Hi lieve mama...</h2>
+        <h2 className="text-2xl font-bold text-primair mb-10 reveal">Welkom bij Momtrail...</h2>
         <p className="text-tekst/80 leading-relaxed mb-6 reveal">
           Je doet je best. Elke dag weer. Maar ergens tussen het zorgen, regelen en doorgaan ben je jezelf kwijtgeraakt. Je glimlacht naar buiten, maar vanbinnen voel je: <strong>dit is niet hoe ik het wilde.</strong>
         </p>

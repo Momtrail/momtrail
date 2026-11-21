@@ -7,7 +7,7 @@ import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Momtrail · Begeleiding voor moeders en kinderen',
+    default: 'Momtrail · Begeleiding voor moeders en kinderen in Maas en Waal',
     template: '%s · Momtrail',
   },
   description: 'Momtrail biedt lichaamsgerichte begeleiding voor moeders en kinderen, in de regio Maas en Waal en online. Voor meer rust, verbinding en plezier in het moederschap.',

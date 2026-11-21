@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import WerkgeverFAQ from '@/components/WerkgeverFAQ';
 import Levenswiel from '@/components/Levenswiel';
 import StickyWeggever from '@/components/StickyWeggever';
 import Kompas from '@/components/Kompas';
@@ -288,19 +289,6 @@ export default function TrajectMoederPage() {
           </div>
         </div>
 
-        {/* FAQ verwijzing */}
-        <div className="max-w-5xl mx-auto mb-10">
-          <div className="bg-wit border border-primair/15 rounded-2xl px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 reveal">
-            <div>
-              <p className="font-bold text-tekst mb-1">Vragen over (werkgevers)vergoeding, termijnen of hoe het in de praktijk werkt?</p>
-              <p className="text-tekst/60 text-sm">Antwoorden op de meest gestelde vragen staan op één plek.</p>
-            </div>
-            <Link href="/faq" className="inline-block bg-primair text-wit font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity shrink-0 text-sm">
-              Veelgestelde vragen →
-            </Link>
-          </div>
-        </div>
-
         <div className="max-w-5xl mx-auto">
           <div className="bg-wit rounded-3xl p-10 shadow-sm">
             <div className="md:flex md:gap-12">
@@ -369,19 +357,27 @@ export default function TrajectMoederPage() {
         <Levenswiel />
       </section>
 
+      <WerkgeverFAQ />
+
       {/* CTA */}
       <section className="bg-primair py-16 px-6">
         <div className="max-w-2xl mx-auto text-center reveal">
           <h2 className="text-2xl font-bold text-achtergrond mb-3">Wil je meer weten of kennismaken?</h2>
-          <p className="text-achtergrond/80 mb-6">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> Wil je liever meteen aan de slag? Plan dan een Trailstart.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+          <p className="text-achtergrond/80 mb-8">Een kennismaking is altijd <strong>kosteloos en vrijblijvend.</strong> Wil je liever meteen aan de slag? Plan dan een Trailstart.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://calendly.com/momtrail" target="_blank" rel="noopener noreferrer" className="inline-block bg-wit text-primair font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
               Plan een kennismaking →
-            </Link>
+            </a>
             <Link href="/aanbod/trailstart" className="inline-block border-2 border-achtergrond/50 text-achtergrond font-bold px-8 py-3 rounded-full hover:border-achtergrond transition-colors">
               Plan je Trailstart →
             </Link>
           </div>
+          <p className="text-achtergrond/50 text-sm">
+            Nog niet helemaal zeker?{' '}
+            <Link href="/gratis#levenswiel" className="text-achtergrond/70 underline hover:text-achtergrond transition-colors">
+              Doe eerst de gratis Momtrail scan →
+            </Link>
+          </p>
         </div>
       </section>
 

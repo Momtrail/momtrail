@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import WerkgeverFAQ from '@/components/WerkgeverFAQ';
 import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Trailpass · Momtrail' };
@@ -136,6 +137,8 @@ export default function TrailpassPage() {
         </div>
         <p className="text-tekst/40 text-xs text-center reveal">3 sessies · €397 · 1 jaar geldig · Praktijkruimte of online</p>
       </div>
+
+      <WerkgeverFAQ />
 
       <ScrollReveal singles={['.reveal']} />
     </>

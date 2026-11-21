@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import WerkgeverFAQ from '@/components/WerkgeverFAQ';
 import Kompas from '@/components/Kompas';
 
 export const metadata: Metadata = { title: 'Mindful Moms' };
@@ -150,6 +151,8 @@ export default function MindfulMomsPage() {
         </div>
 
       </div>
+
+      <WerkgeverFAQ />
 
       <ScrollReveal singles={['.reveal']} />
     </>

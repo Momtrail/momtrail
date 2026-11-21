@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import WerkgeverFAQ from '@/components/WerkgeverFAQ';
 
 export const metadata: Metadata = {
   title: 'Trailstart',
@@ -90,6 +91,8 @@ export default function TrailstartPage() {
         </div>
         <p className="text-tekst/40 text-xs text-center reveal">60–75 min · €97 · Praktijkruimte of online</p>
       </div>
+
+      <WerkgeverFAQ />
 
       <ScrollReveal singles={['.reveal']} />
     </>
