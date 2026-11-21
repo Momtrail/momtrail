@@ -32,7 +32,7 @@ export default function HomePage() {
             Welkom bij Momtrail
           </p>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 max-w-2xl leading-tight text-achtergrond" style={{ fontFamily: 'var(--font-hoofd)' }}>
-            Lichaamsgerichte begeleiding voor moeders en kinderen
+            Lichaamsgerichte begeleiding en NEI therapie
           </h1>
           <p className="hero-subtitle max-w-xl text-2xl leading-relaxed mb-2 text-achtergrond/90" style={{ fontFamily: 'var(--font-buydog)' }}>
             Ben je klaar met overleven en het allemaal alleen doen?
